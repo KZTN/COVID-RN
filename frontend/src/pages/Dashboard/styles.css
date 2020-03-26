@@ -1,0 +1,22 @@
+
+.dashboard h1 {
+    text-align: center; 
+}
+.dashboard p {
+    margin-top: 250px;
+    text-align: center; 
+}
+.dashboard table {
+    margin-top: 30px;
+    list-style: none;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+.dashboard table td{
+    padding: 50px;
+}
