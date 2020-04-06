@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import api from "../../services/api";
-import Chart from "./chart";
 import "./styles.css";
-export default function Home() {
+export default function Dashboard() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -13,23 +12,32 @@ export default function Home() {
     handleAPI();
   }, []);
   return (
-    <div className="dashboard">
-      <table class="rwd-table">
-        <tr>
-          <th>Casos</th>
-          <th>Mortes</th>
-          <th>Suspeitos</th>
-          <th>Descartados</th>
-        </tr>
-        <tr>
-          <td data-th="cases">{data.cases}</td>
-          <td data-th="deaths">{data.deaths}</td>
-          <td data-th="suspects">{data.suspects}</td>
-          <td data-th="refuses">{data.refuses}</td>
-        </tr>
-      </table>
-      <p>Data da última atualização: {data.datetime}</p>
-    </div>
+ <ul>
+      <li className="box-item">
+    <header>
+      <strong>{data.suspects}</strong>
+    </header>
+      <span>Suspeitos</span>
+    </li>
+    <li className="box-item">
+    <header>
+        <strong>{data.refuses}</strong>
+    </header>
+    <span>Descartados</span>
+    </li>
+    <li className="box-item">
+    <header>
+        <strong>{data.cases}</strong>
+    </header>
+    <span>Confirmados</span>
+    </li>
+    <li className="box-item">
+    <header>
+        <strong>{data.deaths}</strong>
+    </header>
+    <span>Óbitos</span>
+    </li>
+ </ul>
   );
 }
 

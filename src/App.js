@@ -1,20 +1,28 @@
 import React from 'react';
 import Routes from './routes';
-import logo from './assets/Virus.svg';
+import DateTime from './utils/datetime';
 import './App.css';
 function App() {
   return (
     <div className="container">
       <header>
-        <img src={logo} alt="Logomarga COVID-19 RN"/>
-        <a href=".">COVID-19 RN</a>
+        <div className="title-box">
+          <strong>COVID-19 RN</strong>
+        </div>
       </header>
-      <p>Rastreador de casos de coronavírus do Rio Grande do Norte em tempo real</p>
-      <div className="content">
-        <Routes />
+      <div className="box-situation">
+        <p>Situação do</p>
+          <div className="box-rn">
+            <h1><strong><mark>Rio grande do Norte</mark></strong></h1>
+          </div>
       </div>
-      <div className="footer">
-        <p>Footer</p>
+      <div className="box-datetime">
+        <span>até às 21h do dia 5 de abril</span>
+      </div>
+      <div className="content">
+        <main>
+          <Routes/>
+        </main>
       </div>
     </div>
   );
