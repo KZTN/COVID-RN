@@ -46,21 +46,7 @@ body, input, button {
   transition: color 0.2s;
 
 }
-.container header a:hover {
-  color: green;
-}
-.container p {
-  margin-top: 30px;
-}
 
-.content {
-  box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  background: #fff;
-  border-radius: 4px;
-  padding: 30px;
-  margin-top: 50px;
-}
 .footer {
   position: fixed;
   left: 0;
