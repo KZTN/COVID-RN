@@ -1,0 +1,212 @@
+[
+    {
+      "name": "Cerro Corá",
+      "suspects": "2",
+      "refuses": "-",
+      "cases": "-",
+      "deaths": "-"
+    },
+    {
+      "name": "Coronel João Pessoa",
+      "suspects": "-",
+      "refuses": "2",
+      "cases": "-",
+      "deaths": "-"
+    },
+    {
+      "name": "Cruzeta",
+      "suspects": "cases",
+      "refuses": "2",
+      "cases": "-",
+      "deaths": "-"
+    },
+    {
+      "name": "Currais Novos",
+      "suspects": "8",
+      "refuses": "1",
+      "cases": "-",
+      "deaths": "-"
+    },
+    {
+      "name": "Doutor Severiano",
+      "suspects": "1",
+      "refuses": "-",
+      "cases": "-",
+      "deaths": "-"
+    },
+    {
+      "name": "Encanto",
+      "suspects": "5",
+      "refuses": "-",
+      "cases": "-",
+      "deaths": "-"
+    },
+    {
+      "name": "Equador",
+      "suspects": "1",
+      "refuses": "-",
+      "cases": "-",
+      "deaths": "-"
+    },
+    {
+      "name": "Espírito Santo",
+      "suspects": "2",
+      "refuses": "-",
+      "cases": "-",
+      "deaths": "-"
+    },
+    {
+      "name": "Extremoz",
+      "suspects": "22",
+      "refuses": "cases",
+      "cases": "5",
+      "deaths": "-"
+    },
+    {
+      "name": "Felipe Guerra",
+      "suspects": "4",
+      "refuses": "-",
+      "cases": "-",
+      "deaths": "-"
+    },
+    {
+      "name": "Fernando Pedroza",
+      "suspects": "2",
+      "refuses": "-",
+      "cases": "-",
+      "deaths": "-"
+    },
+    {
+      "name": "Florânia",
+      "suspects": "1",
+      "refuses": "1",
+      "cases": "-",
+      "deaths": "-"
+    },
+    {
+      "name": "Francisco Dantas",
+      "suspects": "1",
+      "refuses": "",
+      "cases": ""
+,
+"deaths": "-"    },
+    {
+      "name": "Frutuoso Gomes",
+      "suspects": "1",
+      "refuses": "1",
+      "cases": "-",
+      "deaths": "-"
+    },
+    {
+      "name": "Goianinha",
+      "suspects": "16",
+      "refuses": "1",
+      "cases": "-",
+      "deaths": "-"
+    },
+    {
+      "name": "Governador Dix-Sept \nRosado",
+      "suspects": "10",
+      "refuses": "1",
+      "cases": "-",
+      "deaths": "-"
+    },
+    {
+      "name": "Grossos",
+      "suspects": "cases",
+      "refuses": "-",
+      "cases": "-",
+      "deaths": "-"
+    },
+    {
+      "name": "Guamaré",
+      "suspects": "26",
+      "refuses": "6",
+      "cases": "-",
+      "deaths": "-"
+    },
+    {
+      "name": "Ipanguaçu",
+      "suspects": "1",
+      "refuses": "-",
+      "cases": "-",
+      "deaths": "-"
+    },
+    {
+      "name": "Ipueira",
+      "suspects": "2",
+      "refuses": "2",
+      "cases": "-",
+      "deaths": "-"
+    },
+    {
+      "name": "Itajá",
+      "suspects": "2",
+      "refuses": "-",
+      "cases": "-",
+      "deaths": "-"
+    },
+    {
+      "name": "Jaçanã",
+      "suspects": "cases",
+      "refuses": "-",
+      "cases": "-",
+      "deaths": "-"
+    },
+    {
+      "name": "Jandaíra",
+      "suspects": "2",
+      "refuses": "-",
+      "cases": "-",
+      "deaths": "-"
+    },
+    {
+      "name": "Januário Cicco",
+      "suspects": "2",
+      "refuses": "-",
+      "cases": "-",
+      "deaths": "-"
+    },
+    {
+      "name": "Japi",
+      "suspects": "1",
+      "refuses": "1",
+      "cases": "-",
+      "deaths": "-"
+    },
+    {
+      "name": "Jardim de Piranhas",
+      "suspects": "cases",
+      "refuses": "1",
+      "cases": "-",
+      "deaths": "-"
+    },
+    {
+      "name": "Jardim do Seridó",
+      "suspects": "4",
+      "refuses": "-",
+      "cases": "-",
+      "deaths": "-"
+    },
+    {
+      "name": "João Câmara",
+      "suspects": "cases",
+      "refuses": "1",
+      "cases": "-",
+      "deaths": "-"
+    },
+    {
+      "name": "José da Penha",
+      "suspects": "1",
+      "refuses": "",
+      "cases": ""
+,
+"deaths": "-"    },
+    {
+      "name": "Jucurutu",
+      "suspects": "7",
+      "refuses": "-",
+      "cases": "-",
+      "deaths": "-"
+    }
+  ]
