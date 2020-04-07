@@ -25,7 +25,7 @@ function App() {
           <h2>AO CORONAVIRUS</h2>
         </div>
         <div className="emblema-rn">
-          <img src={emblem} alt="" srcset=""/>
+          <img src={emblem} alt="Logomarca RN"/>
         </div>
         <div className="hashtag">
           <div className="hashtag-item"><span>#FIQUEEMCASA</span></div>
