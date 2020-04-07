@@ -1,43 +1,86 @@
 import React, { useEffect, useState } from "react";
+import {FaSearch} from 'react-icons/fa';
+import mongod_api from '../../services/mongodb';
 import api from "../../services/api";
 import "./styles.css";
-export default function Dashboard() {
-  const [data, setData] = useState([]);
+import DateTime from '../../utils/datetime';
 
+export default function Dashboard() {
+  const [boxname, setBoxname] = useState('Rio Grande do Norte');
+  const [boxsuspects, setBoxsuspects] = useState('-');
+  const [boxrefuses, setBoxrefuses] = useState('-');
+  const [boxcases, setBoxcases] = useState('-');
+  const [boxdeaths, setBoxdeaths] = useState('-');
+
+  const [surname, setSurname] = useState('o');
+  const [name, setName] = useState('');
+
+  
   useEffect(() => {
     async function handleAPI() {
       const response = await api.get("/");
-      setData(response.data);
+      setBoxsuspects(response.data.suspects);
+      setBoxrefuses(response.data.refuses);
+      setBoxcases(response.data.cases);
+      setBoxdeaths(response.data.deaths);
     }
     handleAPI();
   }, []);
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    const response = await mongod_api.post('/cidade', {name});
+    setBoxname(response.data.name);
+    setBoxsuspects(response.data.suspects);
+    setBoxrefuses(response.data.refuses);
+    setBoxcases(response.data.cases);
+    setBoxdeaths(response.data.deaths);
+    setSurname('e');    
+    setName('');
+  }
+
   return (
- <ul>
+<>
+<div className="box-situation">
+        <p>Situação d{surname}</p>
+          <div className="box-rn">
+            <h1><strong><mark>{boxname}</mark></strong></h1>
+          </div>
+      </div>
+      <div className="box-datetime">
+        <span><DateTime/></span>
+      </div> 
+<form onSubmit={handleSubmit}>
+  <input type="text" value={name} onChange={e => setName(e.target.value)} placeholder="Busque por sua cidade"/>
+  <button type="submit"><FaSearch size={24} color="#a277f6"/></button>
+</form>
+<ul>
       <li className="box-item">
     <header>
-      <strong>{data.suspects}</strong>
+      <strong>{boxsuspects}</strong>
     </header>
       <span>Suspeitos</span>
     </li>
     <li className="box-item">
     <header>
-        <strong>{data.refuses}</strong>
+        <strong>{boxrefuses}</strong>
     </header>
     <span>Descartados</span>
     </li>
     <li className="box-item">
     <header>
-        <strong>{data.cases}</strong>
+        <strong>{boxcases}</strong>
     </header>
     <span>Confirmados</span>
     </li>
     <li className="box-item">
     <header>
-        <strong>{data.deaths}</strong>
+        <strong>{boxdeaths}</strong>
     </header>
     <span>Óbitos</span>
     </li>
  </ul>
+ </>
   );
 }
 

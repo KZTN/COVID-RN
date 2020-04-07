@@ -1,38 +1,18 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Routes from './routes';
 import emblem from './assets/RN_emblem.png';
-import DateTime from './utils/datetime';
-import {FaSearch} from 'react-icons/fa';
-import './App.css';
-function App() {
-  const [cidade, setCidade] = useState('');
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    alert(cidade);
-    setCidade('');
-  }
+import './App.css';
+
+function App() {
 
   return (
     <div className="container">
       <header>
         <div className="title-box">
-          <h1><strong>COVID-19 RN</strong></h1>
+          <h1><strong><a href="/"> COVID-19 RN</a></strong></h1>
         </div>
       </header>
-      <div className="box-situation">
-        <p>Situação do</p>
-          <div className="box-rn">
-            <h1><strong><mark>Rio grande do Norte</mark></strong></h1>
-          </div>
-      </div>
-      <div className="box-datetime">
-        <span><DateTime/></span>
-      </div> 
-      <form onSubmit={handleSubmit}>
-        <input type="text" value={cidade} onChange={e => setCidade(e.target.value)} placeholder="Busque por sua cidade"/>
-        <button type="submit"><FaSearch size={24} color="#a277f6"/></button>
-      </form>
       <div className="content">
         <main>
           <Routes/>

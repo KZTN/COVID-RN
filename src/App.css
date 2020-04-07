@@ -20,6 +20,10 @@ html {
 body, input, button {
   font-family: 'Roboto' ,Arial, Helvetica, sans-serif;
 }
+a {
+  text-decoration: none;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1200px;
