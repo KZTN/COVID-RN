@@ -1,9 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Routes from './routes';
 import emblem from './assets/RN_emblem.png';
 import DateTime from './utils/datetime';
+import {FaSearch} from 'react-icons/fa';
 import './App.css';
 function App() {
+  const [cidade, setCidade] = useState('');
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    alert(cidade);
+    setCidade('');
+  }
+
   return (
     <div className="container">
       <header>
@@ -19,7 +28,11 @@ function App() {
       </div>
       <div className="box-datetime">
         <span><DateTime/></span>
-      </div>
+      </div> 
+      <form onSubmit={handleSubmit}>
+        <input type="text" value={cidade} onChange={e => setCidade(e.target.value)} placeholder="Busque por sua cidade"/>
+        <button type="submit"><FaSearch size={24} color="#a277f6"/></button>
+      </form>
       <div className="content">
         <main>
           <Routes/>
