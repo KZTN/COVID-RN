@@ -63,9 +63,77 @@ body, input, button {
   margin-top: 10px;
 }
 
-mark {
+.container .box-situation .box-rn mark {
   line-height: 1px;
   font-size: 48px;
   background-color: #15e8cd;
   color: #0b402f;
+}
+
+.container footer {
+  top: 90%;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: inherit;
+  text-align: justify;
+  bottom: 0;
+  max-width: 1200px;
+  width: 90%;
+  height: 50px;
+}
+.container footer .slogan-rn {
+  margin-right: auto;
+  display: inline-block;
+  width: 33%;
+  color: #7d1918;
+  line-height: 25px;
+}
+
+.container footer .slogan-rn span {
+}
+
+.container footer .emblema-rn {
+  display: inline-block;
+  width: 33%;
+
+}
+.container footer .emblema-rn img {
+  width: 256px;
+  height: 126px;
+}
+.container footer .hashtag {
+  display: inline-block;
+  width: 33%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.container footer .hashtag .hashtag-item{
+  font-size: 16px;
+  background-color: #fbe12a;
+  font-weight: bold;
+  color: #322935;
+  width: 100%;
+  text-align: center;
+  margin: 4px;
+  margin-left: auto;
+}
+
+
+@media (max-width: 650px) {
+  .container footer {
+    flex-direction: column;
+    align-items: center;
+    position: static;
+    width: 100%;
+    margin-top: 30px;
+  }
+  .container footer .emblema-rn, .container footer .hashtag, .container footer .slogan-rn  {
+    width: auto;
+    margin: 0 auto;
+  }
 }
