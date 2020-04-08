@@ -33,8 +33,10 @@ export default function Dashboard() {
   async function handleSubmit(e) {
     e.preventDefault();
     setLoading(true);
+    const strentry = name.toUpperCase();
+    console.log(strentry);
     try {
-      const response = await mongod_api.post('/cidade', {name});
+      const response = await mongod_api.post('/cidade', {strentry});
       setBoxname(response.data.name);
       setBoxsuspects(response.data.suspects);
       setBoxrefuses(response.data.refuses);
