@@ -5,7 +5,7 @@ import api from "../../services/api";
 import "./styles.css";
 import DateTime from '../../utils/datetime';
 import SpinnerPage from '../../utils/SpinnerPage'
-
+import {capitalize} from '../../utils/capitalize'
 
 export default function Dashboard() {
   const [loading, setLoading] = useState(false);
@@ -33,10 +33,8 @@ export default function Dashboard() {
   async function handleSubmit(e) {
     e.preventDefault();
     setLoading(true);
-    const strentry = name.toUpperCase();
-    console.log(strentry);
     try {
-      const response = await mongod_api.post('/cidade', {strentry});
+      const response = await mongod_api.post('/cidade', {name: capitalize(name)});
       setBoxname(response.data.name);
       setBoxsuspects(response.data.suspects);
       setBoxrefuses(response.data.refuses);
