@@ -1,7 +1,6 @@
 import React from 'react';
 import Routes from './routes';
 import emblem from './assets/RN_emblem.png';
-
 import './App.css';
 
 function App() {
@@ -15,7 +14,7 @@ function App() {
       </header>
       <div className="content">
         <main>
-          <Routes/>
+        <Routes/>
         </main>
       </div>
       <footer>

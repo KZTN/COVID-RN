@@ -4,8 +4,11 @@ import mongod_api from '../../services/mongodb';
 import api from "../../services/api";
 import "./styles.css";
 import DateTime from '../../utils/datetime';
+import SpinnerPage from '../../utils/SpinnerPage'
+
 
 export default function Dashboard() {
+  const [loading, setLoading] = useState(false);
   const [boxname, setBoxname] = useState('Rio Grande do Norte');
   const [boxsuspects, setBoxsuspects] = useState('-');
   const [boxrefuses, setBoxrefuses] = useState('-');
@@ -29,13 +32,21 @@ export default function Dashboard() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    const response = await mongod_api.post('/cidade', {name});
-    setBoxname(response.data.name);
-    setBoxsuspects(response.data.suspects);
-    setBoxrefuses(response.data.refuses);
-    setBoxcases(response.data.cases);
-    setBoxdeaths(response.data.deaths);
-    setSurname('e');    
+    setLoading(true);
+    try {
+      const response = await mongod_api.post('/cidade', {name});
+      setBoxname(response.data.name);
+      setBoxsuspects(response.data.suspects);
+      setBoxrefuses(response.data.refuses);
+      setBoxcases(response.data.cases);
+      setBoxdeaths(response.data.deaths);
+      setSurname('e');    
+    } catch (error) {
+        alert("Cidade não encontrada, digite novamente");
+
+    }
+    setLoading(false);
+    window.scrollTo(0, 0)
     setName('');
   }
 
@@ -52,8 +63,11 @@ export default function Dashboard() {
       </div> 
 <form onSubmit={handleSubmit}>
   <input type="text" value={name} onChange={e => setName(e.target.value)} placeholder="Busque por sua cidade"/>
-  <button type="submit"><FaSearch size={24} color="#a277f6"/></button>
+  <button type="submit" disabled={name === ''? true : false}><FaSearch size={24} color="#a277f6"/></button>
 </form>
+<div className="box-loading">
+{loading ? <SpinnerPage/> : null}
+</div>
 <ul>
       <li className="box-item">
     <header>
