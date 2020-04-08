@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {FaSearch} from 'react-icons/fa';
-import mongod_api from '../../services/mongodb';
-import api from "../../services/api";
+import mongodb from '../../services/mongodb';
 import "./styles.css";
 import DateTime from '../../utils/datetime';
 import SpinnerPage from '../../utils/SpinnerPage'
@@ -21,7 +20,7 @@ export default function Dashboard() {
   
   useEffect(() => {
     async function handleAPI() {
-      const response = await api.get("/");
+      const response = await mongodb.get("/estado");
       setBoxsuspects(response.data.suspects);
       setBoxrefuses(response.data.refuses);
       setBoxcases(response.data.cases);
@@ -34,7 +33,7 @@ export default function Dashboard() {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await mongod_api.post('/cidade', {name: capitalize(name)});
+      const response = await mongodb.post('/cidade', {name: capitalize(name)});
       setBoxname(response.data.name);
       setBoxsuspects(response.data.suspects);
       setBoxrefuses(response.data.refuses);

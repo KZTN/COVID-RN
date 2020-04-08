@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const mongodb_api = axios.create({
+const mongodb = axios.create({
     baseURL: "https://covid-rn-server.herokuapp.com"
 })
 
-export default mongodb_api;
+export default mongodb;
