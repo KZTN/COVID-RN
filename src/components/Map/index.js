@@ -40,7 +40,7 @@ export default function Map() {
   }, []);
     return(
         <GoogleMap 
-        defaultZoom={5} 
+        defaultZoom={8} 
         defaultCenter={{lat:-5.699659599999999, lng:-36.2444833}}
         defaultOptions={{ styles: styles }}
         >
@@ -53,7 +53,7 @@ export default function Map() {
                             lat: city.location.coordinates[0], 
                             lng: city.location.coordinates[1]
                         }}
-                        onMouseOver={() => {
+                        onClick={() => {
                             setSelectedcity(city);
                         }}
 
@@ -63,7 +63,7 @@ export default function Map() {
             }
             {selectedcity && (
                 <InfoWindow 
-                onMouseOut={() => {
+                onCloseClick={() => {
                     setSelectedcity(null);
                 }}
                     position={{
