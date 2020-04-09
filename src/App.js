@@ -1,10 +1,12 @@
 import React from 'react';
 import Routes from './routes';
 import emblem from './assets/RN_emblem.png';
+import MapContainer from './components/Map';
+import {withScriptjs, withGoogleMap} from 'react-google-maps'
 import './App.css';
 
 function App() {
-
+  const MapWrapped = withScriptjs(withGoogleMap(MapContainer));
   return (
     <div className="container">
       <header>
@@ -16,6 +18,16 @@ function App() {
         <main>
         <Routes/>
         </main>
+      </div>
+      <div className="map" style={{width: '100%', height: '450px', marginTop: '50px'}}>
+      <MapWrapped
+        googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${
+          process.env.REACT_APP_GOOGLE_KEY
+        }`}
+        loadingElement={<div style={{ height: `100%` }} />}
+        containerElement={<div style={{ height: `100%` }} />}
+        mapElement={<div style={{ height: `100%` }} />}
+      />
       </div>
       <footer>
         <div className="slogan-rn">
