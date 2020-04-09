@@ -4,6 +4,7 @@ import emblem from './assets/RN_emblem.png';
 import MapContainer from './components/Map';
 import {withScriptjs, withGoogleMap} from 'react-google-maps'
 import './App.css';
+import 'dotenv';
 
 function App() {
   const MapWrapped = withScriptjs(withGoogleMap(MapContainer));
