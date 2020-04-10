@@ -20,11 +20,11 @@ export default function Dashboard() {
   
   useEffect(() => {
     async function handleAPI() {
-      const response = await mongodb.get("/estado");
-      setBoxsuspects(response.data.suspects);
-      setBoxrefuses(response.data.refuses);
-      setBoxcases(response.data.cases);
-      setBoxdeaths(response.data.deaths);
+      const response = await mongodb.post("/stateshow", {name: "Rio Grande do Norte"});
+      setBoxsuspects(response.data.suspects[0]);
+      setBoxrefuses(response.data.refuses[0]);
+      setBoxcases(response.data.cases[0]);
+      setBoxdeaths(response.data.deaths[0]);
     }
     handleAPI();
   }, []);
