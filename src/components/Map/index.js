@@ -1,14 +1,18 @@
 import React, {useState, useEffect} from 'react';
-import {GoogleMap, Marker, InfoWindow} from 'react-google-maps'
+import {GoogleMap, Marker, InfoWindow, Polygon} from 'react-google-maps'
 import mongodb from '../../services/mongodb';
 import styles from './GoogleMapStyles.json';
-
+import coordinates from './polygons.json';
+let Arrcoordinates = (coordinates[0].geojson.coordinates[0][0]);
+let cordArr = [];
+Arrcoordinates.map(coordinate => cordArr.push({lat:coordinate[1], lng:coordinate[0]}));
+console.log(cordArr);
 export default function Map() {
     const [cities, setCities] = useState([]);
     const [selectedcity, setSelectedcity] = useState();
 
 
-    
+
     useEffect(() => {
         async function getData() {
             const response = await mongodb.get('/maps');
@@ -44,11 +48,21 @@ export default function Map() {
   }, []);
     return(
         <GoogleMap 
+        data={"!3m1!4b1!4m5!3m4!1s0x7b04df549e8eaad:0xa92509ac1c4d9ec4!8m2!3d-5.4025803!4d-36.954107"}
         defaultZoom={8} 
         defaultCenter={{lat:-5.699659599999999, lng:-36.2444833}}
         defaultOptions={{ styles: styles }}
         >
-
+      <Polygon
+        paths={cordArr}
+        options={{
+          strokeColor: "#bbb",
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: "#aaa0",
+          fillOpacity: 0.35
+        }}
+      />
              {   
                 cities.map((city) => (
                     <Marker
