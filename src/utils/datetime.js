@@ -7,8 +7,8 @@ export default function DateTime() {
 
   useEffect(() => {
     async function handleAPI() {
-      const response = await mongodb.get("/estado");
-      const formatedDate = moment(response.data.date).utcOffset("-03:00").format("HH DD MMMM", 'pt-BR');
+      const response = await mongodb.post("/stateshow", {name: "Rio Grande do Norte"});
+      const formatedDate = moment(response.data.date[0]).utcOffset("-03:00").format("HH DD MMMM", 'pt-BR');
       const formatedDateArr = formatedDate.split(' ');
       setData(formatedDateArr);
     }
