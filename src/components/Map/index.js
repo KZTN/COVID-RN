@@ -6,12 +6,16 @@ import styles from './GoogleMapStyles.json';
 export default function Map() {
     const [cities, setCities] = useState([]);
     const [selectedcity, setSelectedcity] = useState();
+
+
+    
     useEffect(() => {
         async function getData() {
-            const response = await mongodb.get('/cidades');
+            const response = await mongodb.get('/maps');
                 setCities(response.data);
         }
         getData();
+        
     }, []);
     useEffect(() => {
         const listener = e => {
@@ -47,7 +51,7 @@ export default function Map() {
 
              {   
                 cities.map((city) => (
-                    <Marker 
+                    <Marker
                         key={city._id} 
                         position={{
                             lat: city.location.coordinates[0], 
@@ -73,7 +77,7 @@ export default function Map() {
                     >
                         <div>
                             <h3>{selectedcity.name}</h3>
-                            <p>Número de casos: {selectedcity.cases}</p>
+                            <p>Número de casos: {selectedcity.cases[0]}</p>
                         </div>
                 </InfoWindow>
             )}
