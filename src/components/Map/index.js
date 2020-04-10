@@ -52,6 +52,10 @@ export default function Map() {
              {   
                 cities.map((city) => (
                     <Marker
+                    icon={{
+                      url: require('./circle.png'),
+                      scaledSize: new window.google.maps.Size(25 + (city.cases[0] / 1.5), 25 + (city.cases[0] / 1.5))
+                    }}
                         key={city._id} 
                         position={{
                             lat: city.location.coordinates[0], 
