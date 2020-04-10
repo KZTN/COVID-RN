@@ -1,21 +1,9 @@
-import React, {Component, useEffect, useState} from 'react';
+import React from 'react';
 import { Line } from 'react-chartjs-2';
-import mongodb from '../../services/mongodb';
 
 
-export default function Chart() {
-  const [dates, setDates] = useState([]);
-  const [cases, SetCases] = useState([]);
-  useEffect(() => {
-    async function getData() {
-      const response = await mongodb.post('/stateshow', {name: "Rio Grande do Norte"});
-      setDates(response.data.date.reverse());
-      SetCases(response.data.cases.reverse());
-    }
-    getData();
-  }, []);
-  console.log(dates);
-  console.log(cases);
+export default function Chart({cases, deaths, dates}) {
+
   const data = {
     labels: dates,
     datasets: [
@@ -39,11 +27,32 @@ export default function Chart() {
         pointRadius: 1,
         pointHitRadius: 10,
         data: cases
+      },
+      {
+        label: 'Números de óbitos',
+        fill: false,
+        lineTension: 0.1,
+        backgroundColor: 'rgba(226, 106, 106, 1)',
+        borderColor: 'rgba(224, 130, 131, 1)',
+        borderCapStyle: 'butt',
+        borderDash: [],
+        borderDashOffset: 0.0,
+        borderJoinStyle: 'miter',
+        pointBorderColor: 'rgba(224, 130, 131, 1)',
+        pointBackgroundColor: '#fff',
+        pointBorderWidth: 1,
+        pointHoverRadius: 5,
+        pointHoverBackgroundColor: 'rgba(224, 130, 131, 1)',
+        pointHoverBorderColor: 'rgba(220,220,220,1)',
+        pointHoverBorderWidth: 2,
+        pointRadius: 1,
+        pointHitRadius: 10,
+        data: deaths
       }
     ]
   };
     return (
-        <Line useRef="chart" data={data} />
+        <Line useRef="chart" data={data}/>
     );
 
 }

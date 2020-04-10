@@ -13,6 +13,9 @@ export default function Dashboard() {
   const [boxrefuses, setBoxrefuses] = useState('-');
   const [boxcases, setBoxcases] = useState('-');
   const [boxdeaths, setBoxdeaths] = useState('-');
+  const [chartcases, setChartcases] = useState([]);
+  const [chartdates, setChartDates] = useState([]);
+  const [chartdeaths, setChartdeaths] = useState([]);
 
   const [surname, setSurname] = useState('o');
   const [name, setName] = useState('');
@@ -25,6 +28,9 @@ export default function Dashboard() {
       setBoxrefuses(response.data.refuses[0]);
       setBoxcases(response.data.cases[0]);
       setBoxdeaths(response.data.deaths[0]);
+      setChartDates(response.data.date.reverse());
+      setChartcases(response.data.cases.reverse());
+      setChartdeaths(response.data.deaths.reverse());
     }
     handleAPI();
   }, []);
@@ -39,6 +45,9 @@ export default function Dashboard() {
       setBoxrefuses(response.data.refuses[0]);
       setBoxcases(response.data.cases[0]);
       setBoxdeaths(response.data.deaths[0]);
+      setChartDates(response.data.date.reverse());
+      setChartcases(response.data.cases.reverse());
+      setChartdeaths(response.data.deaths.reverse());
       setSurname('e');    
     } catch (error) {
         alert("Cidade não encontrada, digite novamente");
@@ -94,7 +103,7 @@ export default function Dashboard() {
     </li>
  </ul>
  <div className="box-chart">
- <Chart/>
+ <Chart cases={chartcases} deaths={chartdeaths} dates={chartdates}/>
  </div>
  </>
   );
