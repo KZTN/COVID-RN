@@ -45,7 +45,7 @@ export default function Map() {
         defaultOptions={{ styles: styles }}
         >
 
-             {   
+{/*              {   
                 cities.map((city) => (
                     <Marker 
                         key={city._id} 
@@ -76,7 +76,7 @@ export default function Map() {
                             <p>Número de casos: {selectedcity.cases}</p>
                         </div>
                 </InfoWindow>
-            )}
+            )} */}
         </GoogleMap>
     );
 }

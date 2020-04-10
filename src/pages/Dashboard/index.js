@@ -35,10 +35,10 @@ export default function Dashboard() {
     try {
       const response = await mongodb.post('/cidade', {name: capitalize(name)});
       setBoxname(response.data.name);
-      setBoxsuspects(response.data.suspects);
-      setBoxrefuses(response.data.refuses);
-      setBoxcases(response.data.cases);
-      setBoxdeaths(response.data.deaths);
+      setBoxsuspects(response.data.suspects[0]);
+      setBoxrefuses(response.data.refuses[0]);
+      setBoxcases(response.data.cases[0]);
+      setBoxdeaths(response.data.deaths[0]);
       setSurname('e');    
     } catch (error) {
         alert("Cidade não encontrada, digite novamente");
