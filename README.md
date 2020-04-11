@@ -1,7 +1,29 @@
-# Project Title
+<p align="center">
+    <img alt="COVID-RN" title="#app" src=".github/COVID-RN_icon.png" width="250px" />
+</p>
+    <h1 align="center">COVID-RN</h1>
 
-One Paragraph of project description goes here
+<h4 align="center">
+  🔎🦠 Rastreador de casos de coronavirus do Rio Grande do Norte em tempo real
+</h4>
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/KZTN/COVID-RN.svg">
 
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/KZTN/COVID-RN.svg">
+  
+  <a href="https://github.com/KZTN/COVID-RN/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/KZTN/COVID-RN.svg">
+  </a>
+
+  <a href="https://github.com/KZTN/COVID-RN/issues">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/KZTN/COVID-RN.svg">
+  </a>
+
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
+</p>
+<p align="center">
+  <img alt="BeTheHero" src=".github/COVID-RN_showcase.png" width="100%">
+</p>
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
@@ -70,11 +92,6 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
@@ -85,3 +102,10 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Hat tip to anyone whose code was used
 * Inspiration
 * etc
+## Autor
+
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/KZTN"><img src="https://avatars0.githubusercontent.com/u/6463299?s=460&u=4461e9ccc7bb327fc8183a09c3da015c832924d6&v=4" width="100px;" alt=""/><br /><sub><b>Kaio César</b></sub></a><br /><a href="https://github.com/kztn/COVID-RN/commits?author=kztn" title="Code">💻</a> <a href="#kztn" title="Design">🎨</a></td>
+  <tr>
+</table>
