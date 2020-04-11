@@ -3,6 +3,7 @@ import {GoogleMap, Marker, InfoWindow, Polygon} from 'react-google-maps'
 import mongodb from '../../services/mongodb';
 import styles from './GoogleMapStyles.json';
 import coordinates from './polygons.json';
+import './styles.css'
 let Arrcoordinates = (coordinates[0].geojson.coordinates[0][0]);
 let cordArr = [];
 Arrcoordinates.map(coordinate => cordArr.push({lat:coordinate[1], lng:coordinate[0]}));
@@ -56,10 +57,10 @@ export default function Map() {
       <Polygon
         paths={cordArr}
         options={{
-          strokeColor: "#bbb",
+          strokeColor: "#b0b0b0",
           strokeOpacity: 0.8,
           strokeWeight: 2,
-          fillColor: "#aaa0",
+          fillColor: "#ddd",
           fillOpacity: 0.35
         }}
       />
@@ -68,7 +69,7 @@ export default function Map() {
                     <Marker
                     icon={{
                       url: require('./circle.png'),
-                      scaledSize: new window.google.maps.Size(25 + (city.cases[0] / 1.5), 25 + (city.cases[0] / 1.5))
+                      scaledSize: new window.google.maps.Size(25 + ((city.cases[0]+(city.deaths[0] *2)) / 2), 25 + ((city.cases[0]+(city.deaths[0] *2)) / 2))
                     }}
                         key={city._id} 
                         position={{
@@ -93,9 +94,10 @@ export default function Map() {
                         lng: selectedcity.location.coordinates[1]
                     }}
                     >
-                        <div>
+                        <div className="box-info">
                             <h3>{selectedcity.name}</h3>
-                            <p>Número de casos: {selectedcity.cases[0]}</p>
+                            <span>Casos: {selectedcity.cases[0]}</span>
+                            <span>Mortes: {selectedcity.deaths[0]}</span>
                         </div>
                 </InfoWindow>
             )}

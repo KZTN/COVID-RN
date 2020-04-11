@@ -103,7 +103,7 @@ export default function Dashboard() {
     </li>
  </ul>
  <div className="box-chart">
- <Chart cases={chartcases} deaths={chartdeaths} dates={chartdates}/>
+ <Chart cases={chartcases} deaths={chartdeaths} dates={chartdates} style={{height: "100%"}}/>
  </div>
  </>
   );

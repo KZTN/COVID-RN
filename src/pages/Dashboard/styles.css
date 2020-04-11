@@ -37,6 +37,12 @@ li.box-item strong {
   justify-content: center;
 }
 
+.box-chart {
+  margin-top: 50px;
+  width: 100%;
+  height: 400px;
+}
+
 @media (max-width: 650px) {
   
     ul {
@@ -44,5 +50,8 @@ li.box-item strong {
   }
   .content {
     width: 90%;
+  }
+  .box-chart {
+    height: 275px;
   }
 }

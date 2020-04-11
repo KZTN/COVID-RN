@@ -1,11 +1,21 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Line } from 'react-chartjs-2';
-
+import * as moment from 'moment';
+import 'moment/locale/pt-br';
 
 export default function Chart({cases, deaths, dates}) {
+  let arr = [];
+    async function formatDate() {
+      dates.map((date) => {
+        arr.push(moment(date).utcOffset("-03:00").format("DD/MMMM", 'pt-BR'));
+        console.log(date);
+      })
+    }
+      formatDate();
+    
 
   const data = {
-    labels: dates,
+    labels: arr,
     datasets: [
       {
         label: 'Números de casos confirmados',
@@ -52,7 +62,7 @@ export default function Chart({cases, deaths, dates}) {
     ]
   };
     return (
-        <Line useRef="chart" data={data}/>
+        <Line useRef="chart" data={data} options={{responsive : true, maintainAspectRatio : false }}/>
     );
 
 }
