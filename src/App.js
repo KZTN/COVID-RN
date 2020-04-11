@@ -44,6 +44,9 @@ function App() {
           <div className="hashtag-item"><span>#RNCONTRACOVID-19</span></div>
         </div>
       </footer>
+      <div className="box-contact">
+        <p>Dúvidas? <a href="mailto:kakaiocesar2@gmail.com" target="_top">Entre em contato</a></p>
+      </div>
     </div>
   );
 }

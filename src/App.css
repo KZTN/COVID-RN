@@ -151,6 +151,19 @@ aside form .input-block input {
   margin-left: auto;
 }
 
+.box-contact {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  margin-top: 50px;
+  opacity: 0.2;
+  transition: opacity 0.2s;
+
+}
+.box-contact:hover {
+  opacity: 1;
+}
+
 @media (max-width: 650px) {
   .container footer {
     flex-direction: column;
@@ -162,5 +175,10 @@ aside form .input-block input {
   .container footer .emblema-rn, .container footer .hashtag, .container footer .slogan-rn  {
     width: auto;
     margin: 0 auto;
+  }
+  .box-contact {
+    margin-top: 220px;
+    background: #dae5e8;
+    opacity: 0.1;
   }
 }
