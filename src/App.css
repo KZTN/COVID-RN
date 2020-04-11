@@ -132,6 +132,7 @@ aside form .input-block input {
 .container footer .hashtag {
   display: inline-block;
   width: 33%;
+  padding: 0 80px;
 
   display: flex;
   flex-direction: column;
