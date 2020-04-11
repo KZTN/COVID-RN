@@ -1,5 +1,6 @@
 <h1 align="center">
     <img alt="COVID-RN" title="#app" src=".github/COVID-RN_icon.png" width="250px" />
+    <h1 align="center">COVID-RN</h1>
 </h1>
 
 <h4 align="center">
