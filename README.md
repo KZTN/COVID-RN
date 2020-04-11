@@ -1,6 +1,25 @@
-# Project Title
+<h1 align="center">
+    <img alt="COVID-RN" title="#app" src=".github/COVID-RN_icon.png" width="250px" />
+</h1>
 
-One Paragraph of project description goes here
+<h4 align="center">
+  🔎🦠 Rastreador de casos de coronavirus do Rio Grande do Norte em tempo real
+</h4>
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/KZTN/COVID-RN.svg">
+
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/KZTN/COVID-RN.svg">
+  
+  <a href="https://github.com/KZTN/COVID-RN/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/KZTN/COVID-RN.svg">
+  </a>
+
+  <a href="https://github.com/KZTN/COVID-RN/issues">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/KZTN/COVID-RN.svg">
+  </a>
+
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
+</p>
 
 ## Getting Started
 
