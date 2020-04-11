@@ -164,6 +164,9 @@ aside form .input-block input {
   opacity: 1;
 }
 
+
+
+
 @media (max-width: 650px) {
   .container footer {
     flex-direction: column;

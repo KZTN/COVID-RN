@@ -20,7 +20,7 @@ function App() {
         <Routes/>
         </main>
       </div>
-      <div className="map" style={{width: '100%', height: '450px', marginTop: '50px'}}>
+      <div className="map" style={{minWidth: '100%', height: '450px', marginTop: '50px'}}>
       <MapWrapped
         googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${
           process.env.REACT_APP_GOOGLE_KEY
@@ -45,7 +45,7 @@ function App() {
         </div>
       </footer>
       <div className="box-contact">
-        <p>Dúvidas? <a href="mailto:kakaiocesar2@gmail.com" target="_top">Entre em contato</a></p>
+        <p>Dúvidas? <a href="mailto:oicovidrn@gmail.com" target="_top">Entre em contato</a></p>
       </div>
     </div>
   );
