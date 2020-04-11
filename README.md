@@ -1,7 +1,7 @@
-<h1 align="center">
+<p align="center">
     <img alt="COVID-RN" title="#app" src=".github/COVID-RN_icon.png" width="250px" />
+</p>
     <h1 align="center">COVID-RN</h1>
-</h1>
 
 <h4 align="center">
   🔎🦠 Rastreador de casos de coronavirus do Rio Grande do Norte em tempo real
