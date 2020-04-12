@@ -93,6 +93,21 @@ yarn start
 
 Depois que o merge da sua pull request for feito, você pode deletar a sua branch.
 
+### TODO list
+
+- [x] Criar uma base de dados API REST
+- [x] Criar uma aplicação web para o projeto
+- [x] Integração frontend com backend
+- [x] Criar interface responsiva
+- [x] Elaborar gráficos com base de dados
+- [x] Elaborar mapas com base de dados
+- [x] Deploy da aplicação
+- [ ] Gerar estatísticas de acesso, consultas, erros e depuração
+- [ ] Gerar relatórios automáticos de status do serviço
+- [ ] Criar um extrator de PDFs
+- [ ] Criar um conversor de PDFs para csv/json
+- [ ] and more...
+
 ## :memo: Licença
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
