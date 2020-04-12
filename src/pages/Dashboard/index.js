@@ -7,7 +7,7 @@ import SpinnerPage from '../../utils/SpinnerPage'
 import {capitalize} from '../../utils/capitalize'
 import Chart from '../../components/Chart';
 export default function Dashboard() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [boxname, setBoxname] = useState('Rio Grande do Norte');
   const [boxsuspects, setBoxsuspects] = useState('-');
   const [boxrefuses, setBoxrefuses] = useState('-');
@@ -31,6 +31,7 @@ export default function Dashboard() {
       setChartDates(response.data.date.reverse());
       setChartcases(response.data.cases.reverse());
       setChartdeaths(response.data.deaths.reverse());
+      setLoading(false);
     }
     handleAPI();
   }, []);
