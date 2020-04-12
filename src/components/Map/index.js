@@ -48,10 +48,10 @@ export default function Map() {
   }, []);
     return(
         <GoogleMap 
-        data={"!3m1!4b1!4m5!3m4!1s0x7b04df549e8eaad:0xa92509ac1c4d9ec4!8m2!3d-5.4025803!4d-36.954107"}
+        streetViewControl={false}
         defaultZoom={8} 
         defaultCenter={{lat:-5.699659599999999, lng:-36.2444833}}
-        defaultOptions={{ styles: styles }}
+        defaultOptions={{ styles: styles, mapTypeControl: false, streetViewControl: false }}
         >
       <Polygon
         paths={cordArr}
@@ -89,6 +89,7 @@ export default function Map() {
             }
             {selectedcity && (
                 <InfoWindow 
+                
                 onMouseOut={() => {
                   setSelectedcity(null);
               }}
