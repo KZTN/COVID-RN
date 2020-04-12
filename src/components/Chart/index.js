@@ -8,7 +8,6 @@ export default function Chart({cases, deaths, dates}) {
     async function formatDate() {
       dates.map((date) => {
         arr.push(moment(date).utcOffset("-03:00").format("DD/MMMM", 'pt-BR'));
-        console.log(date);
       })
     }
       formatDate();

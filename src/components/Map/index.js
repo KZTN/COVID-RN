@@ -7,7 +7,6 @@ import './styles.css'
 let Arrcoordinates = (coordinates[0].geojson.coordinates[0][0]);
 let cordArr = [];
 Arrcoordinates.map(coordinate => cordArr.push({lat:coordinate[1], lng:coordinate[0]}));
-console.log(cordArr);
 export default function Map() {
     const [cities, setCities] = useState([]);
     const [selectedcity, setSelectedcity] = useState();
@@ -76,16 +75,23 @@ export default function Map() {
                             lat: city.location.coordinates[0], 
                             lng: city.location.coordinates[1]
                         }}
-                        onClick={() => {
+                        onMouseOver={() => {
                             setSelectedcity(city);
-                        }}
 
+                        }}
+                        onClick={() => {
+                          setSelectedcity(city);
+
+                      }}
                     />
                 ))
                 
             }
             {selectedcity && (
                 <InfoWindow 
+                onMouseOut={() => {
+                  setSelectedcity(null);
+              }}
                 onCloseClick={() => {
                     setSelectedcity(null);
                 }}
