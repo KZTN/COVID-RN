@@ -27,7 +27,18 @@
 
 ## 💻 Projeto
 
-O COVID-RN é um projeto que visa rastrear os casos de coronavirus em todo o território do Rio Grande do Norte de maneira intuitiva. 
+O COVID-RN é um projeto que visa rastrear os casos de coronavirus em todo o território do Rio Grande do Norte, informando dados únicos tanto para o estado quando para cada cidade.
+
+## 🤔 Motivo/features
+
+Pela falta do estado não possuir uma API sobre a incidência de casos de coronavirus e pouca dinâmica na veiculação dos boletins. O projeto tem o âmbito de oferecer:
+<ul>
+   <li>Uma base de dados do tipo API REST de livre acesso para pesquisa e consulta</li>
+    <li>Uma interface que disponibiliza os dados gerados para o cliente</li>
+    <li>Gráficos e mapas com foco nos casos no RN</li>
+</ul>
+
+Acesse o [outro lado do projeto](https://github.com/KZTN/COVID-RN_SERVER) para mais informações a respeito da base de dados API
 
 ## 🔖 Layout
 
@@ -73,17 +84,7 @@ Rodando o projeto
 yarn start
 ```
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## ⚙️ Feito com
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## 🤔 Como contribuir
+## Como contribuir
 
 - Faça um fork desse repositório;
 - Cria uma branch com a sua feature: `git checkout -b minha-feature`;
@@ -91,16 +92,6 @@ Add additional notes about how to deploy this on a live system
 - Faça push para a sua branch: `git push origin minha-feature`.
 
 Depois que o merge da sua pull request for feito, você pode deletar a sua branch.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
 
 ## :memo: Licença
 
