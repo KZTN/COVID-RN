@@ -2,11 +2,43 @@ import React from 'react';
 import Routes from './routes';
 import emblem from './assets/RN_emblem.png';
 import MapContainer from './components/Map';
+import {FaFacebook, FaGithub, FaTwitter, FaWhatsapp} from 'react-icons/fa';
+
 import {withScriptjs, withGoogleMap} from 'react-google-maps'
 import './App.css';
 import 'dotenv';
 
 function App() {
+  function popupFB() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+      window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcovid-rn.herokuapp.com&t=Veja as cidades brasileiras com casos confirmados de coronavírus. No mapa do mundo','popup','width=600,height=600'); 
+      return false; 
+    }
+    window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcovid-rn.herokuapp.com&t=Veja as cidades brasileiras com casos confirmados de coronavírus. No mapa do mundo','popup','width=600,height=600'); 
+    return false;
+  }
+
+  function popupGH() {
+    window.open('https://github.com/KZTN/COVID-RN','_blank'); 
+    return false;
+  }
+
+  function popupTT() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+      window.open('twitter://post?message=Confira os últimos casos de coronavirus do RN https%3A%2F%2Fcovid-rn.herokuapp.com','popup','width=600,height=600'); 
+      return false; 
+    }
+    window.open('https://twitter.com/intent/tweet?url=https%3A%2F%2Fcovid-rn.herokuapp.com&text=Confira os últimos casos de coronavirus do RN','popup','width=600,height=600'); 
+    return false;
+  }
+  function popupWPP() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+      window.open('whatsapp://send?text=Confira os últimos casos de coronavirus do RN https%3A%2F%2Fcovid-rn.herokuapp.com','_top'); 
+      return false; 
+    }
+    window.open('https://web.whatsapp.com/send?Confira os últimos casos de coronavirus do Rio Grande do Norte em tempo real https%3A%2F%2Fcovid-rn.herokuapp.com','popup','width=600,height=600'); 
+    return false;
+  }
   const MapWrapped = withScriptjs(withGoogleMap(MapContainer));
   return (
     <div className="container">
@@ -30,6 +62,12 @@ function App() {
         mapElement={<div style={{ height: `100%` }} />}
       />
       </div>
+      <div className="box-contact">
+        <button onClick={popupFB}><FaFacebook size={28} color="#353244"/></button>
+        <button onClick={popupWPP}><FaWhatsapp fa size={28} color="#353244"/></button>
+        <button onClick={popupTT}><FaTwitter fa size={28} color="#353244"/></button>
+        <button onClick={popupGH}><FaGithub fa size={28} color="#353244"/></button>          
+      </div>
       <footer>
         <div className="slogan-rn">
           <span>RIO GRANDE DO NORTE</span>
@@ -44,9 +82,6 @@ function App() {
           <div className="hashtag-item"><span>#RNCONTRACOVID-19</span></div>
         </div>
       </footer>
-      <div className="box-contact">
-        <p>Dúvidas? <a href="mailto:oicovidrn@gmail.com" target="_top">Entre em contato</a></p>
-      </div>
     </div>
   );
 }
