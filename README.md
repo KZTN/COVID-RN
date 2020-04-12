@@ -22,37 +22,57 @@
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
 </p>
 <p align="center">
-  <img alt="BeTheHero" src=".github/COVID-RN_showcase.png" width="100%">
+  <img alt="COVID-RN" src=".github/COVID-RN_showcase.png" width="100%">
 </p>
+
+## 💻 Projeto
+
+O COVID-RN é um projeto que visa rastrear os casos de coronavirus em todo o território do Rio Grande do Norte de maneira intuitiva. 
+
+## 🔖 Layout
+
+Com base no design dos boletins epidemiológicos lançados pela SESAP-RN, o projeto seguiu o mesmo modelo como base da estrutura dos dados. Ganhando posteiormente responsividade para diferentes telas, garantindo acesisiblidade a diferentes tipos de usuários com seus respectivos dispositivos desktop 💻 e mobile 📱.
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+O que você precisa para instalar o software
 
 ```
-Give examples
+node v12.x
+yarn 1.22.4
+npm 6.14.4
+git
 ```
 
-### Installing
+### Instalando o projeto 🚀
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+Clonando o projeto:
 
 ```
-Give the example
+git clone https://github.com/KZTN/COVID-RN.git
 ```
 
-And repeat
+Navegando até a pasta do projeto:
 
 ```
-until finished
+cd COVID-RN
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+Baixando as dependências do projeto
+
+```bash
+yarn install
+```
+
+Rodando o projeto
+
+```bash
+yarn start
+```
 
 ## Running the tests
 
