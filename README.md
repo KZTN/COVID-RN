@@ -44,10 +44,10 @@ Acesse o [outro lado do projeto](https://github.com/KZTN/COVID-RN_SERVER) para m
 
 Com base no design dos boletins epidemiológicos lançados pela SESAP-RN, o projeto seguiu o mesmo modelo como base da estrutura dos dados. Ganhando posteiormente responsividade para diferentes telas, garantindo acesisiblidade a diferentes tipos de usuários com seus respectivos dispositivos desktop 💻 e mobile 📱.
 
-## Começando...
+### Começando...
 Essas instruções fornecerão uma cópia do projeto em execução na sua máquina local para fins de desenvolvimento e teste.
 
-### Pré-requisitos
+## Pré-requisitos
 
 O que você precisa para instalar o software
 
@@ -58,7 +58,7 @@ npm 6.14.4
 git
 ```
 
-### Instalando o projeto 🚀
+## Instalando o projeto 🚀
 
 Clonando o projeto:
 
@@ -84,8 +84,7 @@ Rodando o projeto
 yarn start
 ```
 
-## Como contribuir
-
+### Como contribuir
 - Faça um fork desse repositório;
 - Cria uma branch com a sua feature: `git checkout -b minha-feature`;
 - Faça commit das suas alterações: `git commit -m 'feat: Minha nova feature'`;
@@ -94,7 +93,6 @@ yarn start
 Depois que o merge da sua pull request for feito, você pode deletar a sua branch.
 
 ### TODO list
-
 - [x] Criar uma base de dados API REST
 - [x] Criar uma aplicação web para o projeto
 - [x] Integração frontend com backend
@@ -108,12 +106,11 @@ Depois que o merge da sua pull request for feito, você pode deletar a sua branc
 - [ ] Criar um conversor de PDFs para csv/json
 - [ ] and more...
 
-## :memo: Licença
-
+### :memo: Licença
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
 
 
-## Autor
+### Autor
 <table a>
   <tr lign="center">
     <td align="center"><a href="https://github.com/KZTN"><img src="https://avatars0.githubusercontent.com/u/6463299?s=460&u=4461e9ccc7bb327fc8183a09c3da015c832924d6&v=4" width="100px;" alt=""/><br /><sub><b>Kaio César</b></sub></a><br /><a href="https://github.com/kztn/COVID-RN/commits?author=kztn" title="Code">💻</a> <a href="#kztn" title="Design">🎨</a></td>
