@@ -52,7 +52,9 @@ function App() {
         <Routes/>
         </main>
       </div>
-      <div className="map" style={{minWidth: '100%', height: '450px', marginTop: '50px'}}>
+      <div className="box-map">
+      </div>
+      <div className="map" style={{minWidth: '100%', height: '450px'}}>
       <MapWrapped
         googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${
           process.env.REACT_APP_GOOGLE_KEY
