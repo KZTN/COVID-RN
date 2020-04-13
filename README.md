@@ -22,90 +22,99 @@
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
 </p>
 <p align="center">
-  <img alt="BeTheHero" src=".github/COVID-RN_showcase.png" width="100%">
+  <img alt="COVID-RN" src=".github/COVID-RN_showcase.png" width="100%">
 </p>
-## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+## 💻 Projeto
 
-### Prerequisites
+O COVID-RN é um projeto que visa rastrear os casos de coronavirus em todo o território do Rio Grande do Norte, informando dados únicos tanto para o estado quando para cada cidade.
 
-What things you need to install the software and how to install them
+## 🤔 Motivo/features
 
-```
-Give examples
-```
+Pela falta do estado não possuir uma API sobre a incidência de casos de coronavirus e pouca dinâmica na veiculação dos boletins. O projeto tem o âmbito de oferecer:
+<ul>
+   <li>Uma base de dados do tipo API REST de livre acesso para pesquisa e consulta</li>
+    <li>Uma interface que disponibiliza os dados gerados para o cliente</li>
+    <li>Gráficos e mapas com foco nos casos no RN</li>
+</ul>
 
-### Installing
+Acesse o [outro lado do projeto](https://github.com/KZTN/COVID-RN_SERVER) para mais informações a respeito da base de dados API
 
-A step by step series of examples that tell you how to get a development env running
+## 🔖 Layout
 
-Say what the step will be
+Com base no design dos boletins epidemiológicos lançados pela SESAP-RN, o projeto seguiu o mesmo modelo como base da estrutura dos dados. Ganhando posteiormente responsividade para diferentes telas, garantindo acesisiblidade a diferentes tipos de usuários com seus respectivos dispositivos desktop 💻 e mobile 📱.
 
-```
-Give the example
-```
+### Começando...
+Essas instruções fornecerão uma cópia do projeto em execução na sua máquina local para fins de desenvolvimento e teste.
 
-And repeat
+## Pré-requisitos
 
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+O que você precisa para instalar o software
 
 ```
-Give an example
+node v12.x
+yarn 1.22.4
+npm 6.14.4
+git
 ```
 
-### And coding style tests
+## Instalando o projeto 🚀
 
-Explain what these tests test and why
+Clonando o projeto:
 
 ```
-Give an example
+git clone https://github.com/KZTN/COVID-RN.git
 ```
 
-## Deployment
+Navegando até a pasta do projeto:
 
-Add additional notes about how to deploy this on a live system
+```
+cd COVID-RN
+```
 
-## Built With
+Baixando as dependências do projeto
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+```bash
+yarn install
+```
 
-## Contributing
+Rodando o projeto
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+```bash
+yarn start
+```
 
-## Versioning
+### Como contribuir
+- Faça um fork desse repositório;
+- Cria uma branch com a sua feature: `git checkout -b minha-feature`;
+- Faça commit das suas alterações: `git commit -m 'feat: Minha nova feature'`;
+- Faça push para a sua branch: `git push origin minha-feature`.
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+Depois que o merge da sua pull request for feito, você pode deletar a sua branch.
+
+### TODO list
+- [x] Criar uma base de dados API REST
+- [x] Criar uma aplicação web para o projeto
+- [x] Integração frontend com backend
+- [x] Criar interface responsiva
+- [x] Elaborar gráficos com base de dados
+- [x] Elaborar mapas com base de dados
+- [x] Deploy da aplicação
+- [ ] Gerar estatísticas de acesso, consultas, erros e depuração
+- [ ] Gerar relatórios automáticos de status do serviço
+- [ ] Criar um extrator de PDFs
+- [ ] Criar um conversor de PDFs para csv/json
+- [ ] and more...
+
+### :memo: Licença
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
 
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
-## Autor
-
-<table>
-  <tr>
+### Autor
+<table a>
+  <tr lign="center">
     <td align="center"><a href="https://github.com/KZTN"><img src="https://avatars0.githubusercontent.com/u/6463299?s=460&u=4461e9ccc7bb327fc8183a09c3da015c832924d6&v=4" width="100px;" alt=""/><br /><sub><b>Kaio César</b></sub></a><br /><a href="https://github.com/kztn/COVID-RN/commits?author=kztn" title="Code">💻</a> <a href="#kztn" title="Design">🎨</a></td>
   <tr>
 </table>
+
+<p align="center">Feito com ♥ by KZTN</p>
