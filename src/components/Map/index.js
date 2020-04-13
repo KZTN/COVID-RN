@@ -68,7 +68,7 @@ export default function Map() {
                     <Marker
                     icon={{
                       url: require('./circle.png'),
-                      scaledSize: new window.google.maps.Size(15 + ((city.cases[0]+(city.deaths[0] *2)) / 3), 15 + ((city.cases[0]+(city.deaths[0] *2)) / 3))
+                      scaledSize: new window.google.maps.Size(15 + ((city.cases[0]+(city.deaths[0] *10)) / 3), 15 + ((city.cases[0]+(city.deaths[0] *10)) / 3))
                     }}
                         key={city._id} 
                         position={{
