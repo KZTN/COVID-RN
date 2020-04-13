@@ -102,7 +102,16 @@ export default function Dashboard() {
     </header>
     <span>Óbitos</span>
     </li>
+    <li className="box-item" style={{background: "#1db954", color: "#fff"}}>
+    <header>
+        <strong style={{color: "#f0f0f0"}}>-</strong>
+    </header>
+    <span>Recuperados*</span>
+    </li>
  </ul>
+ <div className="box-star" style={{fontSize: 10, color: "#bbb", marginTop: 2}}>
+  <p>(*) dado ainda não disponibilizado pela SESAP-RN</p>
+ </div>
  <div className="box-chart">
  <Chart cases={chartcases} deaths={chartdeaths} dates={chartdates} style={{height: "100%"}}/>
  </div>

@@ -1,7 +1,7 @@
 
 ul {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 20px;
     list-style: none;
     margin-top: 50px;
