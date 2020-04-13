@@ -109,7 +109,7 @@ export default function Dashboard() {
     <span>Recuperados*</span>
     </li>
  </ul>
- <div className="box-star" style={{fontSize: 10, color: "#bbb", marginTop: 2}}>
+ <div className="box-star" style={{fontSize: 10, color: "#bbb", marginTop: 4}}>
   <p>(*) dado ainda não disponibilizado pela SESAP-RN</p>
  </div>
  <div className="box-chart">
