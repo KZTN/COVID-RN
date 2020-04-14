@@ -111,6 +111,13 @@ Depois que o merge da sua pull request for feito, você pode deletar a sua branc
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
 
+## Ajude o projeto 🤝
+
+<a href="https://opencollective.com/covid-rn/donate" target="_blank">
+  <img src="https://opencollective.com/covid-rn/donate/button@2x.png?color=blue" width=300 />
+</a>
+
+
 
 ## Autores
 
