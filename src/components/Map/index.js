@@ -11,8 +11,6 @@ export default function Map() {
     const [cities, setCities] = useState([]);
     const [selectedcity, setSelectedcity] = useState();
 
-
-
     useEffect(() => {
         async function getData() {
             const response = await mongodb.get('/maps');

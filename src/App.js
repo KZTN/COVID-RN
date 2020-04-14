@@ -3,7 +3,7 @@ import Routes from './routes';
 import emblem from './assets/RN_emblem.png';
 import MapContainer from './components/Map';
 import {FaFacebook, FaGithub, FaTwitter, FaWhatsapp} from 'react-icons/fa';
-
+import News from './components/News';
 import {withScriptjs, withGoogleMap} from 'react-google-maps'
 import './App.css';
 import 'dotenv';
@@ -52,6 +52,7 @@ function App() {
         <Routes/>
         </main>
       </div>
+      <News/>
       <div className="box-map">
       </div>
       <div className="map" style={{minWidth: '100%', height: '450px'}}>
