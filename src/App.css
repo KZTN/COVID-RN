@@ -15,6 +15,15 @@ html {
   background: #dae5e8;
   -webkit-front-smoothing: antialiased !important;
 }
+body::-webkit-scrollbar {
+  width: 8px;
+  height: 10px;
+
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: #666;
+}
 
 body, input, button {
   font-family: 'Roboto' ,Arial, Helvetica, sans-serif;

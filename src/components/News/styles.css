@@ -81,6 +81,12 @@
     width: 66%;
 }
 
+.box-news ul.list-news .list-box-name button{
+    color: #666;
+    border: 0;
+    background: transparent;
+}
+
 @media (max-width: 650px) {
     .box-news ul.list-news {
         box-shadow: none;
@@ -89,3 +95,12 @@
         width: 100%;
     }
 }
+.box-news ul.list-news::-webkit-scrollbar {
+    width: 8px;
+    height: 10px;
+
+  }
+  .box-news ul.list-news::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background: #c2c9d2;
+  }
