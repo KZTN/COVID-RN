@@ -1,6 +1,6 @@
 .box-news {
     margin-bottom: 50px;
-    width: 100%;
+    width: 50%;
     color: #666;
 }
 .box-news ul.list-news {
@@ -80,5 +80,8 @@
 @media (max-width: 650px) {
     .box-news ul.list-news {
         box-shadow: none;
+    }
+    .box-news {
+        width: 100%;
     }
 }
