@@ -12,6 +12,7 @@
     "moment": "^2.24.0",
     "react": "^16.13.1",
     "react-chartjs-2": "^2.9.0",
+    "react-device-detect": "^1.11.14",
     "react-dom": "^16.13.1",
     "react-google-maps": "^9.4.5",
     "react-icons": "^3.9.0",

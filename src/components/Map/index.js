@@ -3,6 +3,7 @@ import {GoogleMap, Marker, InfoWindow, Polygon} from 'react-google-maps'
 import mongodb from '../../services/mongodb';
 import styles from './GoogleMapStyles.json';
 import coordinates from './polygons.json';
+import {isMobile} from 'react-device-detect';
 import './styles.css'
 let Arrcoordinates = (coordinates[0].geojson.coordinates[0][0]);
 let cordArr = [];
@@ -10,7 +11,6 @@ Arrcoordinates.map(coordinate => cordArr.push({lat:coordinate[1], lng:coordinate
 export default function Map() {
     const [cities, setCities] = useState([]);
     const [selectedcity, setSelectedcity] = useState();
-
     useEffect(() => {
         async function getData() {
             const response = await mongodb.get('/maps');
@@ -47,8 +47,8 @@ export default function Map() {
     return(
         <GoogleMap 
         streetViewControl={false}
-        defaultZoom={8} 
-        defaultCenter={{lat:-5.699659599999999, lng:-36.2444833}}
+        defaultZoom={isMobile? 7 : 8} 
+        defaultCenter={{lat:-5.799659599999999, lng:-36.6444833}}
         defaultOptions={{ styles: styles, mapTypeControl: false, streetViewControl: false }}
         >
       <Polygon
