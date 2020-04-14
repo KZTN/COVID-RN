@@ -68,7 +68,7 @@ a {
 .container form {
   display: flex;
   flex-direction: row;
-  margin: 50px 30px 0 30px;
+  margin: 50px 150px 0 150px;
 }
 .container form input {
     background: transparent;
@@ -204,5 +204,8 @@ aside form .input-block input {
   }
   .box-map {
     display: none;
+  }
+  .container form {
+    margin: 50px 0 0 0;
   }
 }
