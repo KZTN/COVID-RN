@@ -82,6 +82,8 @@ Rodando o projeto
 ```bash
 yarn start
 ```
+Visite http://localhost:3000 com o seu navegador para ver o resultado.
+
 ## Base url 🔌
 
 Todas chamadas devem usar a url base:
