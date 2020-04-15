@@ -43,6 +43,10 @@ Pela falta do estado não possuir uma API sobre a incidência de casos de corona
 
 Com base no design dos boletins epidemiológicos lançados pela SESAP-RN, o projeto seguiu o mesmo modelo como base da estrutura dos dados. Ganhando posteiormente responsividade para diferentes telas, garantindo acesisiblidade a diferentes tipos de usuários com seus respectivos dispositivos desktop 💻 e mobile 📱.
 
+## Datasource 💽
+
+- [Secretaria de Saúde Pública do Rio Grande do Norte](http://www.saude.rn.gov.br/)
+
 ## Começando...
 Essas instruções fornecerão uma cópia do projeto em execução na sua máquina local para fins de desenvolvimento e teste.
 
