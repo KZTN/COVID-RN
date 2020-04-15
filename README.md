@@ -39,8 +39,6 @@ Pela falta do estado não possuir uma API sobre a incidência de casos de corona
     <li>Gráficos e mapas com foco nos casos no RN</li>
 </ul>
 
-Acesse o [outro lado do projeto](https://github.com/KZTN/COVID-RN_SERVER) para mais informações a respeito da base de dados API
-
 ## 🔖 Layout
 
 Com base no design dos boletins epidemiológicos lançados pela SESAP-RN, o projeto seguiu o mesmo modelo como base da estrutura dos dados. Ganhando posteiormente responsividade para diferentes telas, garantindo acesisiblidade a diferentes tipos de usuários com seus respectivos dispositivos desktop 💻 e mobile 📱.
