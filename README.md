@@ -47,6 +47,14 @@ Com base no design dos boletins epidemiológicos lançados pela SESAP-RN, o proj
 
 - [Secretaria de Saúde Pública do Rio Grande do Norte](http://www.saude.rn.gov.br/)
 
+## Base url 🔌
+
+Todas chamadas devem usar a url base:
+```
+https://covid-rn-server.herokuapp.com
+```
+> utilize a [documentação](https://insomnia-documenter-covidrn-fxui0l7t0.now.sh/) para mais informações de como utilizar a API corretamente
+
 ## Começando...
 Essas instruções fornecerão uma cópia do projeto em execução na sua máquina local para fins de desenvolvimento e teste.
 
@@ -96,12 +104,9 @@ yarn start
 
 Visite http://localhost:3000 com o seu navegador para ver o resultado. 🎉
 
-## Base url 🔌
+## Documentação 📄
 
-Todas chamadas devem usar a url base:
-```
-https://covid-rn-server.herokuapp.com
-```
+[site](https://insomnia-documenter-covidrn-fxui0l7t0.now.sh/)
 
 ## Como contribuir
 
