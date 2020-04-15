@@ -4,6 +4,7 @@ import emblem from './assets/RN_emblem.png';
 import MapContainer from './components/Map';
 import {FaFacebook, FaGithub, FaTwitter, FaWhatsapp} from 'react-icons/fa';
 import News from './components/News';
+import ModalAlert from './components/ModalAlert';
 import {withScriptjs, withGoogleMap} from 'react-google-maps'
 import './App.css';
 import 'dotenv';
@@ -42,6 +43,9 @@ function App() {
   const MapWrapped = withScriptjs(withGoogleMap(MapContainer));
   return (
     <div className="container">
+      <div className="msg">
+        <ModalAlert/>
+      </div>
       <header>
         <div className="title-box">
           <h1><strong><a href="/"> COVID-19 RN</a></strong></h1>
@@ -85,6 +89,7 @@ function App() {
           <div className="hashtag-item"><span>#RNCONTRACOVID-19</span></div>
         </div>
       </footer>
+
     </div>
   );
 }
