@@ -82,6 +82,12 @@ Rodando o projeto
 ```bash
 yarn start
 ```
+## Base url 🔌
+
+Todas chamadas devem usar a url base:
+```
+https://covid-rn-server.herokuapp.com
+```
 
 ## Como contribuir
 
