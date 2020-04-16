@@ -106,7 +106,6 @@ a {
   grid-template-columns: 1fr 1fr;
   gap: 30px;
   margin-bottom: 30px;
-
 }
 
 .container footer {
@@ -228,5 +227,6 @@ aside form .input-block input {
   }
   .container .box-scrollboxes {
     grid-template-columns: 1fr;
+    padding: 0 20px;
   }
 }
