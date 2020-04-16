@@ -53,7 +53,7 @@ Todas chamadas devem usar a url base:
 ```
 https://covid-rn-server.herokuapp.com
 ```
-> utilize a [documentação](https://insomnia-documenter-covidrn-fxui0l7t0.now.sh/) para mais informações de como utilizar a API corretamente
+> utilize a [documentação](https://insomnia-documenter-covidrn-6fgddqztj.now.sh/) para mais informações de como utilizar a API corretamente
 
 ## Começando...
 Essas instruções fornecerão uma cópia do projeto em execução na sua máquina local para fins de desenvolvimento e teste.
@@ -106,7 +106,7 @@ Visite http://localhost:3000 com o seu navegador para ver o resultado. 🎉
 
 ## Documentação 📄
 
-[site](https://insomnia-documenter-covidrn-fxui0l7t0.now.sh/)
+[site](https://insomnia-documenter-covidrn-6fgddqztj.now.sh/)
 
 ## Como contribuir
 
