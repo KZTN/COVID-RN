@@ -43,6 +43,18 @@ Pela falta do estado não possuir uma API sobre a incidência de casos de corona
 
 Com base no design dos boletins epidemiológicos lançados pela SESAP-RN, o projeto seguiu o mesmo modelo como base da estrutura dos dados. Ganhando posteiormente responsividade para diferentes telas, garantindo acesisiblidade a diferentes tipos de usuários com seus respectivos dispositivos desktop 💻 e mobile 📱.
 
+## Datasource 💽
+
+- [Secretaria de Saúde Pública do Rio Grande do Norte](http://www.saude.rn.gov.br/)
+
+## Base url 🔌
+
+Todas chamadas devem usar a url base:
+```
+https://covid-rn-server.herokuapp.com
+```
+> utilize a [documentação](https://insomnia-documenter-covidrn-6fgddqztj.now.sh/) para mais informações de como utilizar a API corretamente
+
 ## Começando...
 Essas instruções fornecerão uma cópia do projeto em execução na sua máquina local para fins de desenvolvimento e teste.
 
@@ -92,12 +104,9 @@ yarn start
 
 Visite http://localhost:3000 com o seu navegador para ver o resultado. 🎉
 
-## Base url 🔌
+## Documentação 📄
 
-Todas chamadas devem usar a url base:
-```
-https://covid-rn-server.herokuapp.com
-```
+[site](https://insomnia-documenter-covidrn-6fgddqztj.now.sh/)
 
 ## Como contribuir
 
