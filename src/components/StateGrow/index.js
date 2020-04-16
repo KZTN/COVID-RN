@@ -65,6 +65,7 @@ export default function StateGrow() {
                     <div className="list-box-name"><span>Data</span></div>
                     <div className="list-box"></div>
                     <div className="list-box"></div>
+                    <div className="list-box"></div>
                     <div className="list-box"><span>Casos</span></div>
                     <div className="list-box"><span>Mortes</span></div>
                 </div>
