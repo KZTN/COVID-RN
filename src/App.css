@@ -100,6 +100,15 @@ a {
   color: #0b402f;
 }
 
+.container .box-scrollboxes {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 50px;
+
+}
+
 .container footer {
   margin-top: 150px;
   display: flex;
@@ -216,5 +225,8 @@ aside form .input-block input {
   }
   .container form {
     margin: 50px 0 0 0;
+  }
+  .container .box-scrollboxes {
+    grid-template-columns: 1fr;
   }
 }

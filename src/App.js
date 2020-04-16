@@ -4,6 +4,7 @@ import emblem from './assets/RN_emblem.png';
 import MapContainer from './components/Map';
 import {FaFacebook, FaGithub, FaTwitter, FaWhatsapp} from 'react-icons/fa';
 import News from './components/News';
+import StateGrow from './components/StateGrow';
 import ModalAlert from './components/ModalAlert';
 import {withScriptjs, withGoogleMap} from 'react-google-maps'
 import './App.css';
@@ -56,7 +57,10 @@ function App() {
         <Routes/>
         </main>
       </div>
-      <News/>
+      <div className="box-scrollboxes">
+        <News/>
+        <StateGrow/>
+      </div>
       <div className="box-map">
       </div>
       <div className="map" style={{minWidth: '100%', height: '450px'}}>

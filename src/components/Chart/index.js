@@ -17,7 +17,7 @@ export default function Chart({cases, deaths, dates}) {
     labels: arr,
     datasets: [
       {
-        label: 'Números de casos confirmados',
+        label: 'Número de casos confirmados',
         fill: false,
         lineTension: 0.1,
         backgroundColor: 'rgba(75,192,192,0.4)',
@@ -38,7 +38,7 @@ export default function Chart({cases, deaths, dates}) {
         data: cases
       },
       {
-        label: 'Números de óbitos',
+        label: 'Número de óbitos',
         fill: false,
         lineTension: 0.1,
         backgroundColor: 'rgba(226, 106, 106, 1)',
