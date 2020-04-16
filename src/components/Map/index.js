@@ -11,7 +11,6 @@ Arrcoordinates.map(coordinate => cordArr.push({lat:coordinate[1], lng:coordinate
 export default function Map() {
     const [cities, setCities] = useState([]);
     const [selectedcity, setSelectedcity] = useState();
-
     useEffect(() => {
         async function getData() {
             const response = await mongodb.get('/maps');
@@ -20,7 +19,6 @@ export default function Map() {
         getData();
         
     }, []);
-
     useEffect(() => {
         const listener = e => {
           if (e.key === "Escape") {
@@ -34,19 +32,18 @@ export default function Map() {
         };
       }, []);
 
-      useEffect(() => {
-        const listener = e => {
-          if (e.onMouseOver === "true") {
-            setSelectedcity(null);
-          }
-        };
-        window.addEventListener("keydown", listener);
-    
-        return () => {
-          window.removeEventListener("keydown", listener);
-        };
-      }, []);
+  useEffect(() => {
+    const listener = e => {
+      if (e.key === "Escape") {
+        setSelectedcity(null);
+      }
+    };
+    window.addEventListener("keydown", listener);
 
+    return () => {
+      window.removeEventListener("keydown", listener);
+    };
+  }, []);
     return(
         <GoogleMap 
         streetViewControl={false}
@@ -78,9 +75,11 @@ export default function Map() {
                         }}
                         onMouseOver={() => {
                             setSelectedcity(city);
+
                         }}
                         onClick={() => {
                           setSelectedcity(city);
+
                       }}
                     />
                 ))
@@ -88,6 +87,13 @@ export default function Map() {
             }
             {selectedcity && (
                 <InfoWindow 
+                
+                onMouseOut={() => {
+                  setSelectedcity(null);
+              }}
+                onCloseClick={() => {
+                    setSelectedcity(null);
+                }}
                     position={{
                         lat: selectedcity.location.coordinates[0], 
                         lng: selectedcity.location.coordinates[1]
