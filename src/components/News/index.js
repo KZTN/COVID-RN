@@ -8,7 +8,6 @@ export default function News() {
     async function handleClick(e) {
        const response = await mongodb.post('/cidade', {name: e.target.value});
        setSelectedcity(response.data);
-       console.log(selectedcity);
     }
 
     useEffect(() => {

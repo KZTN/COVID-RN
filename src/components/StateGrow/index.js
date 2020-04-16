@@ -8,7 +8,7 @@ export default function StateGrow() {
     const [statedeaths, setStatedeaths] = useState([]);
     let arrCases = [];
     let arrDates = [];
-    let arrDeaths = []
+    let arrDeaths = []; 
     useEffect(() => {
         async function getData() {
             const response = await mongodb.post('/stateshow', {name: "Rio Grande do Norte"});
@@ -53,7 +53,6 @@ export default function StateGrow() {
         comparateCases();
         comparateDeaths();
         getDates();
-        console.log(arrDeaths);
 
     return (
         <div className="box-stategrow">

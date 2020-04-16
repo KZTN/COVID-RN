@@ -11,7 +11,6 @@ export default function MOdalAlert() {
         }
         getData();
     }, []);
-    console.log(msg);
 
     const handleClose = () => setShow(false);
   
