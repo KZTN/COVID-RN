@@ -66,7 +66,7 @@ export default function Map() {
                     <Marker
                     icon={{
                       url: require('./circle.png'),
-                      scaledSize: new window.google.maps.Size(15 + ((city.cases[0]+(city.deaths[0] *10)) / 3), 15 + ((city.cases[0]+(city.deaths[0] *10)) / 3))
+                      scaledSize: new window.google.maps.Size(15 + ((city.cases[0]+(city.deaths[0])) / 3), 15 + ((city.cases[0]+(city.deaths[0])) / 3))
                     }}
                         key={city._id} 
                         position={{
@@ -93,6 +93,7 @@ export default function Map() {
               }}
                 onCloseClick={() => {
                     setSelectedcity(null);
+                    console.log('out!');
                 }}
                     position={{
                         lat: selectedcity.location.coordinates[0], 
