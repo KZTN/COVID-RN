@@ -45,7 +45,7 @@ export default function StateGrow() {
         function getDates() {
             statedates.map(eDates => {
                 arrDates.push(eDates);
-            })
+            });
             arrDates.reverse();
         }
 
