@@ -32,18 +32,6 @@ export default function Map() {
         };
       }, []);
 
-  useEffect(() => {
-    const listener = e => {
-      if (e.key === "Escape") {
-        setSelectedcity(null);
-      }
-    };
-    window.addEventListener("keydown", listener);
-
-    return () => {
-      window.removeEventListener("keydown", listener);
-    };
-  }, []);
     return(
         <GoogleMap 
         streetViewControl={false}
