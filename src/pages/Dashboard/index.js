@@ -6,6 +6,8 @@ import DateTime from '../../utils/datetime';
 import SpinnerPage from '../../utils/SpinnerPage'
 import {capitalize} from '../../utils/capitalize'
 import Chart from '../../components/Chart';
+import {isMobile} from 'react-device-detect';
+
 export default function Dashboard() {
   const [loading, setLoading] = useState(true);
   const [boxname, setBoxname] = useState('Rio Grande do Norte');
@@ -22,7 +24,7 @@ export default function Dashboard() {
   const [surname, setSurname] = useState('o');
   const [name, setName] = useState('');
 
-  
+
   useEffect(() => {
     async function handleAPI() {
       const response = await mongodb.post("/stateshow", {name: "Rio Grande do Norte"});
@@ -68,13 +70,23 @@ export default function Dashboard() {
     window.blur();
     setName('');
   }
-
-  return (
+  function has_any_spaces(str) {
+    const expression = /^\S+$/g;
+    if (expression.test(str) || str === '') {
+      return false;
+    }
+    return true;
+  }
+  function breakline(ste)   {
+    var output = [ste.slice(0, 10), '\r\n', ste.slice(10)].join('');
+    return output;
+  }
+return (
 <>
 <div className="box-situation">
   <p>Situação d{surname}</p>
   <div className="box-rn">
-    <h1><strong><mark>{boxname}</mark></strong></h1>
+    <h1><strong><mark>{!isMobile? boxname: has_any_spaces(boxname)? boxname: boxname.length> 10? breakline(boxname): boxname}</mark></strong></h1>
   </div>
 </div>
 <div className="box-datetime">
