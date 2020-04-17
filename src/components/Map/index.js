@@ -92,7 +92,7 @@ export default function Map() {
                             <h3>{selectedcity.name}</h3>
                             <span>Casos: {selectedcity.cases[0]}</span>
                             <span>Mortes: {selectedcity.deaths[0]}</span>
-                            <span>Recuperados: {selectedcity.deaths[0]? selectedcity.deaths[0] : '-' } </span>
+                            <span>Recuperados: {selectedcity.recovered[0]? selectedcity.recovered[0] : '-' } </span>
                         </div>
                 </InfoWindow>
             )}
