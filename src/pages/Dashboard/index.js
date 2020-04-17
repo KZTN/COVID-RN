@@ -124,7 +124,7 @@ export default function Dashboard() {
   <p>(*) Algumas secretarias estão demorando ou não divulgando este dado</p>
  </div>
  <div className="box-chart">
-  <Chart cases={chartcases} deaths={chartdeaths} dates={chartdates} recovered={chartrecovered} style={{height: "100%"}}/>
+  <Chart cases={chartcases} deaths={chartdeaths} dates={chartdates} recovered={chartrecovered}/>
  </div>
  </>
   );

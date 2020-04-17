@@ -7,7 +7,7 @@ export default function Chart({cases, deaths, dates, recovered}) {
   let arr = [];
     async function formatDate() {
       dates.map((date) => {
-        arr.push(moment(date).utcOffset("-03:00").format("DD/MMMM", 'pt-BR'));
+        arr.push(moment(date).utcOffset("-03:00").format("DD/MMM", 'pt-BR'));
       })
     }
       formatDate();
@@ -17,7 +17,7 @@ export default function Chart({cases, deaths, dates, recovered}) {
     labels: arr,
     datasets: [
       {
-        label: 'Número de casos confirmados',
+        label: 'Casos',
         fill: false,
         lineTension: 0.1,
         backgroundColor: 'rgba(75,192,192,0.4)',
@@ -38,7 +38,7 @@ export default function Chart({cases, deaths, dates, recovered}) {
         data: cases
       },
       {
-        label: 'Número de recuperados',
+        label: 'Recuperados',
         fill: false,
         lineTension: 0.1,
         backgroundColor: 'rgb(29,185,84)',
@@ -59,7 +59,7 @@ export default function Chart({cases, deaths, dates, recovered}) {
         data: recovered
       },
       {
-        label: 'Número de óbitos',
+        label: 'Óbitos',
         fill: false,
         lineTension: 0.1,
         backgroundColor: 'rgba(226, 106, 106, 1)',
@@ -82,7 +82,7 @@ export default function Chart({cases, deaths, dates, recovered}) {
     ]
   };
     return (
-        <Line useRef="chart" data={data} options={{responsive : true, maintainAspectRatio : false }}/>
+        <Line useRef="chart" data={data} options={{responsive : true, maintainAspectRatio : false}}/>
     );
 
 }
