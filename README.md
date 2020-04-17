@@ -67,6 +67,7 @@ yarn 1.22.4
 npm 6.14.4
 git
 ```
+> Para uma experiência melhor no ambiente de testes com o servidor API REST, recomenda-se o uso do [insomnia](https://insomnia.rest/).
 
 ### Instalando o projeto 🚀
 Clonando o projeto:
