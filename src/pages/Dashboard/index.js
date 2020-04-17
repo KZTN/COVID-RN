@@ -81,7 +81,7 @@ export default function Dashboard() {
  <span><DateTime/></span>
 </div> 
 <form className="box-form" onSubmit={handleSubmit}>
-  <FaSearch classname="icon-search"size={28} color="#353244" style={{margin: "auto 0 auto 10px"}}/>
+  <FaSearch classname="icon-search"size={28} color="#444" style={{margin: "auto 0 auto 10px"}}/>
   <input type="text" value={name} onChange={e => setName(e.target.value)} placeholder="Busque por sua cidade"/>
   <button type="submit">Buscar</button>
 </form>
