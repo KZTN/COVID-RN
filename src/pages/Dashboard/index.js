@@ -72,16 +72,18 @@ export default function Dashboard() {
   return (
 <>
 <div className="box-situation">
-        <p>Situação d{surname}</p>
-          <div className="box-rn">
-            <h1><strong><mark>{boxname}</mark></strong></h1>
-          </div>
-      </div>
-      <div className="box-datetime">
-        <span><DateTime/></span>
-      </div> 
-<form onSubmit={handleSubmit}>
+  <p>Situação d{surname}</p>
+  <div className="box-rn">
+    <h1><strong><mark>{boxname}</mark></strong></h1>
+  </div>
+</div>
+<div className="box-datetime">
+ <span><DateTime/></span>
+</div> 
+<form className="box-form" onSubmit={handleSubmit}>
+  <FaSearch classname="icon-search"size={32} color="#353244" style={{margin: "auto 0 auto 10px"}}/>
   <input type="text" value={name} onChange={e => setName(e.target.value)} placeholder="Busque por sua cidade"/>
+  <button type="submit">Buscar</button>
 </form>
 <div className="box-loading">
 {loading ? <SpinnerPage/> : null}
@@ -122,7 +124,7 @@ export default function Dashboard() {
   <p>(*) Algumas secretarias estão demorando ou não divulgando este dado</p>
  </div>
  <div className="box-chart">
- <Chart cases={chartcases} deaths={chartdeaths} dates={chartdates} recovered={chartrecovered} style={{height: "100%"}}/>
+  <Chart cases={chartcases} deaths={chartdeaths} dates={chartdates} recovered={chartrecovered} style={{height: "100%"}}/>
  </div>
  </>
   );

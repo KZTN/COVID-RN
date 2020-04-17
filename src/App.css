@@ -56,10 +56,10 @@ a {
 }
 .container .box-situation {
   margin-top: 50px;
-}
-.container .box-situation {
   text-align: center;
+
 }
+
 .container .box-situation .box-rn {
   text-align: center;
   margin-top: 10px;
@@ -74,27 +74,9 @@ a {
   text-align: center;
   margin-top: 10px;
 }
-.container form {
-  display: flex;
-  flex-direction: row;
-  margin: 50px 150px 0 150px;
-}
-.container form input {
-    width: 100%;
-    height: 42;
-    font-size: 22px;
-    background-color:rgba(255, 255, 255, 0.6);
-    border: 0;
-    border-radius:40px;
-    padding:16px 16px 16px 48px;
-    color: #666;
-}
 
-.container form button[type="submit"] {
-  background: transparent;
-  border: 0;
-  cursor: pointer;
-}
+
+
 .container .box-situation .box-rn mark {
   line-height: 1px;
   font-size: 48px;
@@ -131,14 +113,7 @@ a {
 
 .container footer .slogan-rn span {
 }
-aside form .input-block input {
-  width: 100%;
-  height: 32px;
-  font-size: 14px;
-  color: #666;
-  border: 0;
-  border-bottom: 1px solid #eee;
-}
+
 .container footer .emblema-rn {
   display: inline-block;
   width: 33%;
@@ -224,9 +199,7 @@ aside form .input-block input {
   .box-map {
     display: none;
   }
-  .container form {
-    margin: 50px 0 0 0;
-  }
+
   .container .box-scrollboxes {
     grid-template-columns: 1fr;
     padding: 0 18px;
