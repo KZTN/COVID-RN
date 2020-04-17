@@ -123,9 +123,13 @@ export default function Dashboard() {
  <div className="box-star" style={{fontSize: 10, color: "#bbb", marginTop: 4}}>
   <p>(*) Algumas secretarias estão demorando ou não divulgando este dado</p>
  </div>
+
  <div className="box-chart">
+ <div className="box-header-boxchart">
+    <p>Gráfico d{surname} {boxname}</p>
+  </div>
   <Chart cases={chartcases} deaths={chartdeaths} dates={chartdates} recovered={chartrecovered}/>
- </div>
+</div>
  </>
   );
 }
