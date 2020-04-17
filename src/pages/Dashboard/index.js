@@ -72,7 +72,6 @@ export default function Dashboard() {
       </div> 
 <form onSubmit={handleSubmit}>
   <input type="text" value={name} onChange={e => setName(e.target.value)} placeholder="Busque por sua cidade"/>
-  <button type="submit" disabled={name === ''? true : false}><FaSearch size={24} color="#a277f6"/></button>
 </form>
 <div className="box-loading">
 {loading ? <SpinnerPage/> : null}
