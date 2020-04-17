@@ -115,7 +115,7 @@ export default function Dashboard() {
     </li>
     <li className="box-item" style={{background: "#1db954", color: "#fff"}}>
     <header>
-    <strong style={{color: "#f0f0f0"}}>{boxrecovered? boxrecovered : '-'}</strong>
+    <strong style={{color: "#fff"}}>{boxrecovered? boxrecovered : '-'}</strong>
     </header>
     <span>Recuperados*</span>
     </li>
