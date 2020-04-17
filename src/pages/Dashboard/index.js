@@ -13,9 +13,11 @@ export default function Dashboard() {
   const [boxrefuses, setBoxrefuses] = useState('-');
   const [boxcases, setBoxcases] = useState('-');
   const [boxdeaths, setBoxdeaths] = useState('-');
+  const [boxrecovered, setBoxrecovered] = useState('-');
   const [chartcases, setChartcases] = useState([]);
   const [chartdates, setChartDates] = useState([]);
   const [chartdeaths, setChartdeaths] = useState([]);
+  const [chartrecovered, setChartrecovered] = useState([]);
 
   const [surname, setSurname] = useState('o');
   const [name, setName] = useState('');
@@ -28,15 +30,18 @@ export default function Dashboard() {
       setBoxrefuses(response.data.refuses[0]);
       setBoxcases(response.data.cases[0]);
       setBoxdeaths(response.data.deaths[0]);
+      setBoxrecovered(response.data.recovered[0])
       setChartDates(response.data.date.reverse());
       setChartcases(response.data.cases.reverse());
       setChartdeaths(response.data.deaths.reverse());
+      setChartrecovered(response.data.recovered.reverse());
       setLoading(false);
     }
     handleAPI();
   }, []);
 
   async function handleSubmit(e) {
+    
     e.preventDefault();
     setLoading(true);
     try {
@@ -46,16 +51,21 @@ export default function Dashboard() {
       setBoxrefuses(response.data.refuses[0]);
       setBoxcases(response.data.cases[0]);
       setBoxdeaths(response.data.deaths[0]);
+      setBoxrecovered(response.data.recovered[0])
+
       setChartDates(response.data.date.reverse());
       setChartcases(response.data.cases.reverse());
       setChartdeaths(response.data.deaths.reverse());
+      setChartrecovered(response.data.recovered.reverse());
+
       setSurname('e');    
     } catch (error) {
         alert("Cidade não encontrada, digite novamente");
 
     }
     setLoading(false);
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
+    window.blur();
     setName('');
   }
 
@@ -103,16 +113,16 @@ export default function Dashboard() {
     </li>
     <li className="box-item" style={{background: "#1db954", color: "#fff"}}>
     <header>
-        <strong style={{color: "#f0f0f0"}}>-</strong>
+    <strong style={{color: "#f0f0f0"}}>{boxrecovered? boxrecovered : '-'}</strong>
     </header>
     <span>Recuperados*</span>
     </li>
  </ul>
  <div className="box-star" style={{fontSize: 10, color: "#bbb", marginTop: 4}}>
-  <p>(*) dado ainda não disponibilizado pela SESAP-RN</p>
+  <p>(*) Algumas secretarias estão demorando ou não divulgando este dado</p>
  </div>
  <div className="box-chart">
- <Chart cases={chartcases} deaths={chartdeaths} dates={chartdates} style={{height: "100%"}}/>
+ <Chart cases={chartcases} deaths={chartdeaths} dates={chartdates} recovered={chartrecovered} style={{height: "100%"}}/>
  </div>
  </>
   );
