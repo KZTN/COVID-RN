@@ -62,7 +62,7 @@ li.box-item strong {
   margin: auto 5px auto auto;
   padding: 0 16px;
   height: 85%;
-  background: #444;
+  background: #999;
   color: #fff;
   border: 0;
   border-radius: 30px;
@@ -71,21 +71,21 @@ li.box-item strong {
   font-size: 15px;
 }
 .container form.box-form button[type="submit"]:hover {
-  filter: brightness(130%);
+  filter: brightness(75%);
 }
 .container form.box-form input{
   height: 100%;
   width: 100%;
   margin-left: 4px;
   border: 0;
-  color: #444;
+  color: #999;
 
   background: transparent;
   font-size: 20px;
 }
 
 .container form.box-form input::placeholder{
-  color: #444;
+  color: #999;
   opacity: 0.6;
 }
 

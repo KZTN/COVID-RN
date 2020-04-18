@@ -93,7 +93,7 @@ return (
  <span><DateTime/></span>
 </div> 
 <form className="box-form" onSubmit={handleSubmit}>
-  <FaSearch classname="icon-search"size={28} color="#444" style={{margin: "auto 0 auto 10px"}}/>
+  <FaSearch classname="icon-search"size={28} color="#999" style={{margin: "auto 0 auto 10px"}}/>
   <input type="text" value={name} onChange={e => setName(e.target.value)} placeholder="Busque por sua cidade"/>
   <button type="submit">Buscar</button>
 </form>
@@ -132,7 +132,7 @@ return (
     <span>Recuperados*</span>
     </li>
  </ul>
- <div className="box-star" style={{fontSize: 10, color: "#bbb", marginTop: 4}}>
+ <div className="box-star" style={{fontSize: 10, color: "#999", marginTop: 4}}>
   <p>(*) Algumas secretarias estão demorando ou não divulgando este dado</p>
  </div>
 
