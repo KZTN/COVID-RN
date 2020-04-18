@@ -26,6 +26,9 @@
   <img alt="COVID-RN" src=".github/COVID-RN_showcase.png" width="100%">
 </p>
 
+## Hello world 👋
+[English README version](README-US.md)🇺🇸
+
 ## 💻 Projeto
 
 O COVID-RN é um projeto que visa rastrear os casos de coronavirus em todo o território do Rio Grande do Norte, informando dados únicos tanto para o estado quando para cada cidade.
