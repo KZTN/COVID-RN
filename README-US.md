@@ -28,6 +28,13 @@
   <img alt="COVID-RN" src=".github/COVID-RN_showcase.png" width="100%">
 </p>
 
+## ⚠️ Warning
+A new version of the API is in development. In version 2.0, new query features will be included, and the old routes in version 2.0 may or may not be renamed or edited. If you’re using version 1.0 and don’t intend to migrate, don’t worry. All resources will be maintained, including documentation. But stay tuned.
+`/v1/` will be included at the beginning of the URL of all calls from the old API. New documentation exclusive to V2 will be created.
+
+     The expected development time to launch is until the end of the month
+
+
 ## 💻 Project
 
 COVID-RN is a project that aims to track coronavirus cases across the territory of Rio Grande do Norte, reporting unique data for both the state and each city.
