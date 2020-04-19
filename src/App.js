@@ -72,6 +72,20 @@ function App() {
         containerElement={<div style={{ height: `100%` }} />}
         mapElement={<div style={{ height: `100%` }} />}
       />
+      <div className="chart-race">
+      <iframe src='https://flo.uri.sh/visualisation/1990037/embed' frameborder='0' scrolling='no' style={{width:"100%", height:"600px"}}>
+        </iframe><div style={{width:"100%", marginTop:"4px", textAlign:"right"}}>
+          <a 
+            class='flourish-credit' 
+            href='https://public.flourish.studio/visualisation/1990037/?utm_source=embed&utm_campaign=visualisation/1990037' 
+            target='_top' 
+            style={{textDecoration:"none"}}>
+              <img alt='Made with Flourish' 
+                src='https://public.flourish.studio/resources/made_with_flourish.svg' 
+                style={{width:"105px", height:"16px", border:"none", margin:"0"}}/> 
+            </a>
+      </div>
+      </div>
       </div>
       <div className="box-contact">
         <button onClick={popupFB}><FaFacebook size={28} color="#353244"/></button>
