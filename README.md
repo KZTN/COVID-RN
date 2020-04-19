@@ -29,6 +29,12 @@
 ## Hello world 👋
 [English README version](README-US.md)🇺🇸
 
+## ⚠️ Atenção
+
+Uma nova versão da API está em desenvolvimento. Na versão 2.0, novos recursos de consulta serão incluindos, e as antigas rotas na versão 2.0 poderão ou não ser renomeadas ou editadas. Se você está usando a versão 1.0 e não pretende migrar, não se preocupe. Todos os recursos serão mantidos, inclusive a documentação. Mas fique atento. <br/>
+Será incluido `/v1/` no inicio da URL de todas as chamadas da antiga API. Uma nova documentação exclusiva para a V2 será criada. 
+> O tempo previsto do desenvolvimento até lançamento é até o final do mês
+
 ## 💻 Projeto
 
 O COVID-RN é um projeto que visa rastrear os casos de coronavirus em todo o território do Rio Grande do Norte, informando dados únicos tanto para o estado quando para cada cidade.
@@ -57,6 +63,7 @@ Todas chamadas devem usar a url base:
 https://covid-rn-server.herokuapp.com
 ```
 > utilize a [documentação](https://insomnia-documenter-covidrn-6fgddqztj.now.sh/) para mais informações de como utilizar a API corretamente
+
 
 ## Começando...
 Essas instruções fornecerão uma cópia do projeto em execução na sua máquina local para fins de desenvolvimento e teste.
@@ -130,6 +137,7 @@ Depois que o merge da sua pull request for feito, você pode deletar a sua branc
 - [x] Elaborar gráficos com base de dados
 - [x] Elaborar mapas com base de dados
 - [x] Deploy da aplicação
+- [ ] Desenvolver a versão 2.0 da API
 - [ ] Gerar estatísticas de acesso, consultas, erros e depuração
 - [ ] Gerar relatórios automáticos de status do serviço
 - [ ] Criar um extrator de PDFs
