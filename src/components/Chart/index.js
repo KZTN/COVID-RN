@@ -7,7 +7,7 @@ export default function Chart({cases, deaths, dates, recovered}) {
   let arr = [];
     async function formatDate() {
       dates.map((date) => {
-        arr.push(moment(date).utcOffset("-03:00").format("DD/MMM", 'pt-BR'));
+        arr.push(moment(date).utcOffset("-03:00").format("DD/MM", 'pt-BR'));
       })
     }
       formatDate();
@@ -82,7 +82,18 @@ export default function Chart({cases, deaths, dates, recovered}) {
     ]
   };
     return (
-        <Line useRef="chart" data={data} options={{responsive : true, maintainAspectRatio : false}}/>
+        <Line useRef="chart" data={data} options={{responsive : true, maintainAspectRatio : false,    scales: {
+        xAxes: [{
+            gridLines: {
+                color: "rgba(0, 0, 0, 0)",
+            },
+            yAxes: [{
+              gridLines: {
+                  showBorder: false
+              }
+          }]
+        }]
+    }}}/>
     );
 
 }
