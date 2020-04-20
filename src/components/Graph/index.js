@@ -6,7 +6,8 @@ export default function Graph({cases, deaths, dates, recovered}) {
   var ptbr = require("apexcharts/dist/locales/pt-br.json")
   const data = {
     options: {
-      chart: {
+        colors : ['#4bc0c0', '#e26a6a', '#1db954'],
+        chart: {
         locales: [ptbr],
         defaultLocale: 'pt-br',
         id: "basic-bar",
@@ -30,7 +31,6 @@ export default function Graph({cases, deaths, dates, recovered}) {
           minHeight: undefined,
           maxHeight: 120,
           style: {
-              colors: [],
               fontSize: '12px',
               fontFamily: 'Helvetica, Arial, sans-serif',
               fontWeight: 400,
