@@ -63,8 +63,8 @@ function App() {
         <News/>
         <StateGrow/>
       </div>
-{/*       <Top10/>
- */}      <div className="box-map">
+      <Top10/>
+       <div className="box-map">
       </div>
       <div className="map" style={{width: '100%', height: '450px'}}>
       <MapWrapped
