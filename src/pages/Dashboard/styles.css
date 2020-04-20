@@ -8,17 +8,22 @@ ul {
   }
 
 li.box-item {
-  background: #fff;
+  background: #f5f5f2;
   box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.2);
   border-radius: 2px;
   padding: 20px;
   text-align: center;
 }
 
+
 li.box-item strong {
   color: #666;
-  font-size: 56px;
+  font-size: 64px;
   margin: 10px 0;
+}
+
+li.box-item span {
+  color: #000;
 }
 
 .box-loading {
@@ -41,7 +46,7 @@ li.box-item strong {
   position: absolute;
 }
 .box-item:hover .hidden-content {
-  background: #fff;
+  background: #f5f5f2;
   opacity: 1;
 }
 

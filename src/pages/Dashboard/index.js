@@ -130,7 +130,7 @@ return (
     <header>
     <strong style={{color: "#fff"}}>{boxrecovered? boxrecovered : '-'}</strong>
     </header>
-    <span>Recuperados*</span>
+    <span style={{color: "#fdfefc"}}>Recuperados*</span>
     </li>
  </ul>
  <div className="box-star" style={{fontSize: 10, color: "#999", marginTop: 4}}>
