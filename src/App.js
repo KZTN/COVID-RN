@@ -6,7 +6,9 @@ import {FaFacebook, FaGithub, FaTwitter, FaWhatsapp} from 'react-icons/fa';
 import News from './components/News';
 import StateGrow from './components/StateGrow';
 import ModalAlert from './components/ModalAlert';
+import Top10 from './components/Top10';
 import {withScriptjs, withGoogleMap} from 'react-google-maps'
+
 import './App.css';
 import 'dotenv';
 
@@ -61,7 +63,8 @@ function App() {
         <News/>
         <StateGrow/>
       </div>
-      <div className="box-map">
+{/*       <Top10/>
+ */}      <div className="box-map">
       </div>
       <div className="map" style={{minWidth: '100%', height: '450px'}}>
       <MapWrapped
@@ -72,7 +75,7 @@ function App() {
         containerElement={<div style={{ height: `100%` }} />}
         mapElement={<div style={{ height: `100%` }} />}
       />
-      <div className="chart-race">
+{/*       <div className="chart-race">
       <iframe src='https://flo.uri.sh/visualisation/1990037/embed' frameborder='0' scrolling='no' style={{width:"100%", height:"600px"}}>
         </iframe><div style={{width:"100%", marginTop:"4px", textAlign:"right"}}>
           <a 
@@ -85,7 +88,7 @@ function App() {
                 style={{width:"105px", height:"16px", border:"none", margin:"0"}}/> 
             </a>
       </div>
-      </div>
+      </div> */}
       </div>
       <div className="box-contact">
         <button onClick={popupFB}><FaFacebook size={28} color="#353244"/></button>
