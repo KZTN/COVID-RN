@@ -5,7 +5,7 @@ import "./styles.css";
 import DateTime from '../../utils/datetime';
 import SpinnerPage from '../../utils/SpinnerPage'
 import {capitalize} from '../../utils/capitalize'
-import Chart from '../../components/Chart';
+import Graph from '../../components/Graph';
 import {isMobile} from 'react-device-detect';
 
 export default function Dashboard() {
@@ -141,7 +141,7 @@ return (
  <div className="box-header-boxchart">
     <p>Gráfico d{surname} {boxname}</p>
   </div>
-  <Chart cases={chartcases} deaths={chartdeaths} dates={chartdates} recovered={chartrecovered}/>
+  <Graph cases={chartcases} deaths={chartdeaths} dates={chartdates} recovered={chartrecovered}/>
 </div>
  </>
   );
