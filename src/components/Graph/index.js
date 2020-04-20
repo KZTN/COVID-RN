@@ -71,7 +71,7 @@ export default function Graph({cases, deaths, dates, recovered}) {
       series={data.series}
       type="line"
       height="100%"
-      width="100%"
+      width="98%"
     />
     );
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import Routes from './routes';
-import emblem from './assets/RN_emblem.png';
+import emblem from './assets/icon.png';
 import MapContainer from './components/Map';
 import {FaFacebook, FaGithub, FaTwitter, FaWhatsapp} from 'react-icons/fa';
 import News from './components/News';
@@ -66,7 +66,7 @@ function App() {
 {/*       <Top10/>
  */}      <div className="box-map">
       </div>
-      <div className="map" style={{minWidth: '100%', height: '450px'}}>
+      <div className="map" style={{width: '100%', height: '450px'}}>
       <MapWrapped
         googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${
           process.env.REACT_APP_GOOGLE_KEY
@@ -75,6 +75,8 @@ function App() {
         containerElement={<div style={{ height: `100%` }} />}
         mapElement={<div style={{ height: `100%` }} />}
       />
+      </div>
+
 {/*       <div className="chart-race">
       <iframe src='https://flo.uri.sh/visualisation/1990037/embed' frameborder='0' scrolling='no' style={{width:"100%", height:"600px"}}>
         </iframe><div style={{width:"100%", marginTop:"4px", textAlign:"right"}}>
@@ -89,14 +91,13 @@ function App() {
             </a>
       </div>
       </div> */}
-      </div>
       <div className="box-contact">
         <button onClick={popupFB}><FaFacebook size={28} color="#353244"/></button>
         <button onClick={popupWPP}><FaWhatsapp fa size={28} color="#353244"/></button>
         <button onClick={popupTT}><FaTwitter fa size={28} color="#353244"/></button>
         <button onClick={popupGH}><FaGithub fa size={28} color="#353244"/></button>          
       </div>
-      <footer>
+{/*       <footer>
         <div className="slogan-rn">
           <span>RIO GRANDE DO NORTE</span>
           <h2>FORTE NO COMBATE</h2>
@@ -109,7 +110,7 @@ function App() {
           <div className="hashtag-item"><span>#FIQUEEMCASA</span></div>
           <div className="hashtag-item"><span>#RNCONTRACOVID-19</span></div>
         </div>
-      </footer>
+      </footer> */}
 
     </div>
   );

@@ -71,7 +71,7 @@ li.box-item strong {
   font-size: 15px;
 }
 .container form.box-form button[type="submit"]:hover {
-  background: #555;
+  background: #4e4e4e;
 }
 .container form.box-form input{
   height: 100%;
@@ -85,7 +85,7 @@ li.box-item strong {
 }
 
 .container form.box-form input::placeholder{
-  color: #777;
+  color: #6a6a6a;
   opacity: 0.6;
 }
 
