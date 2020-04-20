@@ -90,12 +90,12 @@ align-items: center;
                     <Page><Content className={isMobile?"top-content-mobile":"top-content"}><strong>{boxCountsamples}</strong><span>Amostras coletadas</span></Content></Page>
                     <Page><Content className={isMobile?"top-content-mobile":"top-content"}><strong>{boxmostcasecity}</strong><span>Cidade com mais casos</span></Content></Page>
                     <Page>
-                        <Content className={isMobile?"top-content-mobile":"top-content"}>
+                        <Content className={isMobile?"top-content-mobile":"top-content"} style={{background: "#000"}}>
                             <div classname="box-rank" style={{display: "flex", flexDirection: "row"}}>
-                                <strong style={{fontSize: 78}}>{boxdeathrate}</strong>
-                                <div class="small-percentage" style={{fontSize: 48, margin: "58px 0 0 0", color: "#666"}}>%</div>
+                                <strong style={{fontSize: 78, color: "#fff"}}>{boxdeathrate}</strong>
+                                <div class="small-percentage" style={{fontSize: 48, margin: "58px 0 0 0", color: "#fff"}}>%</div>
                             </div>
-                            <span>Índice de casos fatais</span></Content></Page>
+                            <span style={{color: "#fff"}}>Índice de casos fatais</span></Content></Page>
 
                     
                 </Slider>
