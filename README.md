@@ -26,7 +26,7 @@
   <img alt="COVID-RN" src=".github/COVID-RN_showcase.png" width="100%">
 </p>
 
-## Hello world 👋
+## 👋 Hello world 
 [English README version](README-US.md)🇺🇸
 
 ## ⚠️ Atenção
@@ -52,11 +52,11 @@ Pela falta do estado não possuir uma API sobre a incidência de casos de corona
 
 Com base no design dos boletins epidemiológicos lançados pela SESAP-RN, o projeto seguiu o mesmo modelo como base da estrutura dos dados. Ganhando posteiormente responsividade para diferentes telas, garantindo acesisiblidade a diferentes tipos de usuários com seus respectivos dispositivos desktop 💻 e mobile 📱.
 
-## Fonte de dados 💽
+## 💽 Fonte de dados 
 
 - [Secretaria de Saúde Pública do Rio Grande do Norte](http://www.saude.rn.gov.br/)
 
-## Base url 🔌
+## 🔌 Base url 
 
 Todas chamadas devem usar a url base:
 ```
@@ -148,7 +148,7 @@ Depois que o merge da sua pull request for feito, você pode deletar a sua branc
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
 
-## Ajude o projeto 🤝
+## 🤝 Ajude o projeto 
 
 <a href="https://opencollective.com/covid-rn/donate" target="_blank">
   <img src="https://opencollective.com/covid-rn/donate/button@2x.png?color=blue" width=300 />
