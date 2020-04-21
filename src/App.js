@@ -1,8 +1,8 @@
 import React from 'react';
 import Routes from './routes';
-import emblem from './assets/icon.png';
 import MapContainer from './components/Map';
 import {FaFacebook, FaGithub, FaTwitter, FaWhatsapp} from 'react-icons/fa';
+import Footer from './components/Footer'; 
 import News from './components/News';
 import StateGrow from './components/StateGrow';
 import ModalAlert from './components/ModalAlert';
@@ -45,6 +45,7 @@ function App() {
   }
   const MapWrapped = withScriptjs(withGoogleMap(MapContainer));
   return (
+    <>
     <div className="container">
       <div className="msg">
         <ModalAlert/>
@@ -97,22 +98,9 @@ function App() {
         <button onClick={popupTT}><FaTwitter fa size={28} color="#353244"/></button>
         <button onClick={popupGH}><FaGithub fa size={28} color="#353244"/></button>          
       </div>
-{/*       <footer>
-        <div className="slogan-rn">
-          <span>RIO GRANDE DO NORTE</span>
-          <h2>FORTE NO COMBATE</h2>
-          <h2>AO CORONAVIRUS</h2>
-        </div>
-        <div className="emblema-rn">
-          <img src={emblem} alt="Logomarca RN"/>
-        </div>
-        <div className="hashtag">
-          <div className="hashtag-item"><span>#FIQUEEMCASA</span></div>
-          <div className="hashtag-item"><span>#RNCONTRACOVID-19</span></div>
-        </div>
-      </footer> */}
-
     </div>
+          <Footer/>
+</>
   );
 }
 

@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {GoogleMap, Marker, InfoWindow, Polygon, InfoWindowProps} from 'react-google-maps'
+import {GoogleMap, Marker, InfoWindow, Polygon} from 'react-google-maps'
 import mongodb from '../../services/mongodb';
 import styles from './GoogleMapStyles.json';
 import coordinates from './polygons.json';
@@ -38,8 +38,13 @@ export default function Map() {
         defaultZoom={isMobile? 7 : 8} 
         defaultCenter={{lat:-5.799659599999999, lng:-36.6444833}}
         defaultOptions={{ styles: styles, mapTypeControl: false, streetViewControl: false }}
+        onMouseMove={() => {
+            setSelectedcity(null);
+        }}
+        
         >
       <Polygon
+
         paths={cordArr}
         options={{
           strokeColor: "#b0b0b0",
@@ -63,32 +68,36 @@ export default function Map() {
                         }}
                         onMouseOver={() => {
                             setSelectedcity(city);
-
+                            
                         }}
+
+
                     />
                 ))
                 
             }
             {selectedcity && (
                 <InfoWindow 
-                
-                onMouseLeave={() => {
-                  setSelectedcity(null);
-              }}
+
                 onCloseClick={() => {
                     setSelectedcity(null);
-                    console.log('out!');
                 }}
                     position={{
                         lat: selectedcity.location.coordinates[0], 
                         lng: selectedcity.location.coordinates[1]
                     }}
                     >
-                        <div className="box-info">
+                        <div className="box-info"                        onMouseLeave={() => {
+                        setSelectedcity(null);
+                    }}               
+                        > 
                             <h3>{selectedcity.name}</h3>
                             <span>Casos: {selectedcity.cases[0]}</span>
                             <span>Mortes: {selectedcity.deaths[0]}</span>
                             <span>Recuperados: {selectedcity.recovered[0]? selectedcity.recovered[0] : '-' } </span>
+                            <div className="box-content">
+
+                            </div>
                         </div>
                 </InfoWindow>
             )}
