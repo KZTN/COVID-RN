@@ -69,7 +69,7 @@ https://covid-rn-server.herokuapp.com
 Essas instruções fornecerão uma cópia do projeto em execução na sua máquina local para fins de desenvolvimento e teste.
 
 ### Pré-requisitos
-O que você precisa para instalar o software
+O que você precisa para instalar o software:
 
 ```
 node v12.x
@@ -77,7 +77,7 @@ yarn 1.22.4
 npm 6.14.4
 git
 ```
-> Para uma experiência melhor no ambiente de testes com o servidor API REST, recomenda-se o uso do [insomnia](https://insomnia.rest/).
+> Para uma experiência melhor no ambiente de testes com o servidor API REST, recomenda-se o uso do [insomnia](https://insomnia.rest/)
 
 ### Instalando o projeto 🚀
 Clonando o projeto:
@@ -92,7 +92,7 @@ Navegando até a pasta do projeto:
 cd COVID-RN
 ```
 
-Crie um arquivo `.env` na raíz do projeto e adicione as seguintes linhas
+Crie um arquivo `.env` na raíz do projeto e adicione as seguintes linhas:
 
 ```bash
 REACT_APP_GOOGLE_KEY= YOUR_GOOGLE_API_HERE
@@ -100,13 +100,13 @@ REACT_APP_API_URL= https://covid-rn-server.herokuapp.com
 ```
 > Para obter sua própria API da google acesse https://console.cloud.google.com/ (Recurso não obrigatório)
 
-Baixando as dependências do projeto
+Baixando as dependências do projeto:
 
 ```bash
 yarn install
 ```
 
-Rodando o projeto
+Rodando o projeto:
 
 ```bash
 yarn start
