@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {GoogleMap, Marker, InfoWindow, Polygon} from 'react-google-maps'
+import {GoogleMap, Marker, InfoWindow, Polygon, InfoWindowProps} from 'react-google-maps'
 import mongodb from '../../services/mongodb';
 import styles from './GoogleMapStyles.json';
 import coordinates from './polygons.json';
@@ -29,8 +29,8 @@ export default function Map() {
     
         return () => {
           window.removeEventListener("keydown", listener);
-        };
-      }, []);
+        };   
+}, []);
 
     return(
         <GoogleMap 
@@ -65,10 +65,6 @@ export default function Map() {
                             setSelectedcity(city);
 
                         }}
-                        onClick={() => {
-                          setSelectedcity(city);
-
-                      }}
                     />
                 ))
                 
@@ -76,7 +72,7 @@ export default function Map() {
             {selectedcity && (
                 <InfoWindow 
                 
-                onMouseOut={() => {
+                onMouseLeave={() => {
                   setSelectedcity(null);
               }}
                 onCloseClick={() => {
