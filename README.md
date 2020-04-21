@@ -92,7 +92,7 @@ Navegando até a pasta do projeto:
 cd COVID-RN
 ```
 
-Crie um arquivo .env na raíz do projeto e adicione as seguintes linhas
+Crie um arquivo `.env` na raíz do projeto e adicione as seguintes linhas
 
 ```bash
 REACT_APP_GOOGLE_KEY= YOUR_GOOGLE_API_HERE
