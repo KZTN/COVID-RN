@@ -37,7 +37,7 @@ useEffect(() => {
         setBoxmostcasecity(mostcasecityResponse.data[0].name);
     }
     function calculateAffectedcitiesbypercentage() {
-        setBoxaffectedcitiesbypercentage(((boxaffectedcities*100)/167).toFixed(1));
+        setBoxaffectedcitiesbypercentage(((boxaffectedcities*100)/167).toFixed(0));
     }
     getDeathrate();
     getCountcities();
