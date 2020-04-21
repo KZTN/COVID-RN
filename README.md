@@ -92,13 +92,13 @@ Navegando até a pasta do projeto:
 cd COVID-RN
 ```
 
-Crie um arquivo .env na raíz do projeto e adicione as seguintes linhas
+Crie um arquivo `.env` na raíz do projeto e adicione as seguintes linhas
 
 ```bash
 REACT_APP_GOOGLE_KEY= YOUR_GOOGLE_API_HERE
 REACT_APP_API_URL= https://covid-rn-server.herokuapp.com
 ```
-> Para obter sua própria API da google acesse https://console.cloud.google.com/
+> Para obter sua própria API da google acesse https://console.cloud.google.com/ (Recurso não obrigatório)
 
 Baixando as dependências do projeto
 
