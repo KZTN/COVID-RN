@@ -26,7 +26,7 @@
   <img alt="COVID-RN" src=".github/COVID-RN_showcase.png" width="100%">
 </p>
 
-## Hello world 👋
+## 👋 Hello world 
 [English README version](README-US.md)🇺🇸
 
 ## ⚠️ Atenção
@@ -52,11 +52,11 @@ Pela falta do estado não possuir uma API sobre a incidência de casos de corona
 
 Com base no design dos boletins epidemiológicos lançados pela SESAP-RN, o projeto seguiu o mesmo modelo como base da estrutura dos dados. Ganhando posteiormente responsividade para diferentes telas, garantindo acesisiblidade a diferentes tipos de usuários com seus respectivos dispositivos desktop 💻 e mobile 📱.
 
-## Datasource 💽
+## 💽 Fonte de dados 
 
 - [Secretaria de Saúde Pública do Rio Grande do Norte](http://www.saude.rn.gov.br/)
 
-## Base url 🔌
+## 🔌 Base url 
 
 Todas chamadas devem usar a url base:
 ```
@@ -69,7 +69,7 @@ https://covid-rn-server.herokuapp.com
 Essas instruções fornecerão uma cópia do projeto em execução na sua máquina local para fins de desenvolvimento e teste.
 
 ### Pré-requisitos
-O que você precisa para instalar o software
+O que você precisa para instalar o software:
 
 ```
 node v12.x
@@ -77,7 +77,7 @@ yarn 1.22.4
 npm 6.14.4
 git
 ```
-> Para uma experiência melhor no ambiente de testes com o servidor API REST, recomenda-se o uso do [insomnia](https://insomnia.rest/).
+> Para uma experiência melhor no ambiente de testes com o servidor API REST, recomenda-se o uso do [insomnia](https://insomnia.rest/)
 
 ### Instalando o projeto 🚀
 Clonando o projeto:
@@ -92,7 +92,7 @@ Navegando até a pasta do projeto:
 cd COVID-RN
 ```
 
-Crie um arquivo `.env` na raíz do projeto e adicione as seguintes linhas
+Crie um arquivo `.env` na raíz do projeto e adicione as seguintes linhas:
 
 ```bash
 REACT_APP_GOOGLE_KEY= YOUR_GOOGLE_API_HERE
@@ -100,13 +100,13 @@ REACT_APP_API_URL= https://covid-rn-server.herokuapp.com
 ```
 > Para obter sua própria API da google acesse https://console.cloud.google.com/ (Recurso não obrigatório)
 
-Baixando as dependências do projeto
+Baixando as dependências do projeto:
 
 ```bash
 yarn install
 ```
 
-Rodando o projeto
+Rodando o projeto:
 
 ```bash
 yarn start
@@ -115,7 +115,7 @@ yarn start
 
 Visite http://localhost:3000 com o seu navegador para ver o resultado. 🎉
 
-## Documentação 📄
+## 📄 Documentação 
 
 [site](https://insomnia-documenter-covidrn-6fgddqztj.now.sh/)
 
@@ -148,7 +148,7 @@ Depois que o merge da sua pull request for feito, você pode deletar a sua branc
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
 
-## Ajude o projeto 🤝
+## 🤝 Ajude o projeto 
 
 <a href="https://opencollective.com/covid-rn/donate" target="_blank">
   <img src="https://opencollective.com/covid-rn/donate/button@2x.png?color=blue" width=300 />
