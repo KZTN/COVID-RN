@@ -1,9 +1,9 @@
 .top-content {
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
 }
 .top-content-mobile {
-    width: 85%;
+    width: 80%;
     margin: 0 auto;
 
 }
@@ -25,4 +25,5 @@
 .top-content-mobile span {
     color: #444;
     margin-top: 5px;
+    font-size: 15px;
 }

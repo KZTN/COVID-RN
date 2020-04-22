@@ -30,6 +30,7 @@ body, input, button {
 }
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 .container {
@@ -43,7 +44,7 @@ a {
 
 .container .title-box {
   background-color: #a277f6;
-  padding: 30px 20px 0 20px;
+  padding: 20px 20px 0 20px;
   color: #353244;
   border-radius: 0 0 12px 12px;
   font-size: 44px;

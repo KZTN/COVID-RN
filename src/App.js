@@ -52,7 +52,7 @@ function App() {
       </div>
       <header>
         <div className="title-box">
-          <h1><strong><a href="/"> COVID-19 RN</a></strong></h1>
+          <h1><strong><a href="/"> COVID-RN</a></strong></h1>
         </div>
       </header>
       <div className="content">
