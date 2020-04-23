@@ -11,7 +11,7 @@ export default function Footer() {
             <div className="box-column">
               <div className="box-reference">
                 <div className="box-madewith">
-                  <a href="https://github.com/KZTN" style={{color: "inherit", fontWeight: "bold", fontSize: 15}}> Feito com <Emoji symbol="💙"/></a>
+                  <a href="https://github.com/KZTN" target="_blank" rel="noopener noreferrer" style={{color: "inherit", fontWeight: "bold", fontSize: 15}}> Feito com <Emoji symbol="💙"/></a>
                 </div> 
               </div>
               <div className="box-reference">

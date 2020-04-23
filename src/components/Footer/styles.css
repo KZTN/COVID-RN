@@ -7,6 +7,8 @@ footer {
     justify-content: space-between;
     padding: 0 20% 10px 20%;
     background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 9px 7px 3px gray;
+
 
   }
 
