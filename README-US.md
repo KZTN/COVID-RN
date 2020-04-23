@@ -134,6 +134,8 @@ After the merge of your pull request is done, you can delete your branch.
 - [x] Create graphs with database
 - [x] Make maps with database
 - [x] Deploy the application
+- [ ] API 2.0
+- [ ] Develop an SIR epidemiological model in the project
 - [ ] Generate access, query, error and debug statistics
 - [ ] Generate automatic service status reports
 - [ ] Create a PDF extractor
