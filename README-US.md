@@ -50,11 +50,11 @@ Due to the lack of the state does not have an API on the incidence of coronaviru
 
 Based on the design of the epidemiological bulletins launched by SESAP-RN, the project followed the same model as the basis for the data structure. Subsequently gaining responsiveness for different screens, ensuring accessibility to different types of users with their respective desktop desktop and mobile 📱 devices.
 
-## Datasource 💽
+## 💽 Datasource 
 
 - [Secretaria de Saúde Pública do Rio Grande do Norte](http://www.saude.rn.gov.br/)
 
-## Base url 🔌
+## 🔌 Base url
 
 All calls must use the base url:
 ```
@@ -112,7 +112,7 @@ yarn start
 
 Visit http://localhost:3000 with your browser to see the result. 🎉
 
-## Documentation 📄
+## 📄 Documentation 
 
 [site](https://insomnia-documenter-covidrn-6fgddqztj.now.sh/)
 
@@ -146,7 +146,7 @@ After the merge of your pull request is done, you can delete your branch.
 
 This project is under the MIT license. See the archive [LICENSE](LICENSE.md) for more details.
 
-## Help the project 🤝
+## 🤝 Help the project 
 
 <a href="https://opencollective.com/covid-rn/donate" target="_blank">
   <img src="https://opencollective.com/covid-rn/donate/button@2x.png?color=blue" width=300 />
