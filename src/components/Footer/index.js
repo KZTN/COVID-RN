@@ -36,7 +36,7 @@ export default function Footer() {
         <img src={icon} alt="logomarca COVID-RN" style={{width: 64, height: 64}}/>
         <div className="box-info">
         <span>© 2020 COVID-RN</span>
-        <span>Release v0.7165</span>
+        <span>Release v0.7166</span>
         </div>
 
       </div>
