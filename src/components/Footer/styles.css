@@ -23,6 +23,7 @@ footer {
   footer .item {
     margin: 10px 0;
     color: #555;
+    width: 25%;
   }
   footer .item .box-reference {
     display: flex;
@@ -50,8 +51,12 @@ footer {
     text-align: center;
     margin-bottom: 8px;
   }
-  footer .box-column img {
-    margin: 0 auto;
+  footer .item .box-column img {
+    margin-left: auto;
+    margin-right: 20px;
+  }
+  footer .item .box-column .box-info {
+    margin-left: auto;
   }
   @media (max-width: 650px) {
 
@@ -94,5 +99,10 @@ footer {
     footer .box-column {
       margin: 0;
     }
-
+    footer .item .box-column .box-info {
+      margin: 0;
+    }
+    footer .item .box-column img {
+      margin: 0 auto;
+    }
   }

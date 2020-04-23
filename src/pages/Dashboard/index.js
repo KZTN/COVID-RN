@@ -6,6 +6,7 @@ import DateTime from '../../utils/datetime';
 import SpinnerPage from '../../utils/SpinnerPage'
 import {capitalize} from '../../utils/capitalize'
 import Graph from '../../components/Graph';
+import Calendar from '../../components/Calendar';
 import {isMobile} from 'react-device-detect';
 
 export default function Dashboard() {
@@ -142,6 +143,7 @@ return (
     <p>Gráfico d{surname} {boxname}</p>
   </div>
   <Graph cases={chartcases} deaths={chartdeaths} dates={chartdates} recovered={chartrecovered}/>
+
 </div>
  </>
   );
