@@ -66,7 +66,7 @@ https://covid-rn-server.herokuapp.com
 These instructions will provide a copy of the project running on your local machine for development and testing purposes.
 
 ### Prerequisites
-What you need to install the software
+What you need to install the software:
 
 ```
 node v12.x
@@ -77,7 +77,7 @@ git
 > For a better experience in the test environment with the API REST server, it is recommended to use the[insomnia](https://insomnia.rest/).
 
 ### Installing the project🚀
-Cloning the project
+Cloning the project:
 
 ```
 git clone https://github.com/KZTN/COVID-RN.git
@@ -89,7 +89,7 @@ Go to the project folder:
 cd COVID-RN
 ```
 
-Create an .env file at the root of the project and add the following lines
+Create an .env file at the root of the project and add the following lines:
 
 ```bash
 REACT_APP_GOOGLE_KEY= YOUR_GOOGLE_API_HERE
@@ -97,13 +97,13 @@ REACT_APP_API_URL= https://covid-rn-server.herokuapp.com
 ```
 > To get your own google API go to https://console.cloud.google.com/
 
-Getting project dependencies
+Getting project dependencies:
 
 ```bash
 yarn install
 ```
 
-Run the project
+Run the project:
 
 ```bash
 yarn start
