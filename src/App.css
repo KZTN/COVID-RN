@@ -13,7 +13,7 @@ html, body, #root {
 
 html {
   background: #dae5e8;
-  -webkit-front-smoothing: antialiased !important;
+  -webkit-font-smoothing: antialiased !important;
 }
 body::-webkit-scrollbar {
   width: 8px;

@@ -38,9 +38,7 @@ export default function Map() {
         defaultZoom={isMobile? 7 : 8} 
         defaultCenter={{lat:-5.799659599999999, lng:-36.6444833}}
         defaultOptions={{ styles: styles, mapTypeControl: false, streetViewControl: false }}
-        onMouseMove={() => {
-            setSelectedcity(null);
-        }}
+
         
         >
       <Polygon
@@ -70,7 +68,10 @@ export default function Map() {
                             setSelectedcity(city);
                             
                         }}
-
+                        onClick={() => {
+                            setSelectedcity(city);
+                            
+                        }}
 
                     />
                 ))
@@ -79,17 +80,18 @@ export default function Map() {
             {selectedcity && (
                 <InfoWindow 
 
-                onCloseClick={() => {
+                onMouseOut={() => {
                     setSelectedcity(null);
                 }}
+                  onCloseClick={() => {
+                      setSelectedcity(null);
+                  }}
                     position={{
                         lat: selectedcity.location.coordinates[0], 
                         lng: selectedcity.location.coordinates[1]
                     }}
                     >
-                        <div className="box-info"                        onMouseLeave={() => {
-                        setSelectedcity(null);
-                    }}               
+                        <div className="box-info"                       
                         > 
                             <h3>{selectedcity.name}</h3>
                             <span>Casos: {selectedcity.cases[0]}</span>
