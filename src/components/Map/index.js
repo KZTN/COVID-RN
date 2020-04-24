@@ -42,7 +42,9 @@ export default function Map() {
         
         >
       <Polygon
-
+                onMouseOut={() => {
+                    setSelectedcity(null);
+                }} 
         paths={cordArr}
         options={{
           strokeColor: "#b0b0b0",
@@ -91,7 +93,9 @@ export default function Map() {
                         lng: selectedcity.location.coordinates[1]
                     }}
                     >
-                        <div className="box-info"                       
+                        <div className="box-info"       onMouseLeave={() => {
+                            setSelectedcity(null);
+                        }}                
                         > 
                             <h3>{selectedcity.name}</h3>
                             <span>Casos: {selectedcity.cases[0]}</span>
