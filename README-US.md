@@ -50,11 +50,11 @@ Due to the lack of the state does not have an API on the incidence of coronaviru
 
 Based on the design of the epidemiological bulletins launched by SESAP-RN, the project followed the same model as the basis for the data structure. Subsequently gaining responsiveness for different screens, ensuring accessibility to different types of users with their respective desktop desktop and mobile 📱 devices.
 
-## Datasource 💽
+## 💽 Datasource 
 
 - [Secretaria de Saúde Pública do Rio Grande do Norte](http://www.saude.rn.gov.br/)
 
-## Base url 🔌
+## 🔌 Base url
 
 All calls must use the base url:
 ```
@@ -66,7 +66,7 @@ https://covid-rn-server.herokuapp.com
 These instructions will provide a copy of the project running on your local machine for development and testing purposes.
 
 ### Prerequisites
-What you need to install the software
+What you need to install the software:
 
 ```
 node v12.x
@@ -77,7 +77,7 @@ git
 > For a better experience in the test environment with the API REST server, it is recommended to use the[insomnia](https://insomnia.rest/).
 
 ### Installing the project🚀
-Cloning the project
+Cloning the project:
 
 ```
 git clone https://github.com/KZTN/COVID-RN.git
@@ -89,7 +89,7 @@ Go to the project folder:
 cd COVID-RN
 ```
 
-Create an .env file at the root of the project and add the following lines
+Create an .env file at the root of the project and add the following lines:
 
 ```bash
 REACT_APP_GOOGLE_KEY= YOUR_GOOGLE_API_HERE
@@ -97,13 +97,13 @@ REACT_APP_API_URL= https://covid-rn-server.herokuapp.com
 ```
 > To get your own google API go to https://console.cloud.google.com/
 
-Getting project dependencies
+Getting project dependencies:
 
 ```bash
 yarn install
 ```
 
-Run the project
+Run the project:
 
 ```bash
 yarn start
@@ -112,7 +112,7 @@ yarn start
 
 Visit http://localhost:3000 with your browser to see the result. 🎉
 
-## Documentation 📄
+## 📄 Documentation 
 
 [site](https://insomnia-documenter-covidrn-6fgddqztj.now.sh/)
 
@@ -134,6 +134,8 @@ After the merge of your pull request is done, you can delete your branch.
 - [x] Create graphs with database
 - [x] Make maps with database
 - [x] Deploy the application
+- [ ] API 2.0
+- [ ] Develop an SIR epidemiological model in the project
 - [ ] Generate access, query, error and debug statistics
 - [ ] Generate automatic service status reports
 - [ ] Create a PDF extractor
@@ -144,7 +146,7 @@ After the merge of your pull request is done, you can delete your branch.
 
 This project is under the MIT license. See the archive [LICENSE](LICENSE.md) for more details.
 
-## Help the project 🤝
+## 🤝 Help the project 
 
 <a href="https://opencollective.com/covid-rn/donate" target="_blank">
   <img src="https://opencollective.com/covid-rn/donate/button@2x.png?color=blue" width=300 />

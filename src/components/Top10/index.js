@@ -17,11 +17,13 @@ const [boxaffectedcities, setBoxaffectedcities] = useState("-");
 const [boxaffectedcitiesbypercentage, setBoxaffectedcitiesbypercentage] = useState("-");
 const [boxmostcasecity, setBoxmostcasecity] = useState("-");
 const [boxCountsamples, setboxCountsamples] = useState("-");
+const [boxnewcaseperminue, setBoxnewcaseperminute] = useState("-");
 useEffect(() => {
     async function getDeathrate() {
         const deathrateResponse = await mongodb.post('/stateshow', {name: "Rio Grande do Norte"});
         setBoxdeathrate(((deathrateResponse.data.deaths[0]*100)/(deathrateResponse.data.cases[0])).toFixed(1));
         setboxCountsamples(deathrateResponse.data.date.length);
+        setBoxnewcaseperminute(deathrateResponse.data.cases[0] - deathrateResponse.data.cases[1]);
     };
     async function getCountcities() {
         const countcitiesResponse = await mongodb.get('/cidades');
@@ -37,7 +39,7 @@ useEffect(() => {
         setBoxmostcasecity(mostcasecityResponse.data[0].name);
     }
     function calculateAffectedcitiesbypercentage() {
-        setBoxaffectedcitiesbypercentage(((boxaffectedcities*100)/167).toFixed(1));
+        setBoxaffectedcitiesbypercentage(((boxaffectedcities*100)/167).toFixed(0));
     }
     getDeathrate();
     getCountcities();

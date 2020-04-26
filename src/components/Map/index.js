@@ -29,8 +29,8 @@ export default function Map() {
     
         return () => {
           window.removeEventListener("keydown", listener);
-        };
-      }, []);
+        };   
+}, []);
 
     return(
         <GoogleMap 
@@ -38,8 +38,13 @@ export default function Map() {
         defaultZoom={isMobile? 7 : 8} 
         defaultCenter={{lat:-5.799659599999999, lng:-36.6444833}}
         defaultOptions={{ styles: styles, mapTypeControl: false, streetViewControl: false }}
+
+        
         >
       <Polygon
+                onMouseOut={() => {
+                    setSelectedcity(null);
+                }} 
         paths={cordArr}
         options={{
           strokeColor: "#b0b0b0",
@@ -54,7 +59,7 @@ export default function Map() {
                     <Marker
                     icon={{
                       url: require('./circle.png'),
-                      scaledSize: new window.google.maps.Size(15 + ((city.cases[0]+(city.deaths[0])) / 5), 15 + ((city.cases[0]+(city.deaths[0])) / 5))
+                      scaledSize: new window.google.maps.Size((isMobile?12.5:15) + ((city.cases[0]) / (isMobile?6.66:5)), (isMobile?12.5:15) + ((city.cases[0]) / (isMobile?6.66:5)))
                     }}
                         key={city._id} 
                         position={{
@@ -63,36 +68,42 @@ export default function Map() {
                         }}
                         onMouseOver={() => {
                             setSelectedcity(city);
-
+                            
                         }}
                         onClick={() => {
-                          setSelectedcity(city);
+                            setSelectedcity(city);
+                            
+                        }}
 
-                      }}
                     />
                 ))
                 
             }
             {selectedcity && (
                 <InfoWindow 
-                
+
                 onMouseOut={() => {
-                  setSelectedcity(null);
-              }}
-                onCloseClick={() => {
                     setSelectedcity(null);
-                    console.log('out!');
                 }}
+                  onCloseClick={() => {
+                      setSelectedcity(null);
+                  }}
                     position={{
                         lat: selectedcity.location.coordinates[0], 
                         lng: selectedcity.location.coordinates[1]
                     }}
                     >
-                        <div className="box-info">
+                        <div className="box-info"       onMouseLeave={() => {
+                            setSelectedcity(null);
+                        }}                
+                        > 
                             <h3>{selectedcity.name}</h3>
                             <span>Casos: {selectedcity.cases[0]}</span>
                             <span>Mortes: {selectedcity.deaths[0]}</span>
                             <span>Recuperados: {selectedcity.recovered[0]? selectedcity.recovered[0] : '-' } </span>
+                            <div className="box-content">
+
+                            </div>
                         </div>
                 </InfoWindow>
             )}
