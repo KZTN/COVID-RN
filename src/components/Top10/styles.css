@@ -1,3 +1,12 @@
+.slick-prev:before {
+    color: #444;
+  }
+  .slick-next:before {
+    color: #444;
+  }
+.featured {
+    width: 100%;
+}
 .top-content {
     width: 70%;
     margin: 0 auto;
