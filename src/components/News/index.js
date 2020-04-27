@@ -42,10 +42,11 @@ export default function News() {
                 {arr.map((city) => (
                     <li key={city._id}>
                         <div className="list-box-name"><button value={city.name} /*onClick={handleClick}*/>{city.name}</button></div>
-                        <div className="list-box"><span>{city.cases[0]}</span></div>
+                        <div className="list-box"><span>{city.cases[0]}{city.cases[0]<0? '*': ''}</span></div>
                         <div className="list-box"><span>{city.deaths[0]}</span></div>
                     </li>
                 ))}
+                <p>(*) Valor corrigido pelo último boletim da SESAP</p>
             </ul>
             <div className="box-bottom-news"></div>
         </div>
