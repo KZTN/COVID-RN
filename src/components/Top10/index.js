@@ -50,7 +50,7 @@ useEffect(() => {
 const Wrapper = styled.div`
 width: 100%;
 margin: 30px auto 30px auto;
-display: flex,
+display: flex;
 flex-direction: column;
     
 `;
@@ -78,7 +78,7 @@ align-items: center;
                     slidesToScroll={isMobile?1:3}
                     dots={true}
                     adaptiveHeight={true}
-                    arrows={false}
+                    arrows={isMobile?false:true}
                 >
                     <Page><Content className={isMobile?"top-content-mobile":"top-content"}><strong>{boxcountcities}</strong><span>Cidades sob monitoramento</span></Content></Page>
                     <Page><Content className={isMobile?"top-content-mobile":"top-content"}><strong>{boxaffectedcities}</strong><span>Cidades afetadas</span></Content></Page>
