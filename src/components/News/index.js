@@ -46,9 +46,10 @@ export default function News() {
                         <div className="list-box"><span>{city.deaths[0]}</span></div>
                     </li>
                 ))}
-                <p>(*) Valor corrigido pelo último boletim da SESAP</p>
             </ul>
-            <div className="box-bottom-news"></div>
+            <div className="box-bottom-news">                
+                <p>(*) Valor corrigido pelo último boletim da SESAP</p>
+            </div>
         </div>
     );
 }
