@@ -20,7 +20,7 @@ const [boxCountsamples, setboxCountsamples] = useState("-");
 const [boxnewcaseperminue, setBoxnewcaseperminute] = useState("-");
 useEffect(() => {
     async function getDeathrate() {
-        const deathrateResponse = await mongodb.post('/stateshow', {name: "Rio Grande do Norte"});
+        const deathrateResponse = await mongodb.get('/uf/RN');
         setBoxdeathrate(((deathrateResponse.data.deaths[0]*100)/(deathrateResponse.data.cases[0])).toFixed(1));
         setboxCountsamples(deathrateResponse.data.date.length);
         setBoxnewcaseperminute(deathrateResponse.data.cases[0] - deathrateResponse.data.cases[1]);

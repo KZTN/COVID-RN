@@ -11,7 +11,7 @@ export default function StateGrow() {
     let arrDeaths = []; 
     useEffect(() => {
         async function getData() {
-            const response = await mongodb.post('/stateshow', {name: "Rio Grande do Norte"});
+            const response = await mongodb.get('/uf/RN');
             setStatecases(response.data.cases.reverse());
             setStateDates(response.data.date.reverse());
             setStatedeaths(response.data.deaths.reverse());
