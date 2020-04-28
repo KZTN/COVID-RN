@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import './styles.css';
 import mongodb from '../../services/mongodb';
 export default function News() {
+    var star = false;
     const [selectedcity, setSelectedcity] = useState();
     const [cities, setCities] = useState([]);
     let arr = [];
@@ -42,13 +43,13 @@ export default function News() {
                 {arr.map((city) => (
                     <li key={city._id}>
                         <div className="list-box-name"><button value={city.name} /*onClick={handleClick}*/>{city.name}</button></div>
-                        <div className="list-box"><span>{city.cases[0]}{city.cases[0]<0? '*': ''}</span></div>
+                        <div className="list-box"><span>{city.cases[0]}{city.cases[0]<0? ('*', star = true) : ''}</span></div>
                         <div className="list-box"><span>{city.deaths[0]}</span></div>
                     </li>
                 ))}
             </ul>
             <div className="box-bottom-news">                
-                <p>(*) Valor corrigido pelo último boletim da SESAP</p>
+                <p>{star? '(*) Valor corrigido pelo último boletim da SESAP': ''}</p>
             </div>
         </div>
     );
