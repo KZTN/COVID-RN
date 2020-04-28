@@ -28,7 +28,7 @@ export default function Dashboard() {
 
   useEffect(() => {
     async function handleAPI() {
-      const response = await mongodb.get("uf/RN");
+      const response = await mongodb.get("/uf/RN");
       setBoxsuspects(response.data.suspects[0]);
       setBoxrefuses(response.data.refuses[0]);
       setBoxcases(response.data.cases[0]);
