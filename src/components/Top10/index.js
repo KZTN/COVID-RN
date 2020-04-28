@@ -88,7 +88,7 @@ align-items: center;
                                 <strong style={{fontSize: 78}}>{boxaffectedcitiesbypercentage}</strong>
                                 <div class="small-percentage" style={{fontSize: 48, margin: "58px 0 0 0", color: "#666"}}>%</div>
                             </div>
-                            <span>índice de cidades afetadas</span></Content></Page>
+                            <span>Índice de cidades afetadas</span></Content></Page>
                     <Page><Content className={isMobile?"top-content-mobile":"top-content"}><strong>{boxCountsamples}</strong><span>Amostras coletadas</span></Content></Page>
                     <Page><Content className={isMobile?"top-content-mobile":"top-content"}><strong>{boxmostcasecity}</strong><span>Cidade com mais casos</span></Content></Page>
                     <Page>
