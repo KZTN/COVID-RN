@@ -56,7 +56,7 @@
 }
 .box-news .box-bottom-news p {
     font-size: 10px;
-    margin-left: 10px;
+    padding: 4px 10px;
 }
 .box-news ul.list-news li {
     width: 97%;

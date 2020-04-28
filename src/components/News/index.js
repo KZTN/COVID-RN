@@ -43,8 +43,8 @@ export default function News() {
                 {arr.map((city) => (
                     <li key={city._id}>
                         <div className="list-box-name"><button value={city.name} /*onClick={handleClick}*/>{city.name}</button></div>
-                        <div className="list-box"><span>{city.cases[0]}{city.cases[0]<0? ('*', star = true) : ''}</span></div>
-                        <div className="list-box"><span>{city.deaths[0]}{city.deaths[0]<0? ('*', star = true) : ''}</span></div>
+                        <div className="list-box"><span>{city.cases[0]}{city.cases[0]<0? '*' : ''}{city.cases[0]<0? star = true : null}</span></div>
+                        <div className="list-box"><span>{city.deaths[0]}{city.deaths[0]<0? ('*') : ''}{city.deaths[0]<0? star = true : null}</span></div>
                     </li>
                 ))}
             </ul>
