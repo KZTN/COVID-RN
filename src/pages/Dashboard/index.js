@@ -12,7 +12,7 @@ import {isMobile} from 'react-device-detect';
 export default function Dashboard() {
   const [loading, setLoading] = useState(true);
   const [datedata, setDatedata] = useState();
-  const [boxname, setBoxname] = useState('-');
+  const [boxname, setBoxname] = useState('Rio Grande do Norte');
   const [boxsuspects, setBoxsuspects] = useState('-');
   const [boxrefuses, setBoxrefuses] = useState('-');
   const [boxcases, setBoxcases] = useState('-');
