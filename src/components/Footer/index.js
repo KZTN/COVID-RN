@@ -38,7 +38,6 @@ export default function Footer() {
         <span>© 2020 COVID-RN</span>
         <span>Release v0.7201</span>
         </div>
-
       </div>
     </div>
   </footer>
