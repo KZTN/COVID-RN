@@ -3,13 +3,13 @@ import './styles.css';
 import mongodb from '../../services/mongodb';
 export default function News() {
     var star = false;
-    const [selectedcity, setSelectedcity] = useState();
-    const [cities, setCities] = useState([]);
+/*     const [selectedcity, setSelectedcity] = useState();
+ */    const [cities, setCities] = useState([]);
     let arr = [];
-    async function handleClick(e) {
+/*     async function handleClick(e) {
        const response = await mongodb.post('/cidade', {name: e.target.value});
        setSelectedcity(response.data);
-    }
+    } */
 
     useEffect(() => {
         async function getData() {
@@ -48,7 +48,7 @@ export default function News() {
                     </li>
                 ))}
             </ul>
-            <div className="box-bottom-news">                
+            <div className="box-bottom-news">
                 <p>{star? '(*) Valor corrigido pelo último boletim da SESAP': ''}</p>
             </div>
         </div>
