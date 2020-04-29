@@ -17,12 +17,10 @@ const [boxaffectedcities, setBoxaffectedcities] = useState("-");
 const [boxaffectedcitiesbypercentage, setBoxaffectedcitiesbypercentage] = useState("-");
 const [boxmostcasecity, setBoxmostcasecity] = useState("-");
 const [boxCountsamples, setboxCountsamples] = useState("-");
-const [boxnewcaseperminue, setBoxnewcaseperminute] = useState("-");
 useEffect(() => {
     async function getDeathrate() {
-        setBoxdeathrate(((uf.deaths[0]*100)/(uf.cases[0])).toFixed(1));
+        setBoxdeathrate(((uf.deaths[uf.date.length -1]*100)/(uf.cases[uf.date.length -1])).toFixed(1));
         setboxCountsamples(uf.date.length);
-        setBoxnewcaseperminute(uf.cases[0] - uf.cases[1]);
     };
     async function getCountcities() {
         const countcitiesResponse = await mongodb.get('/cidades');

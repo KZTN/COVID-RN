@@ -70,7 +70,7 @@ function App() {
       </header>
       <div className="content">
         <main>
-        <Routes uf={UF}/>
+        <Routes/>
         </main>
       </div>
       <div className="box-scrollboxes">

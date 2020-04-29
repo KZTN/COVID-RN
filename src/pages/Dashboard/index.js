@@ -9,7 +9,7 @@ import Graph from '../../components/Graph';
 //import Calendar from '../../components/Calendar';
 import {isMobile} from 'react-device-detect';
 
-export default function Dashboard({uf}) {
+export default function Dashboard() {
   const [loading, setLoading] = useState(true);
   const [datedata, setDatedata] = useState();
   const [boxname, setBoxname] = useState('-');
