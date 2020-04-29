@@ -10,7 +10,7 @@ import {isMobile} from 'react-device-detect';
 
 
 
-export default function Top10() {
+export default function Top10({uf}) {
 const [boxdeathrate, setBoxdeathrate] = useState("-");
 const [boxcountcities, setBoxcountcities] = useState("-");
 const [boxaffectedcities, setBoxaffectedcities] = useState("-");
@@ -20,10 +20,9 @@ const [boxCountsamples, setboxCountsamples] = useState("-");
 const [boxnewcaseperminue, setBoxnewcaseperminute] = useState("-");
 useEffect(() => {
     async function getDeathrate() {
-        const deathrateResponse = await mongodb.get('/uf/RN');
-        setBoxdeathrate(((deathrateResponse.data.deaths[0]*100)/(deathrateResponse.data.cases[0])).toFixed(1));
-        setboxCountsamples(deathrateResponse.data.date.length);
-        setBoxnewcaseperminute(deathrateResponse.data.cases[0] - deathrateResponse.data.cases[1]);
+        setBoxdeathrate(((uf.deaths[0]*100)/(uf.cases[0])).toFixed(1));
+        setboxCountsamples(uf.date.length);
+        setBoxnewcaseperminute(uf.cases[0] - uf.cases[1]);
     };
     async function getCountcities() {
         const countcitiesResponse = await mongodb.get('/cidades');
@@ -46,7 +45,7 @@ useEffect(() => {
     getAffectedcities();
     getMostcasecity();
     calculateAffectedcitiesbypercentage();
-}, [boxaffectedcities]);
+}, [boxaffectedcities, uf.cases, uf.date.length, uf.deaths]);
 const Wrapper = styled.div`
 width: 100%;
 margin: 30px auto 30px auto;

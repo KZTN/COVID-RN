@@ -1,8 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import './styles.css';
 import * as moment from 'moment';
-import mongodb from '../../services/mongodb';
-export default function StateGrow() {
+export default function StateGrow({uf}) {
     const [statecases, setStatecases] = useState([]);
     const [statedates, setStateDates] = useState([]);
     const [statedeaths, setStatedeaths] = useState([]);
@@ -11,14 +10,13 @@ export default function StateGrow() {
     let arrDeaths = []; 
     useEffect(() => {
         async function getData() {
-            const response = await mongodb.get('/uf/RN');
-            setStatecases(response.data.cases.reverse());
-            setStateDates(response.data.date.reverse());
-            setStatedeaths(response.data.deaths.reverse());
+            setStatecases(uf.cases.reverse());
+            setStateDates(uf.date.reverse());
+            setStatedeaths(uf.deaths.reverse());
         }
         getData();
 
-    }, []);
+    }, [uf.cases, uf.date, uf.deaths]);
 
      function comparateCases() {
             for (let i = 0; i < statecases.length; i++) {
@@ -72,8 +70,8 @@ export default function StateGrow() {
                     <li key={index}>
                         <div className="list-box-name">{moment(arrDates[index]).utcOffset("-03:00").format("DD/MM", 'pt-BR')}</div>
                         <div className="list-box-bar">
-                            <div className="list-progress-bar-deaths" style={{width: `${arrDeaths[index]}%`, right: `${cases}%`}}></div>
-                            <div className="list-progress-bar-cases" style={{width: `${cases}%`}}>
+                            <div className="list-progress-bar-deaths" style={{width: `${arrDeaths[index]/3}%`, right: `${cases/3}%`}}></div>
+                            <div className="list-progress-bar-cases" style={{width: `${cases/3}%`}}>
                             </div>
                         </div>
                         <div className="list-box"><span>{cases}</span></div>

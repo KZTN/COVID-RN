@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Routes from './routes';
 import MapContainer from './components/Map';
 import {FaFacebook, FaGithub, FaTwitter, FaWhatsapp} from 'react-icons/fa';
@@ -8,11 +8,24 @@ import StateGrow from './components/StateGrow';
 import ModalAlert from './components/ModalAlert';
 import Top10 from './components/Top10';
 import {withScriptjs, withGoogleMap} from 'react-google-maps'
+import mongodb from './services/mongodb';
 
 import './App.css';
 import 'dotenv';
 
 function App() {
+  const [ready, setReady] = useState(false);
+  const [UF, setUF] = useState();
+  useEffect(() => {
+    async function getUFData() {
+      const response = await mongodb.get("/uf/RN");
+      if(response) {
+        setUF(response.data);
+        setReady(true);
+      }
+    }
+    getUFData();
+  },[]);
   function popupFB() {
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
       window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcovid-rn.herokuapp.com&t=Veja as cidades brasileiras com casos confirmados de coronavírus. No mapa do mundo','popup','width=600,height=600'); 
@@ -57,14 +70,14 @@ function App() {
       </header>
       <div className="content">
         <main>
-        <Routes/>
+        <Routes uf={UF}/>
         </main>
       </div>
       <div className="box-scrollboxes">
         <News/>
-        <StateGrow/>
+        {ready?<StateGrow uf={UF}/>:null}
       </div>
-      <Top10/>
+        {ready?<Top10 uf={UF}/>:null}
        <div className="box-map">
       </div>
       <div className="map" style={{width: '100%', height: '450px'}}>
@@ -77,21 +90,6 @@ function App() {
         mapElement={<div style={{ height: `100%` }} />}
       />
       </div>
-
-{/*       <div className="chart-race">
-      <iframe src='https://flo.uri.sh/visualisation/1990037/embed' frameborder='0' scrolling='no' style={{width:"100%", height:"600px"}}>
-        </iframe><div style={{width:"100%", marginTop:"4px", textAlign:"right"}}>
-          <a 
-            class='flourish-credit' 
-            href='https://public.flourish.studio/visualisation/1990037/?utm_source=embed&utm_campaign=visualisation/1990037' 
-            target='_top' 
-            style={{textDecoration:"none"}}>
-              <img alt='Made with Flourish' 
-                src='https://public.flourish.studio/resources/made_with_flourish.svg' 
-                style={{width:"105px", height:"16px", border:"none", margin:"0"}}/> 
-            </a>
-      </div>
-      </div> */}
       <div className="box-contact">
         <button onClick={popupFB}><FaFacebook size={28} color="#353244"/></button>
         <button onClick={popupWPP}><FaWhatsapp fa size={28} color="#353244"/></button>

@@ -6,12 +6,13 @@ import DateTime from '../../utils/datetime';
 import SpinnerPage from '../../utils/SpinnerPage'
 import {capitalize} from '../../utils/capitalize'
 import Graph from '../../components/Graph';
-import Calendar from '../../components/Calendar';
+//import Calendar from '../../components/Calendar';
 import {isMobile} from 'react-device-detect';
 
-export default function Dashboard() {
+export default function Dashboard({uf}) {
   const [loading, setLoading] = useState(true);
-  const [boxname, setBoxname] = useState('Rio Grande do Norte');
+  const [datedata, setDatedata] = useState();
+  const [boxname, setBoxname] = useState('-');
   const [boxsuspects, setBoxsuspects] = useState('-');
   const [boxrefuses, setBoxrefuses] = useState('-');
   const [boxcases, setBoxcases] = useState('-');
@@ -29,10 +30,12 @@ export default function Dashboard() {
   useEffect(() => {
     async function handleAPI() {
       const response = await mongodb.get("/uf/RN");
+      setBoxname(response.data.name);
       setBoxsuspects(response.data.suspects[0]);
       setBoxrefuses(response.data.refuses[0]);
       setBoxcases(response.data.cases[0]);
       setBoxdeaths(response.data.deaths[0]);
+      setDatedata(response.data.date[0]);
       setBoxrecovered(response.data.recovered[0])
       setChartDates(response.data.date.reverse());
       setChartcases(response.data.cases.reverse());
@@ -92,7 +95,7 @@ return (
   </div>
 </div>
 <div className="box-datetime">
- <span><DateTime/></span>
+ <span><DateTime date={datedata}/></span>
 </div> 
 <form className="box-form" onSubmit={handleSubmit}>
   <FaSearch classname="icon-search"size={28} color="#6a6a6a" style={{margin: "auto 0 auto 10px"}}/>
