@@ -1,4 +1,5 @@
 
+
 <p align="center">
     <img alt="COVID-RN" title="#app" src=".github/COVID-RN_icon.png" width="250px" />
 </p>
@@ -34,6 +35,10 @@
 Uma nova versão da API está em desenvolvimento. Na versão 2.0, novos recursos de consulta serão incluindos, e as antigas rotas na versão 2.0 poderão ou não ser renomeadas ou editadas. Se você está usando a versão 1.0 e não pretende migrar, não se preocupe. Todos os recursos serão mantidos, inclusive a documentação. Mas fique atento. <br/>
 Será incluido `/api/v1/` no inicio da URL de todas as chamadas da antiga API. Uma nova documentação exclusiva para a V2 será criada. 
 > O tempo previsto do desenvolvimento até lançamento é até o final do mês
+
+ - 28/04/2020: A partir de agora, toda chamada API da antiga versão deverá ser incluída  `/api/v1/` para todas as chamadas.
+ - 29/04/2020: a versão inicial da API v2 está aberta para uso e testes[BETA]. Uma nova documentação será liberada amanhã.
+ - 29/04/2020: Devido a mudanças substânciais de futuro novos estágios do projeto. A versão 1 da API recebeu uma modificação na chamada de consulta de estado. Confira a Documentação.
 
 ## 💻 Projeto
 
