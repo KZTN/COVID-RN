@@ -61,7 +61,8 @@ function App() {
     <>
     <div className="container">
       <div className="msg">
-        <ModalAlert/>
+      {ready?<ModalAlert/>:null}
+
       </div>
       <header>
         <div className="title-box">
