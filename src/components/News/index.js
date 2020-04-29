@@ -13,7 +13,7 @@ export default function News() {
 
     useEffect(() => {
         async function getData() {
-            const response = await mongodb.get('/cidades');
+            const response = await mongodb.get('/RN/cidades');
             setCities(response.data);
         }
         getData();

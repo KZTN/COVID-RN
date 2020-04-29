@@ -47,11 +47,11 @@ export default function Dashboard() {
   }, []);
 
   async function handleSubmit(e) {
-    
+
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await mongodb.post('/cidade', {name: capitalize(name)});
+      const response = await mongodb.post('/RN/cidade', {name: capitalize(name)});
       setBoxname(response.data.name);
       setBoxsuspects(response.data.suspects[0]);
       setBoxrefuses(response.data.refuses[0]);
@@ -64,7 +64,7 @@ export default function Dashboard() {
       setChartdeaths(response.data.deaths.reverse());
       setChartrecovered(response.data.recovered.reverse());
 
-      setSurname('e');    
+      setSurname('e');
     } catch (error) {
         alert("Cidade não encontrada, digite novamente");
 
@@ -96,7 +96,7 @@ return (
 </div>
 <div className="box-datetime">
  <span><DateTime date={datedata}/></span>
-</div> 
+</div>
 <form className="box-form" onSubmit={handleSubmit}>
   <FaSearch classname="icon-search"size={28} color="#6a6a6a" style={{margin: "auto 0 auto 10px"}}/>
   <input id="input" type="text" value={name} onChange={e => setName(e.target.value)} placeholder="Busque por sua cidade"/>

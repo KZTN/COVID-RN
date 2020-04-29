@@ -23,7 +23,7 @@ useEffect(() => {
         setboxCountsamples(uf.date.length);
     };
     async function getCountcities() {
-        const countcitiesResponse = await mongodb.get('/cidades');
+        const countcitiesResponse = await mongodb.get('/RN/cidades');
         setBoxcountcities(countcitiesResponse.data.length);
     };
     async function getAffectedcities() {
@@ -49,7 +49,7 @@ width: 100%;
 margin: 30px auto 30px auto;
 display: flex;
 flex-direction: column;
-    
+
 `;
 const Page = styled.div`
 height: 180px;
@@ -96,7 +96,7 @@ align-items: center;
                             </div>
                             <span style={{color: "#fff"}}>Índice de casos fatais</span></Content></Page>
 
-                    
+
                 </Slider>
             </Wrapper>
         );
