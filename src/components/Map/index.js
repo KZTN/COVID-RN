@@ -17,7 +17,7 @@ export default function Map() {
                 setCities(response.data);
         }
         getData();
-        
+
     }, []);
     useEffect(() => {
         const listener = e => {
@@ -26,25 +26,25 @@ export default function Map() {
           }
         };
         window.addEventListener("keydown", listener);
-    
+
         return () => {
           window.removeEventListener("keydown", listener);
-        };   
+        };
 }, []);
 
     return(
-        <GoogleMap 
+        <GoogleMap
         streetViewControl={false}
-        defaultZoom={isMobile? 7 : 8} 
+        defaultZoom={isMobile? 7 : 8}
         defaultCenter={{lat:-5.799659599999999, lng:-36.6444833}}
         defaultOptions={{ styles: styles, mapTypeControl: false, streetViewControl: false }}
 
-        
+
         >
       <Polygon
                 onMouseOut={() => {
                     setSelectedcity(null);
-                }} 
+                }}
         paths={cordArr}
         options={{
           strokeColor: "#b0b0b0",
@@ -54,33 +54,33 @@ export default function Map() {
           fillOpacity: 0.35
         }}
       />
-             {   
+             {
                 cities.map((city) => (
                     <Marker
                     icon={{
                       url: require('./circle.png'),
-                      scaledSize: new window.google.maps.Size((isMobile?10:13.33) + ((city.cases[0]) / (isMobile?10:10)), (isMobile?10:13.33) + ((city.cases[0]) / (isMobile?10:10)))
+                      scaledSize: new window.google.maps.Size((isMobile?10:13.33) + ((city.cases[0]) / (isMobile?16.66:13.33)), (isMobile?10:13.33) + ((city.cases[0]) / (isMobile?16.66:13.33)))
                     }}
-                        key={city._id} 
+                        key={city._id}
                         position={{
-                            lat: city.location.coordinates[0], 
+                            lat: city.location.coordinates[0],
                             lng: city.location.coordinates[1]
                         }}
                         onMouseOver={() => {
                             setSelectedcity(city);
-                            
+
                         }}
                         onClick={() => {
                             setSelectedcity(city);
-                            
+
                         }}
 
                     />
                 ))
-                
+
             }
             {selectedcity && (
-                <InfoWindow 
+                <InfoWindow
 
                 onMouseOut={() => {
                     setSelectedcity(null);
@@ -89,14 +89,14 @@ export default function Map() {
                       setSelectedcity(null);
                   }}
                     position={{
-                        lat: selectedcity.location.coordinates[0], 
+                        lat: selectedcity.location.coordinates[0],
                         lng: selectedcity.location.coordinates[1]
                     }}
                     >
                         <div className="box-info"       onMouseLeave={() => {
                             setSelectedcity(null);
-                        }}                
-                        > 
+                        }}
+                        >
                             <h3>{selectedcity.name}</h3>
                             <span>Casos: {selectedcity.cases[0]}</span>
                             <span>Mortes: {selectedcity.deaths[0]}</span>
