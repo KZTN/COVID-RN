@@ -32,7 +32,7 @@ useEffect(() => {
     };
 
     async function getMostcasecity() {
-        const mostcasecityResponse = await mongodb.post('/rank/1', {criteria: "cases"});
+        const mostcasecityResponse = await mongodb.post('/rank/RN/1', {criteria: "cases"});
         setBoxmostcasecity(mostcasecityResponse.data[0].name);
     }
     function calculateAffectedcitiesbypercentage() {
