@@ -39,7 +39,7 @@ Será incluido `/api/v1/` no inicio da URL de todas as chamadas da antiga API. U
  - 28/04/2020: A partir de agora, toda chamada API da antiga versão deverá ser incluída  `/api/v1/` para todas as chamadas.
  - 29/04/2020: a versão inicial da API v2 está aberta para uso e testes[BETA]. Uma nova documentação será liberada amanhã.
  - 29/04/2020: Devido a mudanças circunstanciais no futuro do projeto e como forma de evitar a depreciação da API. A versão 1 da API recebeu modificações em suas chamadas, recebendo sua última atualização. Com isso, foi finalizado o suporte para a v1. Veja a Documentação para mais detalhes 
- - 30/04/2020: Documentação da V2 Finalizada, confira a <a href="#📄-Documentação">Documentação</a>
+ - 30/04/2020: Documentação da V2 Finalizada, confira a <a href="#-Documentação">Documentação</a>
 
 ## 💻 Projeto
 
