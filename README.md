@@ -123,7 +123,7 @@ Visite http://localhost:3000 com o seu navegador para ver o resultado. 🎉
 
 ## 📄 Documentação 
 
-<a href="https://covid-rn-v1.now.sh/" target="_blank">API V1</a> Stable
+<a href="https://covid-rn-v1.now.sh/" target="_blank">API V1</a> Stable</br>
 <a href="https://covid-rn-v2.now.sh/" target="_blank">API V2</a> Latest
 
 
