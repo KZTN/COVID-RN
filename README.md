@@ -1,5 +1,6 @@
 
 
+
 <p align="center">
     <img alt="COVID-RN" title="#app" src=".github/COVID-RN_icon.png" width="250px" />
 </p>
@@ -31,9 +32,10 @@
 [English README version](README-US.md)🇺🇸
 
 ## ⚠️ Atenção
-Uma nova API foi desenvolvida e está pronta para uso, confira a <a href="#-Documentação">Documentação</a>
+Uma nova API foi desenvolvida e está pronta para uso, confira a <a href="#-Documentação">Documentação</a>.
 > Recomenda-se para novos usuários o uso da V2. Pois a V1, embora continue a receber dados diários, não terá mais suporte a novas atualizações.
-> Requisições por datas específicas serão brevemente implementadas na V2. Confira o <a href="#-Workflow">Workflow</a>
+
+> Requisições por datas específicas serão brevemente implementadas na V2. Confira o <a href="#Workflow">Workflow</a>.
 
 ## 💻 Projeto
 
