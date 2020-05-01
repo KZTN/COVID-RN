@@ -75,7 +75,7 @@ function App() {
         </main>
       </div>
       <div className="box-scrollboxes">
-        <News/>
+        {ready?<News/>:null}
         {ready?<StateGrow uf={UF}/>:null}
       </div>
         {ready?<Top10 uf={UF}/>:null}
