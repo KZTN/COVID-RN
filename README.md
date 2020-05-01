@@ -100,7 +100,7 @@ Crie um arquivo `.env` na raíz do projeto e adicione as seguintes linhas:
 REACT_APP_GOOGLE_KEY= YOUR_GOOGLE_API_HERE
 REACT_APP_API_URL= https://covid-rn-server.herokuapp.com/api/v2
 ```
-> Para obter sua própria API da google acesse https://console.cloud.google.com/ (Recurso não obrigatório)
+> Para obter sua própria API da google, acesse: https://console.cloud.google.com/ (Recurso não obrigatório)
 
 Baixando as dependências do projeto:
 
