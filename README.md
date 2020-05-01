@@ -31,15 +31,9 @@
 [English README version](README-US.md)🇺🇸
 
 ## ⚠️ Atenção
-
-Uma nova versão da API está em desenvolvimento. Na versão 2.0, novos recursos de consulta serão incluindos, e as antigas rotas na versão 2.0 poderão ou não ser renomeadas ou editadas. Se você está usando a versão 1.0 e não pretende migrar, não se preocupe. Todos os recursos serão mantidos, inclusive a documentação. Mas fique atento. <br/>
-Será incluido `/api/v1/` no inicio da URL de todas as chamadas da antiga API. Uma nova documentação exclusiva para a V2 será criada. 
-> O tempo previsto do desenvolvimento até lançamento é até o final do mês
-
- - 28/04/2020: A partir de agora, toda chamada API da antiga versão deverá ser incluída  `/api/v1/` para todas as chamadas.
- - 29/04/2020: a versão inicial da API v2 está aberta para uso e testes[BETA]. Uma nova documentação será liberada amanhã.
- - 29/04/2020: Devido a mudanças circunstanciais no futuro do projeto e como forma de evitar a depreciação da API. A versão 1 da API recebeu modificações em suas chamadas, recebendo sua última atualização. Com isso, foi finalizado o suporte para a v1. Veja a Documentação para mais detalhes 
- - 30/04/2020: Documentação da V2 Finalizada, confira a <a href="#-Documentação">Documentação</a>
+Uma nova API foi desenvolvida e está pronta para uso, confira a <a href="#-Documentação">Documentação</a>
+> Recomenda-se para novos usuários o uso da V2. Pois a V1, embora continue a receber dados diários, não terá mais suporte a novas atualizações.
+> Requisições por datas específicas serão brevemente implementadas na V2. Confira o <a href="#-Workflow">Workflow</a>
 
 ## 💻 Projeto
 
@@ -136,7 +130,7 @@ Visite http://localhost:3000 com o seu navegador para ver o resultado. 🎉
 
 Depois que o merge da sua pull request for feito, você pode deletar a sua branch.
 
-## TODO list
+## Workflow
 
 - [x] Criar uma base de dados API REST
 - [x] Criar uma aplicação web para o projeto
@@ -146,6 +140,7 @@ Depois que o merge da sua pull request for feito, você pode deletar a sua branc
 - [x] Elaborar mapas com base de dados
 - [x] Deploy da aplicação
 - [x] Desenvolver a versão 2.0 da API
+- [ ] Consultas a API por data específica (em desenvolvimento)
 - [ ] Elaborar um modelo epidemiológico SIR no projeto
 - [ ] Gerar estatísticas de acesso, consultas, erros e depuração (em desenvolvimento...)
 - [ ] Gerar relatórios automáticos de status do serviço
