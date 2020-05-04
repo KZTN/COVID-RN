@@ -20,7 +20,7 @@
                }
                return palavra.charAt(0).toUpperCase() + palavra.slice(1);
            })
-           .join(' ').replace(/\s+$/, ''); // junta as palavras novamente
+           .join(' ').trim(); // junta as palavras novamente
     }
 
 export {
