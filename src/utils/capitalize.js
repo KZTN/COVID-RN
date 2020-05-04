@@ -8,7 +8,7 @@
 
     function capitalize(texto) {
         let prepos = ["da", "do", "das", "dos", "a", "e", "de" ];
-        return texto.split(' ') // quebra o texto em palavras
+        return texto.replace(/rn/g, '').replace(/Rn/g, '').replace(/RN/g, '').replace(/Rio Grande do Norte/g, '').replace(/rio grande do norte/g, '').split(' ') // quebra o texto em palavras
            .map((palavra) => { // para cada palavra
                if (abreviacao(palavra) || numeralRomano(palavra)) {
                     return palavra;
