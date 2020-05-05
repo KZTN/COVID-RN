@@ -116,7 +116,10 @@ Visit http://localhost:3000 with your browser to see the result. 🎉
 
 ## 📄 Documentation 
 
-[site](https://insomnia-documenter-covidrn-6fgddqztj.now.sh/)
+
+<a href="https://covid-rn-v1.now.sh/" target="_blank">API V1</a> Stable</br>
+<a href="https://covid-rn-v2.now.sh/" target="_blank">API V2</a> Latest
+
 
 ## How to contribute
 
