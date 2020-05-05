@@ -29,9 +29,11 @@
 </p>
 
 ## ⚠️ Warning
-A new version of the API is in development. In version 2.0, new query features will be included, and the old routes in version 2.0 may or may not be renamed or edited. If you’re using version 1.0 and don’t intend to migrate, don’t worry. All resources will be maintained, including documentation. But stay tuned.<br/>
-`/v1/` will be included at the beginning of the URL of all calls from the old API. New documentation exclusive to V2 will be created.
->The expected development time to launch is until the end of the month
+
+A new API has been developed and is ready to use, check the <a href="#-Documentação"> Documentation </a>.
+> It is recommended for new users to use V2. Because V1, even continuing to receive daily data, will no longer support new updates.
+
+> Requests for specific dates will be implemented shortly in V2. Check out the <a href="#Workflow"> Workflow </a>.
 
 
 ## 💻 Project
@@ -93,7 +95,7 @@ Create an .env file at the root of the project and add the following lines:
 
 ```bash
 REACT_APP_GOOGLE_KEY= YOUR_GOOGLE_API_HERE
-REACT_APP_API_URL= https://covid-rn-server.herokuapp.com
+REACT_APP_API_URL= https://covid-rn-server.herokuapp.com/api/v2
 ```
 > To get your own google API go to https://console.cloud.google.com/
 
@@ -114,7 +116,10 @@ Visit http://localhost:3000 with your browser to see the result. 🎉
 
 ## 📄 Documentation 
 
-[site](https://insomnia-documenter-covidrn-6fgddqztj.now.sh/)
+
+<a href="https://covid-rn-v1.now.sh/" target="_blank">API V1</a> Stable</br>
+<a href="https://covid-rn-v2.now.sh/" target="_blank">API V2</a> Latest
+
 
 ## How to contribute
 
@@ -134,12 +139,13 @@ After the merge of your pull request is done, you can delete your branch.
 - [x] Create graphs with database
 - [x] Make maps with database
 - [x] Deploy the application
-- [ ] API 2.0
+- [x] API 2.0
+- [ ] API queries by specific date (on going...)
 - [ ] Develop an SIR epidemiological model in the project
-- [ ] Generate access, query, error and debug statistics
+- [ ] Generate access, query, error and debug statistics (on going...)
 - [ ] Generate automatic service status reports
-- [ ] Create a PDF extractor
-- [ ] Create a PDF to csv / json converter
+- [ ] Create a PDF extractor (on going...)
+- [ ] Create a PDF to csv / json converter (on going...)
 - [ ] and more...
 
 ## :memo: License

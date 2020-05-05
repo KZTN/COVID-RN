@@ -62,7 +62,7 @@ Com base no design dos boletins epidemiológicos lançados pela SESAP-RN, o proj
 
 Todas chamadas devem usar a url base:
 ```
-https://covid-rn-server.herokuapp.com
+https://covid-rn-server.herokuapp.com/api/v2
 ```
 > utilize a [documentação](https://insomnia-documenter-covidrn-6fgddqztj.now.sh/) para mais informações de como utilizar a API corretamente
 
