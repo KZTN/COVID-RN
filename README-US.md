@@ -95,7 +95,7 @@ Create an .env file at the root of the project and add the following lines:
 
 ```bash
 REACT_APP_GOOGLE_KEY= YOUR_GOOGLE_API_HERE
-REACT_APP_API_URL= https://covid-rn-server.herokuapp.com
+REACT_APP_API_URL= https://covid-rn-server.herokuapp.com/api/v2
 ```
 > To get your own google API go to https://console.cloud.google.com/
 
