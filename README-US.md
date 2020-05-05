@@ -29,9 +29,11 @@
 </p>
 
 ## ⚠️ Warning
-A new version of the API is in development. In version 2.0, new query features will be included, and the old routes in version 2.0 may or may not be renamed or edited. If you’re using version 1.0 and don’t intend to migrate, don’t worry. All resources will be maintained, including documentation. But stay tuned.<br/>
-`/v1/` will be included at the beginning of the URL of all calls from the old API. New documentation exclusive to V2 will be created.
->The expected development time to launch is until the end of the month
+
+A new API has been developed and is ready to use, check the <a href="#-Documentação"> Documentation </a>.
+> It is recommended for new users to use V2. Because V1, even continuing to receive daily data, will no longer support new updates.
+
+> Requests for specific dates will be implemented shortly in V2. Check out the <a href="#Workflow"> Workflow </a>.
 
 
 ## 💻 Project
