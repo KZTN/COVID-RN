@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import './styles.css';
 import mongodb from '../../services/mongodb';
 export default function MOdalAlert() {
@@ -13,13 +13,6 @@ export default function MOdalAlert() {
     }, []);
 
     const handleClose = () => setShow(false);
-  
-    return (
-        <>
-        {msg && (
-            alert(msg.description)
-        )}
-      </>
-    );
-  }
-  
+
+    return <>{msg && alert(msg.description)}</>;
+}
