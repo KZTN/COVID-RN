@@ -25,6 +25,14 @@ body::-webkit-scrollbar-thumb {
   background: #666;
 }
 
+::selection {
+    background: #15e8cd; /* WebKit/Blink Browsers */
+  }
+  ::-moz-selection {
+    background: #15e8cd; /* Gecko Browsers */
+  }
+
+
 body, input, button {
   font-family: 'Roboto' ,Arial, Helvetica, sans-serif;
 }
