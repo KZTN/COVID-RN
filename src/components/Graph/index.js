@@ -2,6 +2,11 @@ import React from 'react';
 import Chart from 'react-apexcharts';
 
 export default function Graph({ cases, deaths, dates, recovered }) {
+    /*     var casesarr = cases;
+    var activearr = [];
+    casesarr.map((casesarr, index) => {
+        activearr.push(casesarr - recovered[index]);
+    }); */
     var ptbr = require('apexcharts/dist/locales/pt-br.json');
     const data = {
         options: {
@@ -11,7 +16,7 @@ export default function Graph({ cases, deaths, dates, recovered }) {
                     opacity: 0.3,
                 },
             },
-            colors: ['#4bc0c0', '#e26a6a', '#1db954'],
+            colors: ['#4bc0c0', '#e26a6a', '#1db954', '#52d'],
             chart: {
                 locales: [ptbr],
                 defaultLocale: 'pt-br',
@@ -52,6 +57,18 @@ export default function Graph({ cases, deaths, dates, recovered }) {
                     },
                 },
             },
+            yaxis: {
+                floating: true,
+                axisTicks: {
+                    show: false,
+                },
+                axisBorder: {
+                    show: false,
+                },
+                labels: {
+                    show: false,
+                },
+            },
         },
         series: [
             {
@@ -66,6 +83,10 @@ export default function Graph({ cases, deaths, dates, recovered }) {
                 name: 'Recuperados',
                 data: recovered,
             },
+            /*             {
+                name: 'ativos',
+                data: activearr,
+            }, */
         ],
     };
 
@@ -75,7 +96,7 @@ export default function Graph({ cases, deaths, dates, recovered }) {
             series={data.series}
             type="line"
             height="100%"
-            width="98%"
+            width="100%"
         />
     );
 }
