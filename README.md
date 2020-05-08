@@ -121,7 +121,7 @@ Visite http://localhost:3000 com o seu navegador para ver o resultado. 🎉
 
 ## 📄 Documentação 
 
-<a href="covid-rn-documentation.now.sh" target="_blank">Versão unificada</a>
+<a href="https://covid-rn-documentation.now.sh/" target="_blank">Versão unificada</a>
 
 
 ## Como contribuir
