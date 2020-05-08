@@ -143,7 +143,7 @@ Depois que o merge da sua pull request for feito, você pode deletar a sua branc
 - [x] Elaborar mapas com base de dados
 - [x] Deploy da aplicação
 - [x] Desenvolver a versão 2.0 da API
-- [ ] Consultas a API por data específica (em desenvolvimento)
+- [x] Consultas a API por data específica
 - [ ] Elaborar um modelo epidemiológico SIR no projeto
 - [ ] Gerar estatísticas de acesso, consultas, erros e depuração (em desenvolvimento...)
 - [ ] Gerar relatórios automáticos de status do serviço
