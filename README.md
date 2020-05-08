@@ -32,10 +32,12 @@
 [English README version](README-US.md)🇺🇸
 
 ## ⚠️ Atenção
-Uma nova API foi desenvolvida e está pronta para uso, confira a <a href="#-Documentação">Documentação</a>.
+<b>Uma nova API foi desenvolvida e está pronta para uso, confira a <a href="#-Documentação">Documentação</a>.</b>
 > Recomenda-se para novos usuários o uso da V2. Pois a V1, embora continue a receber dados diários, não terá mais suporte a novas atualizações.
 
-> Requisições por datas específicas serão brevemente implementadas na V2. Confira o <a href="#Workflow">Workflow</a>.
+> Requisições por datas específicas foram implementadas e estão liberadas para uso e consulta, a documentação referente também foi atualizada.
+
+> As documentações foram unificadas, veja a <a href="#-Documentação">Documentação</a>
 
 ## 💻 Projeto
 
@@ -79,7 +81,7 @@ yarn 1.22.4
 npm 6.14.4
 git
 ```
-> Para uma experiência melhor no ambiente de testes com o servidor API REST, recomenda-se o uso do [insomnia](https://insomnia.rest/)
+> Para uma melhor experiência no ambiente de testes com o servidor API REST, recomenda-se o uso do [insomnia](https://insomnia.rest/)
 
 ### Instalando o projeto 🚀
 Clonando o projeto:
@@ -119,8 +121,7 @@ Visite http://localhost:3000 com o seu navegador para ver o resultado. 🎉
 
 ## 📄 Documentação 
 
-<a href="https://covid-rn-v1.now.sh/" target="_blank">API V1</a> Stable</br>
-<a href="https://covid-rn-v2.now.sh/" target="_blank">API V2</a> Latest
+<a href="https://covid-rn-documentation.now.sh/" target="_blank">Versão unificada</a>
 
 
 ## Como contribuir
@@ -142,7 +143,7 @@ Depois que o merge da sua pull request for feito, você pode deletar a sua branc
 - [x] Elaborar mapas com base de dados
 - [x] Deploy da aplicação
 - [x] Desenvolver a versão 2.0 da API
-- [ ] Consultas a API por data específica (em desenvolvimento)
+- [x] Consultas a API por data específica
 - [ ] Elaborar um modelo epidemiológico SIR no projeto
 - [ ] Gerar estatísticas de acesso, consultas, erros e depuração (em desenvolvimento...)
 - [ ] Gerar relatórios automáticos de status do serviço

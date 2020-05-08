@@ -1,0 +1,12 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# These files should have specific line endings
+*.css	text eol=lf
+*.js	text eol=lf
+.html	text eol=lf
+
+# These files are binary and should be left untouched
+# (binary is a macro for -text -diff)
+*.png	binary
+*.ico	binary	
