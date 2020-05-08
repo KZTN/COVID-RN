@@ -32,10 +32,12 @@
 [English README version](README-US.md)🇺🇸
 
 ## ⚠️ Atenção
-Uma nova API foi desenvolvida e está pronta para uso, confira a <a href="#-Documentação">Documentação</a>.
+<b>Uma nova API foi desenvolvida e está pronta para uso, confira a <a href="#-Documentação">Documentação</a>.</b>
 > Recomenda-se para novos usuários o uso da V2. Pois a V1, embora continue a receber dados diários, não terá mais suporte a novas atualizações.
 
-> Requisições por datas específicas serão brevemente implementadas na V2. Confira o <a href="#Workflow">Workflow</a>.
+> Requisições por datas específicas foram implementadas e estão liberadas para uso e consulta, a documentação referente também foi atualizada.
+
+> As documentações foram unificadas, veja a <a href="#-Documentação">Documentação</a>
 
 ## 💻 Projeto
 
@@ -119,8 +121,7 @@ Visite http://localhost:3000 com o seu navegador para ver o resultado. 🎉
 
 ## 📄 Documentação 
 
-<a href="https://covid-rn-v1.now.sh/" target="_blank">API V1</a> Stable</br>
-<a href="https://covid-rn-v2.now.sh/" target="_blank">API V2</a> Latest
+<a href="covid-rn-documentation.now.sh" target="_blank">Versão unificada</a>
 
 
 ## Como contribuir
