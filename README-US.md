@@ -28,13 +28,14 @@
   <img alt="COVID-RN" src=".github/COVID-RN_showcase.png" width="100%">
 </p>
 
-## ⚠️ Warning
 
-A new API has been developed and is ready to use, check the <a href="#-Documentação"> Documentation </a>.
-> It is recommended for new users to use V2. Because V1, even continuing to receive daily data, will no longer support new updates.
+## ⚠️ Atenção
+<b>A new API has been developed and is ready to use, check <a href="#-Documentação">Documentation</a>.</b>
+> V2 is recommended for new users. Because V1, while continuing to receive daily data, will no longer support new updates.
 
-> Requests for specific dates will be implemented shortly in V2. Check out the <a href="#Workflow"> Workflow </a>.
+> Requests for specific dates have been implemented and are released for use and consultation, the related documentation has also been updated.
 
+> Documentations have been unified, see <a href="#-Documentação">Documentation</a>
 
 ## 💻 Project
 
