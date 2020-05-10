@@ -77,7 +77,7 @@ yarn 1.22.4
 npm 6.14.4
 git
 ```
-> For a better experience in the test environment with the API REST server, it is recommended to use the[insomnia](https://insomnia.rest/).
+> For a better experience in the test environment with the API REST server, it is recommended to use the [insomnia](https://insomnia.rest/).
 
 ### Installing the project🚀
 Cloning the project:
@@ -117,9 +117,8 @@ Visit http://localhost:3000 with your browser to see the result. 🎉
 
 ## 📄 Documentation 
 
+<a href="https://covid-rn-documentation.now.sh/" target="_blank">Unified Version</a>
 
-<a href="https://covid-rn-v1.now.sh/" target="_blank">API V1</a> Stable</br>
-<a href="https://covid-rn-v2.now.sh/" target="_blank">API V2</a> Latest
 
 
 ## How to contribute
