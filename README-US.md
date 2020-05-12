@@ -130,7 +130,7 @@ Visit http://localhost:3000 with your browser to see the result. 🎉
 
 After the merge of your pull request is done, you can delete your branch.
 
-## TODO list
+## Workflow
 
 - [x] Create a REST API database
 - [x] Create a web application for the project
