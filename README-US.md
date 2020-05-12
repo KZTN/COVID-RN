@@ -143,9 +143,9 @@ After the merge of your pull request is done, you can delete your branch.
 - [x] API queries by specific date
 - [ ] Develop an SIR epidemiological model in the project
 - [ ] Generate access, query, error and debug statistics (on going...)
-- [ ] Generate automatic service status reports
-- [ ] Create a PDF extractor (on going...)
-- [ ] Create a PDF to csv / json converter (on going...)
+- [x] Generate automatic service status reports
+- [ ] Create a PDF extractor
+- [ ] Create a PDF to csv / json converter
 - [ ] and more...
 
 ## :memo: License
