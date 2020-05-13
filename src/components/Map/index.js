@@ -63,9 +63,9 @@ export default function Map() {
                         url: require('./circle.png'),
                         scaledSize: new window.google.maps.Size(
                             (isMobile ? 10 : 13.33) +
-                                city.cases[0] / (isMobile ? 16.66 : 13.33),
+                                city.cases[0] / (isMobile ? 19.99 : 16.66),
                             (isMobile ? 10 : 13.33) +
-                                city.cases[0] / (isMobile ? 16.66 : 13.33)
+                                city.cases[0] / (isMobile ? 19.99 : 16.66)
                         ),
                     }}
                     key={city._id}
