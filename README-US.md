@@ -28,13 +28,14 @@
   <img alt="COVID-RN" src=".github/COVID-RN_showcase.png" width="100%">
 </p>
 
-## ⚠️ Warning
 
-A new API has been developed and is ready to use, check the <a href="#-Documentação"> Documentation </a>.
-> It is recommended for new users to use V2. Because V1, even continuing to receive daily data, will no longer support new updates.
+## ⚠️ Atenção
+<b>A new API has been developed and is ready to use, check <a href="#-Documentação">Documentation</a>.</b>
+> V2 is recommended for new users. Because V1, while continuing to receive daily data, will no longer support new updates.
 
-> Requests for specific dates will be implemented shortly in V2. Check out the <a href="#Workflow"> Workflow </a>.
+> Requests for specific dates have been implemented and are released for use and consultation, the related documentation has also been updated.
 
+> Documentations have been unified, see <a href="#-Documentação">Documentation</a>
 
 ## 💻 Project
 
@@ -76,7 +77,7 @@ yarn 1.22.4
 npm 6.14.4
 git
 ```
-> For a better experience in the test environment with the API REST server, it is recommended to use the[insomnia](https://insomnia.rest/).
+> For a better experience in the test environment with the API REST server, it is recommended to use the [insomnia](https://insomnia.rest/).
 
 ### Installing the project🚀
 Cloning the project:
@@ -116,9 +117,8 @@ Visit http://localhost:3000 with your browser to see the result. 🎉
 
 ## 📄 Documentation 
 
+<a href="https://covid-rn-documentation.now.sh/" target="_blank">Unified Version</a>
 
-<a href="https://covid-rn-v1.now.sh/" target="_blank">API V1</a> Stable</br>
-<a href="https://covid-rn-v2.now.sh/" target="_blank">API V2</a> Latest
 
 
 ## How to contribute
@@ -130,7 +130,7 @@ Visit http://localhost:3000 with your browser to see the result. 🎉
 
 After the merge of your pull request is done, you can delete your branch.
 
-## TODO list
+## Workflow
 
 - [x] Create a REST API database
 - [x] Create a web application for the project
@@ -140,12 +140,12 @@ After the merge of your pull request is done, you can delete your branch.
 - [x] Make maps with database
 - [x] Deploy the application
 - [x] API 2.0
-- [ ] API queries by specific date (on going...)
+- [x] API queries by specific date
 - [ ] Develop an SIR epidemiological model in the project
 - [ ] Generate access, query, error and debug statistics (on going...)
-- [ ] Generate automatic service status reports
-- [ ] Create a PDF extractor (on going...)
-- [ ] Create a PDF to csv / json converter (on going...)
+- [x] Generate automatic service status reports
+- [ ] Create a PDF extractor
+- [ ] Create a PDF to csv / json converter
 - [ ] and more...
 
 ## :memo: License
