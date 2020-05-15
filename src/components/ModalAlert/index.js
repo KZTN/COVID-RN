@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './styles.css';
 import mongodb from '../../services/mongodb';
-export default function MOdalAlert() {
+export default function ModalAlert() {
     const [show, setShow] = useState(true);
     const [msg, setMsg] = useState();
     useEffect(() => {
