@@ -33,9 +33,9 @@
 
 ## ⚠️ Atenção
 
-<b>🔥 Um novo console de status do seridor da API e contagem de requisiçõoes de chamadas está sendo projetado, o período previsto de desenvolvimento e implementação é até o final do mês. Confira o </b><a href="#Workflow">Workflow</a>
+<b>🔥 Um novo console de status do servidor da API e contagem de requisiçõoes de chamadas está sendo projetado, o período previsto de desenvolvimento e implementação é até o final do mês. Confira o </b><a href="#Workflow">Workflow</a>
 
-<b>Uma nova API foi desenvolvida e está pronta para uso, confira a <a href="#-Documentação">Documentação</a>.</b>
+<b>🔥 Uma nova API foi desenvolvida e está pronta para uso, confira a <a href="#-Documentação">Documentação</a>.</b>
 > Recomenda-se para novos usuários o uso da V2. Pois a V1, embora continue a receber dados diários, não terá mais suporte a novas atualizações.
 <br/>
 
