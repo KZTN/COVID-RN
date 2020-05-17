@@ -33,7 +33,7 @@
 
 ## ⚠️ Atenção
 
-<b>🔥 Um novo console de status do servidor da API e contagem de requisiçõoes de chamadas está sendo projetado, o período previsto de desenvolvimento e implementação é até o final do mês. Confira o </b><a href="#Workflow">Workflow</a>
+<b>🔥 Um novo console de status do servidor da API e contagem de requisiçõoes de chamadas está sendo projetado, o período previsto de desenvolvimento e implementação é até o final do mês. Confira o <a href="#Workflow">Workflow</a>.</b>
 
 <b>🔥 Uma nova API foi desenvolvida e está pronta para uso, confira a <a href="#-Documentação">Documentação</a>.</b>
 > Recomenda-se para novos usuários o uso da V2. Pois a V1, embora continue a receber dados diários, não terá mais suporte a novas atualizações.
@@ -150,7 +150,7 @@ Depois que o merge da sua pull request for feito, você pode deletar a sua branc
 - [x] Desenvolver a versão 2.0 da API
 - [x] Consultas a API por data específica
 - [ ] Elaborar um modelo epidemiológico SIR no projeto
-- [x] Gerar estatísticas de acesso, consultas, erros e depuração (em desenvolvimento...)
+- [ ] Gerar estatísticas de acesso, consultas, erros e depuração (em desenvolvimento...)
 - [ ] Criar um console de consultas à API e estátisticas de acesso
 - [x] Gerar relatórios automáticos de status do serviço
 - [ ] Criar um extrator de PDFs
