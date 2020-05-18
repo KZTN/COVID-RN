@@ -33,14 +33,12 @@ function App() {
             )
         ) {
             window.open(
-                'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcovid-rn.herokuapp.com&t=Veja as cidades brasileiras com casos confirmados de coronavírus. No mapa do mundo',
-                'popup',
-                'width=600,height=600'
+                'https://www.facebook.com/sharer/sharer.php?u=covid-rn.herokuapp.com', '_blank'
             );
             return false;
         }
         window.open(
-            'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcovid-rn.herokuapp.com&t=Veja as cidades brasileiras com casos confirmados de coronavírus. No mapa do mundo',
+            'https://www.facebook.com/sharer/sharer.php?u=covid-rn.herokuapp.com',
             'popup',
             'width=600,height=600'
         );
@@ -85,7 +83,7 @@ function App() {
             return false;
         }
         window.open(
-            'https://web.whatsapp.com/send?Confira os últimos casos de coronavirus do Rio Grande do Norte em tempo real https%3A%2F%2Fcovid-rn.herokuapp.com',
+            'https://web.whatsapp.com/send?Confira%20os%20últimos%20casos%20de%20coronavirus%20do%20Rio%20Grande%20do%20Norte%20em%20tempo%20real%20https%3A%2F%2Fcovid-rn.herokuapp.com',
             'popup',
             'width=600,height=600'
         );
