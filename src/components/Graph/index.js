@@ -2,11 +2,11 @@ import React from 'react';
 import Chart from 'react-apexcharts';
 
 export default function Graph({ cases, deaths, dates, recovered }) {
-    /*     var casesarr = cases;
+       var casesarr = cases;
     var activearr = [];
     casesarr.map((casesarr, index) => {
         activearr.push(casesarr - recovered[index]);
-    }); */
+    });
     var ptbr = require('apexcharts/dist/locales/pt-br.json');
     const data = {
         options: {
@@ -83,10 +83,10 @@ export default function Graph({ cases, deaths, dates, recovered }) {
                 name: 'Recuperados',
                 data: recovered,
             },
-            /*             {
+                        {
                 name: 'ativos',
                 data: activearr,
-            }, */
+            },
         ],
     };
 
