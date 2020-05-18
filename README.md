@@ -32,12 +32,17 @@
 [English README version](README-US.md)🇺🇸
 
 ## ⚠️ Atenção
-<b>Uma nova API foi desenvolvida e está pronta para uso, confira a <a href="#-Documentação">Documentação</a>.</b>
+
+<b>🔥 Um novo console de status do servidor da API e contagem de requisiçõoes de chamadas está sendo projetado, o período previsto de desenvolvimento e implementação é até o final do mês. Confira o <a href="#Workflow">Workflow</a>.</b>
+
+<b>🔥 Uma nova API foi desenvolvida e está pronta para uso, confira a <a href="#-Documentação">Documentação</a>.</b>
 > Recomenda-se para novos usuários o uso da V2. Pois a V1, embora continue a receber dados diários, não terá mais suporte a novas atualizações.
+<br/>
 
 > Requisições por datas específicas foram implementadas e estão liberadas para uso e consulta, a documentação referente também foi atualizada.
 
 > As documentações foram unificadas, veja a <a href="#-Documentação">Documentação</a>
+
 
 ## 💻 Projeto
 
@@ -146,6 +151,7 @@ Depois que o merge da sua pull request for feito, você pode deletar a sua branc
 - [x] Consultas a API por data específica
 - [ ] Elaborar um modelo epidemiológico SIR no projeto
 - [ ] Gerar estatísticas de acesso, consultas, erros e depuração (em desenvolvimento...)
+- [ ] Criar um console de consultas à API e estátisticas de acesso
 - [x] Gerar relatórios automáticos de status do serviço
 - [ ] Criar um extrator de PDFs
 - [ ] Criar um conversor de PDFs para csv/json
