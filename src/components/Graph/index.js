@@ -5,7 +5,7 @@ export default function Graph({ cases, deaths, dates, recovered }) {
        var casesarr = cases;
     var activearr = [];
     casesarr.map((casesarr, index) => {
-        activearr.push(casesarr - recovered[index]);
+        activearr.push(casesarr - (recovered[index] + deaths[index]));
     });
     var ptbr = require('apexcharts/dist/locales/pt-br.json');
     const data = {

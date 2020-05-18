@@ -150,7 +150,7 @@ export default function Dashboard() {
                 </li>
                 <li className="box-item">
                     <header>
-                        <strong>{boxcases-boxrecovered}</strong>
+                        <strong>{boxcases-(boxrecovered+boxdeaths)}</strong>
                     </header>
                     <span>Ativos</span>
                 </li>

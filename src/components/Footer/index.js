@@ -83,7 +83,7 @@ export default function Footer() {
                     />
                     <div className="box-info">
                         <span>© 2020 COVID-RN</span>
-                        <span>Release v1.0263</span>
+                        <span>Release v1.0265</span>
                     </div>
                 </div>
             </div>
