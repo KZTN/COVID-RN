@@ -12,6 +12,7 @@ li.box-item {
     border-radius: 2px;
     padding: 20px;
     text-align: center;
+    cursor: default;
 }
 
 li.box-item strong {

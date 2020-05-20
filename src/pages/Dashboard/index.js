@@ -17,6 +17,7 @@ export default function Dashboard() {
     const [boxrefuses, setBoxrefuses] = useState('-');
     const [boxcases, setBoxcases] = useState('-');
     const [boxdeaths, setBoxdeaths] = useState('-');
+    const [boxactives, setBoxactives] = useState('-');
     const [boxrecovered, setBoxrecovered] = useState('-');
     const [chartcases, setChartcases] = useState([]);
     const [chartdates, setChartDates] = useState([]);
@@ -44,6 +45,7 @@ export default function Dashboard() {
             }
             setBoxrefuses(response.data.refuses[0]);
             setBoxcases(response.data.cases[0]);
+            setBoxactives((response.data.cases[0] - (response.data.recovered[0] + response.data.deaths[0])))
             setBoxdeaths(response.data.deaths[0]);
             setDatedata(response.data.date[0]);
             setBoxrecovered(response.data.recovered[0]);
@@ -73,8 +75,8 @@ export default function Dashboard() {
             setBoxrefuses(response.data.refuses[0]);
             setBoxcases(response.data.cases[0]);
             setBoxdeaths(response.data.deaths[0]);
+            setBoxactives((response.data.cases[0] - (response.data.recovered[0] + response.data.deaths[0])))
             setBoxrecovered(response.data.recovered[0]);
-
             setChartDates(response.data.date.reverse());
             setChartcases(response.data.cases.reverse());
             setChartdeaths(response.data.deaths.reverse());
@@ -166,7 +168,7 @@ export default function Dashboard() {
                 </li>
                 <li className="box-item">
                     <header>
-                        <strong>{boxcases - (boxrecovered + boxdeaths)}</strong>
+                        <strong>{boxactives}</strong>
                     </header>
                     <span>Ativos</span>
                 </li>
