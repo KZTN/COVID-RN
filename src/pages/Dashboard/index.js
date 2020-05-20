@@ -6,9 +6,20 @@ import DateTime from '../../utils/datetime';
 import SpinnerPage from '../../utils/SpinnerPage';
 import { capitalize } from '../../utils/capitalize';
 import Graph from '../../components/Graph';
+import { createMuiTheme, MuiThemeProvider, Tooltip } from '@material-ui/core';
 //import Calendar from '../../components/Calendar';
 import { isMobile } from 'react-device-detect';
-
+const theme = createMuiTheme({
+    overrides: {
+      MuiTooltip: {
+        tooltip: {
+          fontSize: "2em",
+          color: "gray",
+          backgroundColor: "white"
+        }
+      }
+    }
+  });
 export default function Dashboard() {
     const [loading, setLoading] = useState(true);
     const [datedata, setDatedata] = useState();
@@ -38,14 +49,19 @@ export default function Dashboard() {
             setBoxname(response.data.name);
             setBoxname(response.data.name);
             if (response.data.suspects[0] >= 10000) {
-                setBoxsuspects(`${(response.data.suspects[0] / 1000).toFixed(0)}mil`);
+                setBoxsuspects(
+                    `${(response.data.suspects[0] / 1000).toFixed(0)}mil`
+                );
                 setSuspectstitle(response.data.suspects[0]);
             } else {
                 setBoxsuspects(response.data.suspects[0]);
             }
             setBoxrefuses(response.data.refuses[0]);
             setBoxcases(response.data.cases[0]);
-            setBoxactives((response.data.cases[0] - (response.data.recovered[0] + response.data.deaths[0])))
+            setBoxactives(
+                response.data.cases[0] -
+                    (response.data.recovered[0] + response.data.deaths[0])
+            );
             setBoxdeaths(response.data.deaths[0]);
             setDatedata(response.data.date[0]);
             setBoxrecovered(response.data.recovered[0]);
@@ -75,7 +91,10 @@ export default function Dashboard() {
             setBoxrefuses(response.data.refuses[0]);
             setBoxcases(response.data.cases[0]);
             setBoxdeaths(response.data.deaths[0]);
-            setBoxactives((response.data.cases[0] - (response.data.recovered[0] + response.data.deaths[0])))
+            setBoxactives(
+                response.data.cases[0] -
+                    (response.data.recovered[0] + response.data.deaths[0])
+            );
             setBoxrecovered(response.data.recovered[0]);
             setChartDates(response.data.date.reverse());
             setChartcases(response.data.cases.reverse());
@@ -148,9 +167,14 @@ export default function Dashboard() {
                 {loading ? <SpinnerPage /> : null}
             </div>
             <ul>
-                <li className="box-item" title={`${suspectstitle} suspeitos`}>
+                <li className="box-item">
                     <header>
-                        <strong>{boxsuspects}</strong>
+                    <MuiThemeProvider theme={theme}>
+
+                        <Tooltip title={`${suspectstitle} suspeitos`} aria-label={`${suspectstitle} suspeitos`}>
+                            <strong>{boxsuspects}</strong>
+                        </Tooltip>
+                        </MuiThemeProvider>
                     </header>
                     <span>Suspeitos</span>
                 </li>
