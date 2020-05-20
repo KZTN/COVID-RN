@@ -30,12 +30,15 @@
 
 
 ## ⚠️ Warning
-<b>A new API has been developed and is ready to use, check <a href="#-Documentação">Documentation</a>.</b>
-> V2 is recommended for new users. Because V1, while continuing to receive daily data, will no longer support new updates.
+<b>🔥 A new API server status console and call request count is being designed, the planned development and implementation period is until the end of the month. See the <a href="#Workflow">Workflow</a>.</b>
+
+<b>🔥 A new API has been developed and is ready to use, check the <a href="#-Documentation">Documentation</a>.</b>
+
+> It's highly recommended for new users use V2. Because V1, while continuing to receive daily data, will no longer support new updates.
 
 > Requests for specific dates have been implemented and are released for use and consultation, the related documentation has also been updated.
 
-> Documentations have been unified, see <a href="#-Documentação">Documentation</a>
+> Documentations have been unified, see <a href="#-Documentation">Documentation</a>
 
 ## 💻 Project
 
