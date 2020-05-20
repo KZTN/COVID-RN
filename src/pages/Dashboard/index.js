@@ -16,28 +16,37 @@ export default function Dashboard() {
     const [boxsuspects, setBoxsuspects] = useState('-');
     const [boxrefuses, setBoxrefuses] = useState('-');
     const [boxcases, setBoxcases] = useState('-');
-    const [boxactives, setBoxactives] = useState('-');
     const [boxdeaths, setBoxdeaths] = useState('-');
     const [boxrecovered, setBoxrecovered] = useState('-');
     const [chartcases, setChartcases] = useState([]);
     const [chartdates, setChartDates] = useState([]);
     const [chartdeaths, setChartdeaths] = useState([]);
     const [chartrecovered, setChartrecovered] = useState([]);
-
     const [surname, setSurname] = useState('o');
     const [name, setName] = useState('');
+    const [suspectstitle, setSuspectstitle] = useState('-');
+    const [refusestitle, setRefusestitle] = useState('-');
+    const [casestitle, setCasestitle] = useState('-');
+    const [deathstitle, setDeathstitle] = useState('-');
+    const [activestitle, setActivestitle] = useState('-');
+    const [recoveredtitle, setRecoveredtitle] = useState('-');
 
     useEffect(() => {
         async function handleAPI() {
             const response = await mongodb.get('/uf/RN');
             setBoxname(response.data.name);
-            setBoxsuspects(response.data.suspects[0]);
+            setBoxname(response.data.name);
+            if (response.data.suspects[0] >= 10000) {
+                setBoxsuspects(`${(response.data.suspects[0] / 1000).toFixed(0)}mil`);
+                setSuspectstitle(response.data.suspects[0]);
+            } else {
+                setBoxsuspects(response.data.suspects[0]);
+            }
             setBoxrefuses(response.data.refuses[0]);
             setBoxcases(response.data.cases[0]);
             setBoxdeaths(response.data.deaths[0]);
-            setBoxrecovered(response.data.recovered[0]);
-            setBoxactives(response.data.cases[0] - (response.data.recovered[0] + response.data.deaths[0]));
             setDatedata(response.data.date[0]);
+            setBoxrecovered(response.data.recovered[0]);
             setChartDates(response.data.date.reverse());
             setChartcases(response.data.cases.reverse());
             setChartdeaths(response.data.deaths.reverse());
@@ -55,12 +64,17 @@ export default function Dashboard() {
                 name: capitalize(name),
             });
             setBoxname(response.data.name);
-            setBoxsuspects(response.data.suspects[0]);
+            if (response.data.suspects[0] >= 10000) {
+                setBoxsuspects(`${~~response.data.suspects[0] / 1000}mil`);
+                setSuspectstitle(response.data.suspects[0]);
+            } else {
+                setBoxsuspects(response.data.suspects[0]);
+            }
             setBoxrefuses(response.data.refuses[0]);
             setBoxcases(response.data.cases[0]);
             setBoxdeaths(response.data.deaths[0]);
             setBoxrecovered(response.data.recovered[0]);
-            setBoxactives(response.data.cases[0] - (response.data.recovered[0] + response.data.deaths[0]));
+
             setChartDates(response.data.date.reverse());
             setChartcases(response.data.cases.reverse());
             setChartdeaths(response.data.deaths.reverse());
@@ -132,7 +146,7 @@ export default function Dashboard() {
                 {loading ? <SpinnerPage /> : null}
             </div>
             <ul>
-                <li className="box-item">
+                <li className="box-item" title={`${suspectstitle} suspeitos`}>
                     <header>
                         <strong>{boxsuspects}</strong>
                     </header>
@@ -152,7 +166,7 @@ export default function Dashboard() {
                 </li>
                 <li className="box-item">
                     <header>
-                        <strong>{boxactives}</strong>
+                        <strong>{boxcases - (boxrecovered + boxdeaths)}</strong>
                     </header>
                     <span>Ativos</span>
                 </li>
