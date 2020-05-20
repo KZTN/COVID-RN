@@ -29,7 +29,7 @@
 </p>
 
 
-## ⚠️ Atenção
+## ⚠️ Warning
 <b>A new API has been developed and is ready to use, check <a href="#-Documentação">Documentation</a>.</b>
 > V2 is recommended for new users. Because V1, while continuing to receive daily data, will no longer support new updates.
 
