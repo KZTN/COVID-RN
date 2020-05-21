@@ -153,6 +153,7 @@ Depois que o merge da sua pull request for feito, você pode deletar a sua branc
 - [ ] Gerar estatísticas de acesso, consultas, erros e depuração (em desenvolvimento...)
 - [ ] Criar um console de consultas à API e estátisticas de acesso
 - [x] Gerar relatórios automáticos de status do serviço
+- [x] Gerar mapas de contaminação por data
 - [ ] Criar um extrator de PDFs
 - [ ] Criar um conversor de PDFs para csv/json
 - [ ] and more...
