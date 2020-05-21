@@ -148,6 +148,7 @@ After the merge of your pull request is done, you can delete your branch.
 - [ ] Generate access, query, error and debug statistics (on going...)
 - [ ] Generate infected maps by date
 - [x] Generate automatic service status reports
+- [ ] Revision, refactoring and optimization of the entire project
 - [ ] Create a PDF extractor
 - [ ] Create a PDF to csv / json converter
 - [ ] and more...
