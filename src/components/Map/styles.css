@@ -1,3 +1,7 @@
+.box-slider {
+    width: 90%;
+    margin: 0 auto;
+}
 .box-info {
     display: flex;
     flex-direction: column;
