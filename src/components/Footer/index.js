@@ -20,7 +20,6 @@ export default function Footer() {
                                     fontSize: 15,
                                 }}
                             >
-                                {' '}
                                 Feito com <Emoji symbol="💙" />
                             </a>
                         </div>
@@ -83,7 +82,7 @@ export default function Footer() {
                     />
                     <div className="box-info">
                         <span>© 2020 COVID-RN</span>
-                        <span>Release v1.0265</span>
+                        <span>Release v1.1278</span>
                     </div>
                 </div>
             </div>
