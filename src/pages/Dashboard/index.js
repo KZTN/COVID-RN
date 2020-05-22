@@ -50,7 +50,7 @@ export default function Dashboard() {
             setBoxname(response.data.name);
             if (response.data.suspects[0] >= 10000) {
                 setBoxsuspects(
-                    `${(response.data.suspects[0] / 1000).toFixed(0)}mil`
+                    `${parseInt(response.data.suspects[0] / 1000)}mil`
                 );
                 setSuspectstitle(response.data.suspects[0]);
             } else {
