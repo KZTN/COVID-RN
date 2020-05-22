@@ -4,8 +4,10 @@ import mongodb from '../../services/mongodb';
 import styles from './GoogleMapStyles.json';
 import coordinates from './polygons.json';
 import { isMobile } from 'react-device-detect';
-import { makeStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/styles';
 import Slider from '@material-ui/core/Slider';
+import { createMuiTheme } from '@material-ui/core';
 
 import './styles.css';
 import * as moment from 'moment';
@@ -15,8 +17,52 @@ let cordArr = [];
 Arrcoordinates.map((coordinate) =>
     cordArr.push({ lat: coordinate[1], lng: coordinate[0] })
 );
-export default function Map(a) {
-    console.log('aaaaaaaa' + a);
+export default function Map() {
+    const AmountSlider = createMuiTheme({
+        overrides: {
+            MuiSlider: {
+                root: {
+                    color: '#4bc0c0',
+                    height: 12,
+                },
+                mark: {
+                    height: 6,
+                    '&:last-child, &first-child': {
+                        display: 'none',
+                    },
+                },
+                thumb: {
+                    height: 26,
+                    width: 26,
+                    backgroundColor: '#fff',
+                    border: '2px solid currentColor',
+                    marginTop: -8,
+                    marginLeft: -12,
+                    '&:focus,&:hover,&$active': {
+                        boxShadow: 'inherit',
+                    },
+                },
+                active: {},
+                valueLabel: {
+                    left: 'calc(-50% + 6px)',
+                },
+                track: {
+                    height: 12,
+                    borderRadius: 6,
+                    width: "102%",
+                    marginLeft: -8
+
+
+                },
+                rail: {
+                    height: 12,
+                    borderRadius: 6,
+                    width: "102%",
+                    marginLeft: -8
+                },
+            },
+        },
+    });
     const [selectedsample, setSelectedsample] = useState(0);
     const [isready, setIsready] = useState(false);
     const [cities, setCities] = useState([]);
@@ -24,14 +70,18 @@ export default function Map(a) {
     const [dates, setDates] = useState([]);
     const [selectedcity, setSelectedcity] = useState();
     function valuetext(value) {
-        return moment(dates[value-1]).utc().format('DD-MM');
+        return moment(dates[value - 1])
+            .utc()
+            .format('DD-MM');
     }
     function handleChangeSlider(number) {
+        console.log('vrum vrum' + number);
         var result = number - samples;
         if (result < 0) {
             result = Math.abs(result);
         }
         setSelectedsample(result);
+        return true;
     }
 
     useEffect(() => {
@@ -91,30 +141,34 @@ export default function Map(a) {
                         fillOpacity: 0.35,
                     }}
                 />
-                {cities.filter((city) => (city.cases[selectedsample] > 0)).map((city) => (
-                    <Marker
-                        icon={{
-                            url: require('./circle.png'),
-                            scaledSize: new window.google.maps.Size(
-                                (isMobile ? 9.99 : 13.33) +
-                                    city.cases[selectedsample] / (isMobile ? 29.99 : 26.66),
-                                (isMobile ? 9.99 : 13.33) +
-                                    city.cases[selectedsample] / (isMobile ? 29.99 : 26.66)
-                            ),
-                        }}
-                        key={city._id}
-                        position={{
-                            lat: city.location.coordinates[0],
-                            lng: city.location.coordinates[1],
-                        }}
-                        onMouseOver={() => {
-                            setSelectedcity(city);
-                        }}
-                        onClick={() => {
-                            setSelectedcity(city);
-                        }}
-                    />
-                ))}
+                {cities
+                    .filter((city) => city.cases[selectedsample] > 0)
+                    .map((city) => (
+                        <Marker
+                            icon={{
+                                url: require('./circle.png'),
+                                scaledSize: new window.google.maps.Size(
+                                    (isMobile ? 9.99 : 13.33) +
+                                        city.cases[selectedsample] /
+                                            (isMobile ? 29.99 : 26.66),
+                                    (isMobile ? 9.99 : 13.33) +
+                                        city.cases[selectedsample] /
+                                            (isMobile ? 29.99 : 26.66)
+                                ),
+                            }}
+                            key={city._id}
+                            position={{
+                                lat: city.location.coordinates[0],
+                                lng: city.location.coordinates[1],
+                            }}
+                            onMouseOver={() => {
+                                setSelectedcity(city);
+                            }}
+                            onClick={() => {
+                                setSelectedcity(city);
+                            }}
+                        />
+                    ))}
                 {selectedcity && (
                     <InfoWindow
                         onMouseOut={() => {
@@ -135,14 +189,18 @@ export default function Map(a) {
                             }}
                         >
                             <h3>{selectedcity.name}</h3>
-                            <span>Casos: {selectedcity.cases[selectedsample]}</span>
+                            <span>
+                                Casos: {selectedcity.cases[selectedsample]}
+                            </span>
                             <span>
                                 Ativos:{' '}
                                 {selectedcity.cases[selectedsample] -
                                     (selectedcity.recovered[selectedsample] +
                                         selectedcity.deaths[selectedsample])}
                             </span>
-                            <span>Mortes: {selectedcity.deaths[selectedsample]}</span>
+                            <span>
+                                Mortes: {selectedcity.deaths[selectedsample]}
+                            </span>
                             <span>
                                 Recuperados:{' '}
                                 {selectedcity.recovered[selectedsample]
@@ -156,17 +214,21 @@ export default function Map(a) {
             </GoogleMap>
             <div className="box-slider">
                 {isready ? (
-                    <Slider
-                        defaultValue={samples}
-                        aria-labelledby="discrete-slider-small-steps"
-                        step={1}
-                        marks={isMobile ? false : true}
-                        min={1}
-                        max={samples}
-                        valueLabelDisplay="on"
-                        valueLabelFormat={valuetext}
-                        onChange={(event, number) => handleChangeSlider(number)}
-                    />
+                    <ThemeProvider theme={AmountSlider}>
+                        <Slider
+                            defaultValue={samples}
+                            aria-labelledby="discrete-slider-small-steps"
+                            step={1}
+                            min={1}
+                            marks={isMobile ? false : true}
+                            max={samples}
+                            valueLabelDisplay="on"
+                            valueLabelFormat={valuetext}
+                            onChange={(event, number) =>
+                                handleChangeSlider(number)
+                            }
+                        />
+                    </ThemeProvider>
                 ) : null}
             </div>
         </>

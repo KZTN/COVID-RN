@@ -84,7 +84,7 @@ export default function Graph({ cases, deaths, dates, recovered }) {
                 data: recovered,
             },
                         {
-                name: 'ativos',
+                name: 'Ativos',
                 data: activearr,
             },
         ],
