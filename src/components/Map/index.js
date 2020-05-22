@@ -27,6 +27,8 @@ export default function Map() {
                 },
                 mark: {
                     height: 6,
+                    width: 0,
+                    border: '1px solid #fff',
                     '&:last-child, &first-child': {
                         display: 'none',
                     },
