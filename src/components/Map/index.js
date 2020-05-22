@@ -37,7 +37,7 @@ export default function Map() {
                     backgroundColor: '#fff',
                     border: '2px solid currentColor',
                     marginTop: -8,
-                    marginLeft: -12,
+                    marginLeft: -16,
                     '&:focus,&:hover,&$active': {
                         boxShadow: 'inherit',
                     },
@@ -50,7 +50,7 @@ export default function Map() {
                     height: 12,
                     borderRadius: 6,
                     width: "102%",
-                    marginLeft: -8
+                    marginLeft: -11
 
 
                 },
@@ -58,7 +58,7 @@ export default function Map() {
                     height: 12,
                     borderRadius: 6,
                     width: "102%",
-                    marginLeft: -8
+                    marginLeft: -11
                 },
             },
         },
