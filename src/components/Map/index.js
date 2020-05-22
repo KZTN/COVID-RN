@@ -15,7 +15,8 @@ let cordArr = [];
 Arrcoordinates.map((coordinate) =>
     cordArr.push({ lat: coordinate[1], lng: coordinate[0] })
 );
-export default function Map() {
+export default function Map(a) {
+    console.log('aaaaaaaa' + a);
     const [selectedsample, setSelectedsample] = useState(0);
     const [isready, setIsready] = useState(false);
     const [cities, setCities] = useState([]);

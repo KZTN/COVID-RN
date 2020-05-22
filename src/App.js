@@ -16,15 +16,23 @@ import 'dotenv';
 function App() {
     const [ready, setReady] = useState(false);
     const [UF, setUF] = useState();
+    const [cities, setCities] = useState([]);
     useEffect(() => {
         async function getUFData() {
             const response = await mongodb.get('/uf/RN');
             if (response) {
                 setUF(response.data);
-                setReady(true);
             }
         }
         getUFData();
+    }, []);
+    useEffect(() => {
+        async function getData() {
+            const response = await mongodb.get('/RN/cidades');
+            setCities(response.data);
+            setReady(true);
+        }
+        getData();
     }, []);
     function popupFB() {
         if (
@@ -109,10 +117,10 @@ function App() {
                     </main>
                 </div>
                 <div className="box-scrollboxes">
-                    {ready ? <News /> : null}
+                    {ready ? <News cities={cities} /> : null}
                     {ready ? <StateGrow uf={UF} /> : null}
                 </div>
-                {ready ? <Top10 uf={UF} /> : null}
+                {ready ? <Top10 uf={UF} cities={cities}/>  : null}
                 <div className="box-map"></div>
                 <div className="map" style={{ width: '100%', height: '450px' }}>
                     <MapWrapped
@@ -127,13 +135,13 @@ function App() {
                         <FaFacebook size={28} color="#353244" />
                     </button>
                     <button onClick={popupWPP}>
-                        <FaWhatsapp fa size={28} color="#353244" />
+                        <FaWhatsapp size={28} color="#353244" />
                     </button>
                     <button onClick={popupTT}>
-                        <FaTwitter fa size={28} color="#353244" />
+                        <FaTwitter size={28} color="#353244" />
                     </button>
                     <button onClick={popupGH}>
-                        <FaGithub fa size={28} color="#353244" />
+                        <FaGithub size={28} color="#353244" />
                     </button>
                 </div>
             </div>

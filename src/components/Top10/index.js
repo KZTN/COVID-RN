@@ -7,10 +7,10 @@ import './styles.css';
 import mongodb from '../../services/mongodb';
 import { isMobile } from 'react-device-detect';
 
-export default function Top10({ uf }) {
+export default function Top10({ uf, cities }) {
     const [boxdeathrate, setBoxdeathrate] = useState('-');
-    const [boxcountcities, setBoxcountcities] = useState('-');
-    const [boxaffectedcities, setBoxaffectedcities] = useState('-');
+    const [boxcountcities, setBoxcountcities] = useState(cities.length);
+    const [boxaffectedcities, setBoxaffectedcities] = useState(cities.filter((city) => (city.cases[0] > 0)).length);
     const [
         boxaffectedcitiesbypercentage,
         setBoxaffectedcitiesbypercentage,
@@ -27,14 +27,6 @@ export default function Top10({ uf }) {
             );
             setboxCountsamples(uf.date.length);
         }
-        async function getCountcities() {
-            const countcitiesResponse = await mongodb.get('/RN/cidades');
-            setBoxcountcities(countcitiesResponse.data.length);
-        }
-        async function getAffectedcities() {
-            const affectedcitiesResponse = await mongodb.get('/maps');
-            setBoxaffectedcities(affectedcitiesResponse.data.length);
-        }
 
         async function getMostcasecity() {
             const mostcasecityResponse = await mongodb.post('/rank/RN/1', {
@@ -42,14 +34,13 @@ export default function Top10({ uf }) {
             });
             setBoxmostcasecity(mostcasecityResponse.data[0].name);
         }
+
         function calculateAffectedcitiesbypercentage() {
             setBoxaffectedcitiesbypercentage(
                 ((boxaffectedcities * 100) / 167).toFixed(0)
             );
         }
         getDeathrate();
-        getCountcities();
-        getAffectedcities();
         getMostcasecity();
         calculateAffectedcitiesbypercentage();
     }, [boxaffectedcities, uf.cases, uf.date.length, uf.deaths]);
@@ -112,14 +103,14 @@ export default function Top10({ uf }) {
                         }
                     >
                         <div
-                            classname="box-rank"
+                            className="box-rank"
                             style={{ display: 'flex', flexDirection: 'row' }}
                         >
                             <strong style={{ fontSize: 78 }}>
                                 {boxaffectedcitiesbypercentage}
                             </strong>
                             <div
-                                class="small-percentage"
+                                className="small-percentage"
                                 style={{
                                     fontSize: 48,
                                     margin: '58px 0 0 0',
@@ -160,14 +151,14 @@ export default function Top10({ uf }) {
                         style={{ background: '#000' }}
                     >
                         <div
-                            classname="box-rank"
+                            className="box-rank"
                             style={{ display: 'flex', flexDirection: 'row' }}
                         >
                             <strong style={{ fontSize: 78, color: '#fff' }}>
                                 {boxdeathrate}
                             </strong>
                             <div
-                                class="small-percentage"
+                                className="small-percentage"
                                 style={{
                                     fontSize: 48,
                                     margin: '58px 0 0 0',

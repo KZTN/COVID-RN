@@ -1,23 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css';
-import mongodb from '../../services/mongodb';
-export default function News() {
+export default function News({cities}) {
     var star = false;
     /*     const [selectedcity, setSelectedcity] = useState();
-     */ const [cities, setCities] = useState([]);
+     */
     let arr = [];
     /*     async function handleClick(e) {
        const response = await mongodb.post('/cidade', {name: e.target.value});
        setSelectedcity(response.data);
     } */
 
-    useEffect(() => {
-        async function getData() {
-            const response = await mongodb.get('/RN/cidades');
-            setCities(response.data);
-        }
-        getData();
-    }, []);
+
     function filtercities() {
         cities.map((city) => {
             if (
