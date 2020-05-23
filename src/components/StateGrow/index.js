@@ -15,7 +15,7 @@ export default function StateGrow({ uf }) {
             setStatedeaths(uf.deaths.reverse());
         }
         getData();
-    }, [uf.cases, uf.date, uf.deaths]);
+    }, []);
 
     function comparateCases() {
         for (let i = 0; i < statecases.length; i++) {

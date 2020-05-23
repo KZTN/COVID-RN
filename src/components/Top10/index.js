@@ -43,7 +43,7 @@ export default function Top10({ uf, cities }) {
         getDeathrate();
         getMostcasecity();
         calculateAffectedcitiesbypercentage();
-    }, [boxaffectedcities, uf.cases, uf.date.length, uf.deaths]);
+    }, []);
     const Wrapper = styled.div`
         width: 100%;
         margin: 30px auto 30px auto;
