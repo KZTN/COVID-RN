@@ -1,7 +1,7 @@
 .box-stategrow {
     width: 100%;
     color: #666;
-    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.15);
     border-radius: 8px;
 }
 
@@ -11,10 +11,8 @@
     background: #f5f5f2;
     margin: 0;
     flex-direction: column;
-    overflow-y: scroll; 
+    overflow-y: scroll;
     display: flex !important;
-
-
 }
 
 .box-stategrow ul.list-stategrow .box-elements {
@@ -38,7 +36,6 @@
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     z-index: 1;
-
 }
 
 .box-stategrow .box-bottom-stategrow {
@@ -50,17 +47,16 @@
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     z-index: 1;
-
 }
 
 .box-stategrow ul.list-stategrow li {
     width: 97%;
     margin: 0 1.5% 10px 1.5%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     line-height: 34px;
 }
 
@@ -79,7 +75,7 @@
     width: 10%;
 }
 
-.box-stategrow ul.list-stategrow .list-box-name button{
+.box-stategrow ul.list-stategrow .list-box-name button {
     color: #666;
     border: 0;
     background: transparent;
@@ -96,32 +92,30 @@
 .box-stategrow ul.list-stategrow::-webkit-scrollbar {
     width: 8px;
     height: 10px;
-
-  }
-  .box-stategrow ul.list-stategrow::-webkit-scrollbar-thumb {
+}
+.box-stategrow ul.list-stategrow::-webkit-scrollbar-thumb {
     border-radius: 8px;
     background: #c2c9d2;
-  }
+}
 
-  .list-box-bar {
-      margin-left: 20px;
-      height: 80%;
-      width: 100%;
-      background: transparent;
-      display: flex;
-      border-radius: 4px;
-      transform: scale(-1, -1);
-  }
+.list-box-bar {
+    margin-left: 20px;
+    height: 80%;
+    width: 100%;
+    background: transparent;
+    display: flex;
+    border-radius: 4px;
+    transform: scale(-1, -1);
+}
 
-  .list-progress-bar-cases {
+.list-progress-bar-cases {
     position: absolute;
     right: 0;
     top: 0px;
     display: block;
     height: 100%;
     background: #4bc0c0;
-
-  }
+}
 
 .list-progress-bar-deaths {
     position: absolute;
@@ -129,8 +123,4 @@
     display: block;
     height: 100%;
     background: #e26a6a;
-
-  }
-
-
-
+}

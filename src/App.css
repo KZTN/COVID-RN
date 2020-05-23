@@ -157,7 +157,7 @@ a {
     background: #f5f5f2;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.15);
 }
 .box-contact {
     text-align: center;
@@ -167,7 +167,7 @@ a {
     background: #f5f5f2;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
-    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.15);
 }
 .box-contact button {
     border: 0;

@@ -55,7 +55,7 @@ export default function Top10({ uf, cities }) {
         height: 180px;
     `;
     const Content = styled.div`
-        box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.15);
         background: #f5f5f2;
         border-radius: 8px;
         height: 100%;
