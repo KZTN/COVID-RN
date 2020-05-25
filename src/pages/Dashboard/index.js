@@ -11,15 +11,16 @@ import { createMuiTheme, MuiThemeProvider, Tooltip } from '@material-ui/core';
 import { isMobile } from 'react-device-detect';
 const theme = createMuiTheme({
     overrides: {
-      MuiTooltip: {
-        tooltip: {
-          fontSize: "2em",
-          color: "gray",
-          backgroundColor: "white"
-        }
-      }
-    }
-  });
+        MuiTooltip: {
+            tooltip: {
+                fontSize: '2rem',
+                color: 'gray',
+                backgroundColor: 'white',
+                border: '1px solid #eee',
+            },
+        },
+    },
+});
 export default function Dashboard() {
     const [loading, setLoading] = useState(true);
     const [datedata, setDatedata] = useState();
@@ -42,7 +43,25 @@ export default function Dashboard() {
     const [deathstitle, setDeathstitle] = useState('-');
     const [activestitle, setActivestitle] = useState('-');
     const [recoveredtitle, setRecoveredtitle] = useState('-');
-
+    const [suspectstooltipisselected, setSuspectstooltipisselected] = useState(
+        false
+    );
+    const [refusestooltipisselected, setRefusesTooltipisselected] = useState(
+        false
+    );
+    const [casesstooltipisselected, setCasesTooltipisselected] = useState(
+        false
+    );
+    const [activestooltipisselected, setActivesTooltipisselected] = useState(
+        false
+    );
+    const [deathstooltipisselected, setDeathsTooltipisselected] = useState(
+        false
+    );
+    const [
+        recoveredtooltipisselected,
+        setRecoveredTooltipisselected,
+    ] = useState(false);
     useEffect(() => {
         async function handleAPI() {
             const response = await mongodb.get('/uf/RN');
@@ -52,18 +71,78 @@ export default function Dashboard() {
                 setBoxsuspects(
                     `${parseInt(response.data.suspects[0] / 1000)}mil`
                 );
-                setSuspectstitle(response.data.suspects[0]);
             } else {
                 setBoxsuspects(response.data.suspects[0]);
             }
+            if (response.data.refuses[0] >= 10000) {
+                setBoxrefuses(
+                    `${parseInt(response.data.refuses[0] / 1000)}mil`
+                );
+            } else {
+                setBoxrefuses(response.data.suspects[0]);
+            }
+            const actives =
+                response.data.cases[0] -
+                (response.data.recovered[0] + response.data.deaths[0]);
+            const activesbefore =
+                response.data.cases[1] -
+                (response.data.recovered[1] + response.data.deaths[1]);
             setBoxrefuses(response.data.refuses[0]);
             setBoxcases(response.data.cases[0]);
-            setBoxactives(
-                response.data.cases[0] -
-                    (response.data.recovered[0] + response.data.deaths[0])
-            );
+            setBoxactives(actives);
             setBoxdeaths(response.data.deaths[0]);
             setDatedata(response.data.date[0]);
+
+            setRefusestitle(
+                `Total: ${response.data.refuses[0]} variação: ${(
+                    ((response.data.refuses[0] * 100) /
+                        response.data.refuses[1]) %
+                    100
+                ).toFixed(2)}% `
+            );
+
+            setSuspectstitle(
+                `Total: ${response.data.suspects[0]} variação: ${(
+                    ((response.data.suspects[0] * 100) /
+                        response.data.suspects[1]) %
+                    100
+                ).toFixed(2)}% `
+            );
+            setCasestitle(
+                `Total: ${response.data.cases[0]} variação: ${(
+                    ((response.data.cases[0] * 100) / response.data.cases[1]) %
+                    100
+                ).toFixed(2)}% `
+            );
+            if (actives > activesbefore) {
+                setActivestitle(
+                    `Total: ${actives} variação: ${(
+                        ((actives * 100) / activesbefore) %
+                        100
+                    ).toFixed(2)}% `
+                );
+            } else {
+                setActivestitle(
+                    `Total: ${actives} variação: -${(
+                        ((activesbefore * 100) / actives) %
+                        100
+                    ).toFixed(2)}% `
+                );
+            }
+            setDeathstitle(
+                `Total: ${response.data.deaths[0]} variação: ${(
+                    ((response.data.deaths[0] * 100) /
+                        response.data.deaths[1]) %
+                    100
+                ).toFixed(2)}% `
+            );
+            setRecoveredtitle(
+                `Total: ${response.data.recovered[0]} variação: ${(
+                    ((response.data.recovered[0] * 100) /
+                        response.data.recovered[1]) %
+                    100
+                ).toFixed(2)}% `
+            );
             setBoxrecovered(response.data.recovered[0]);
             setChartDates(response.data.date.reverse());
             setChartcases(response.data.cases.reverse());
@@ -73,6 +152,24 @@ export default function Dashboard() {
         }
         handleAPI();
     }, []);
+    function handleSuspectsTolltipisselected(e) {
+        setSuspectstooltipisselected(e);
+    }
+    function handleRefusesTolltipisselected(e) {
+        setRefusesTooltipisselected(e);
+    }
+    function handleCasesTolltipisselected(e) {
+        setCasesTooltipisselected(e);
+    }
+    function handleActivesTolltipisselected(e) {
+        setActivesTooltipisselected(e);
+    }
+    function handleDeathsTolltipisselected(e) {
+        setDeathsTooltipisselected(e);
+    }
+    function handleRecoveredTolltipisselected(e) {
+        setRecoveredTooltipisselected(e);
+    }
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -81,20 +178,72 @@ export default function Dashboard() {
             const response = await mongodb.post('/RN/cidade', {
                 name: capitalize(name),
             });
+            const actives =
+                response.data.cases[0] -
+                (response.data.recovered[0] + response.data.deaths[0]);
+            const activesbefore =
+                response.data.cases[1] -
+                (response.data.recovered[1] + response.data.deaths[1]);
             setBoxname(response.data.name);
             if (response.data.suspects[0] >= 10000) {
-                setBoxsuspects(`${~~response.data.suspects[0] / 1000}mil`);
-                setSuspectstitle(response.data.suspects[0]);
+                setBoxsuspects(
+                    `${parseInt(response.data.suspects[0] / 1000)}mil`
+                );
             } else {
                 setBoxsuspects(response.data.suspects[0]);
             }
-            setBoxrefuses(response.data.refuses[0]);
-            setBoxcases(response.data.cases[0]);
+            if (response.data.refuses[0] >= 10000) {
+                setBoxrefuses(
+                    `${parseInt(response.data.refuses[0] / 1000)}mil`
+                );
+            } else {
+                setBoxrefuses(response.data.suspects[0]);
+            }
             setBoxdeaths(response.data.deaths[0]);
-            setBoxactives(
-                response.data.cases[0] -
-                    (response.data.recovered[0] + response.data.deaths[0])
+            setBoxactives(actives);
+            setSuspectstitle(
+                `Total: ${response.data.suspects[0]} variação: ${(
+                    ((response.data.suspects[0] * 100) /
+                        response.data.suspects[1]) %
+                    100
+                ).toFixed(2)}% `
             );
+            setCasestitle(
+                `Total: ${response.data.cases[0]} variação: ${(
+                    ((response.data.cases[0] * 100) / response.data.cases[1]) %
+                    100
+                ).toFixed(2)}% `
+            );
+            if (actives > activesbefore) {
+                setActivestitle(
+                    `Total: ${actives} variação: ${(
+                        ((actives * 100) / activesbefore) %
+                        100
+                    ).toFixed(2)}% `
+                );
+            } else {
+                setActivestitle(
+                    `Total: ${actives} variação: -${(
+                        ((activesbefore * 100) / actives) %
+                        100
+                    ).toFixed(2)}% `
+                );
+            }
+            setDeathstitle(
+                `Total: ${response.data.deaths[0]} variação: ${(
+                    ((response.data.deaths[0] * 100) /
+                        response.data.deaths[1]) %
+                    100
+                ).toFixed(2)}% `
+            );
+            setRecoveredtitle(
+                `Total: ${response.data.recovered[0]} variação: ${(
+                    ((response.data.recovered[0] * 100) /
+                        response.data.recovered[1]) %
+                    100
+                ).toFixed(2)}% `
+            );
+            setBoxcases(response.data.cases[0]);
             setBoxrecovered(response.data.recovered[0]);
             setChartDates(response.data.date.reverse());
             setChartcases(response.data.cases.reverse());
@@ -166,53 +315,222 @@ export default function Dashboard() {
             <div className="box-loading">
                 {loading ? <SpinnerPage /> : null}
             </div>
-            <ul>
-                <li className="box-item">
-                    <header>
-                    <MuiThemeProvider theme={theme}>
-
-                        <Tooltip title={`${suspectstitle} suspeitos`} aria-label={`${suspectstitle} suspeitos`}>
-                            <strong>{boxsuspects}</strong>
-                        </Tooltip>
-                        </MuiThemeProvider>
-                    </header>
-                    <span>Suspeitos</span>
-                </li>
-                <li className="box-item">
-                    <header>
-                        <strong>{boxrefuses}</strong>
-                    </header>
-                    <span>Descartados</span>
-                </li>
-                <li className="box-item">
-                    <header>
-                        <strong>{boxcases}</strong>
-                    </header>
-                    <span>Confirmados</span>
-                </li>
-                <li className="box-item">
-                    <header>
-                        <strong>{boxactives}</strong>
-                    </header>
-                    <span>Ativos</span>
-                </li>
-                <li className="box-item">
-                    <header>
-                        <strong>{boxdeaths}</strong>
-                    </header>
-                    <span>Óbitos</span>
-                </li>
-                <li
-                    className="box-item"
-                    style={{ background: '#1db954', color: '#fff' }}
-                >
-                    <header>
-                        <strong style={{ color: '#fff' }}>
-                            {boxrecovered ? boxrecovered : '-'}
-                        </strong>
-                    </header>
-                    <span style={{ color: '#fdfefc' }}>Recuperados*</span>
-                </li>
+            <ul style={{}}>
+                <MuiThemeProvider theme={theme}>
+                    <Tooltip
+                        title={suspectstitle}
+                        aria-label={suspectstitle}
+                        open={suspectstooltipisselected}
+                    >
+                        <li
+                            className={
+                                isMobile
+                                    ? 'box-item mobile'
+                                    : 'box-item desktop'
+                            }
+                            onTouchStart={() =>
+                                handleSuspectsTolltipisselected(true)
+                            }
+                            onMouseOver={() =>
+                                handleSuspectsTolltipisselected(true)
+                            }
+                            onMouseOut={() =>
+                                handleSuspectsTolltipisselected(false)
+                            }
+                            onTouchEnd={() =>
+                                handleSuspectsTolltipisselected(false)
+                            }
+                            onTouchMove={() =>
+                                handleSuspectsTolltipisselected(false)
+                            }
+                        >
+                            <header>
+                                <strong>{boxsuspects}</strong>
+                            </header>
+                            <span>Suspeitos</span>
+                        </li>
+                    </Tooltip>
+                </MuiThemeProvider>
+                <MuiThemeProvider theme={theme}>
+                    <Tooltip
+                        title={refusestitle}
+                        aria-label={refusestitle}
+                        open={refusestooltipisselected}
+                    >
+                        <li
+                            className={
+                                isMobile
+                                    ? 'box-item mobile'
+                                    : 'box-item desktop'
+                            }
+                            onTouchStart={() =>
+                                handleRefusesTolltipisselected(true)
+                            }
+                            onMouseOver={() =>
+                                handleRefusesTolltipisselected(true)
+                            }
+                            onMouseOut={() =>
+                                handleRefusesTolltipisselected(false)
+                            }
+                            onTouchEnd={() =>
+                                handleRefusesTolltipisselected(false)
+                            }
+                            onTouchMove={() =>
+                                handleRefusesTolltipisselected(false)
+                            }
+                        >
+                            <header>
+                                <strong>{boxrefuses}</strong>
+                            </header>
+                            <span>Descartados</span>
+                        </li>
+                    </Tooltip>
+                </MuiThemeProvider>
+                <MuiThemeProvider theme={theme}>
+                    <Tooltip
+                        title={casestitle}
+                        aria-label={casestitle}
+                        open={casesstooltipisselected}
+                    >
+                        <li
+                            className={
+                                isMobile
+                                    ? 'box-item mobile'
+                                    : 'box-item desktop'
+                            }
+                            onTouchStart={() =>
+                                handleCasesTolltipisselected(true)
+                            }
+                            onMouseOver={() =>
+                                handleCasesTolltipisselected(true)
+                            }
+                            onMouseOut={() =>
+                                handleCasesTolltipisselected(false)
+                            }
+                            onTouchEnd={() =>
+                                handleCasesTolltipisselected(false)
+                            }
+                            onTouchMove={() =>
+                                handleCasesTolltipisselected(false)
+                            }
+                        >
+                            <header>
+                                <strong>{boxcases}</strong>
+                            </header>
+                            <span>Confirmados</span>
+                        </li>
+                    </Tooltip>
+                </MuiThemeProvider>
+                <MuiThemeProvider theme={theme}>
+                    <Tooltip
+                        title={activestitle}
+                        aria-label={activestitle}
+                        open={activestooltipisselected}
+                    >
+                        <li
+                            className={
+                                isMobile
+                                    ? 'box-item mobile'
+                                    : 'box-item desktop'
+                            }
+                            onTouchStart={() =>
+                                handleActivesTolltipisselected(true)
+                            }
+                            onMouseOver={() =>
+                                handleActivesTolltipisselected(true)
+                            }
+                            onMouseOut={() =>
+                                handleActivesTolltipisselected(false)
+                            }
+                            onTouchEnd={() =>
+                                handleActivesTolltipisselected(false)
+                            }
+                            onTouchMove={() =>
+                                handleActivesTolltipisselected(false)
+                            }
+                        >
+                            <header>
+                                <strong>{boxactives}</strong>
+                            </header>
+                            <span>Ativos</span>
+                        </li>
+                    </Tooltip>
+                </MuiThemeProvider>
+                <MuiThemeProvider theme={theme}>
+                    <Tooltip
+                        title={deathstitle}
+                        aria-label={deathstitle}
+                        open={deathstooltipisselected}
+                    >
+                        <li
+                            className={
+                                isMobile
+                                    ? 'box-item mobile'
+                                    : 'box-item desktop'
+                            }
+                            onTouchStart={() =>
+                                handleDeathsTolltipisselected(true)
+                            }
+                            onMouseOver={() =>
+                                handleDeathsTolltipisselected(true)
+                            }
+                            onMouseOut={() =>
+                                handleDeathsTolltipisselected(false)
+                            }
+                            onTouchEnd={() =>
+                                handleDeathsTolltipisselected(false)
+                            }
+                            onTouchMove={() =>
+                                handleDeathsTolltipisselected(false)
+                            }
+                        >
+                            <header>
+                                <strong>{boxdeaths}</strong>
+                            </header>
+                            <span>Óbitos</span>
+                        </li>
+                    </Tooltip>
+                </MuiThemeProvider>
+                <MuiThemeProvider theme={theme}>
+                    <Tooltip
+                        title={recoveredtitle}
+                        aria-label={recoveredtitle}
+                        open={recoveredtooltipisselected}
+                    >
+                        <li
+                            className={
+                                isMobile
+                                    ? 'box-item mobile'
+                                    : 'box-item desktop'
+                            }
+                            style={{ background: '#1db954', color: '#fff' }}
+                            onTouchStart={() =>
+                                handleRecoveredTolltipisselected(true)
+                            }
+                            onMouseOver={() =>
+                                handleRecoveredTolltipisselected(true)
+                            }
+                            onMouseOut={() =>
+                                handleRecoveredTolltipisselected(false)
+                            }
+                            onTouchEnd={() =>
+                                handleRecoveredTolltipisselected(false)
+                            }
+                            onTouchMove={() =>
+                                handleRecoveredTolltipisselected(false)
+                            }
+                        >
+                            <header>
+                                <strong style={{ color: '#fff' }}>
+                                    {boxrecovered ? boxrecovered : '-'}
+                                </strong>
+                            </header>
+                            <span style={{ color: '#fdfefc' }}>
+                                Recuperados*
+                            </span>
+                        </li>
+                    </Tooltip>
+                </MuiThemeProvider>
             </ul>
             <div
                 className="box-star"
