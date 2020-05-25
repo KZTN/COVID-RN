@@ -79,7 +79,7 @@ export default function Dashboard() {
                     `${parseInt(response.data.refuses[0] / 1000)}mil`
                 );
             } else {
-                setBoxrefuses(response.data.suspects[0]);
+                setBoxrefuses(response.data.refuses[0]);
             }
             const actives =
                 response.data.cases[0] -
@@ -87,7 +87,6 @@ export default function Dashboard() {
             const activesbefore =
                 response.data.cases[1] -
                 (response.data.recovered[1] + response.data.deaths[1]);
-            setBoxrefuses(response.data.refuses[0]);
             setBoxcases(response.data.cases[0]);
             setBoxactives(actives);
             setBoxdeaths(response.data.deaths[0]);
@@ -197,7 +196,7 @@ export default function Dashboard() {
                     `${parseInt(response.data.refuses[0] / 1000)}mil`
                 );
             } else {
-                setBoxrefuses(response.data.suspects[0]);
+                setBoxrefuses(response.data.refuses[0]);
             }
             setBoxdeaths(response.data.deaths[0]);
             setBoxactives(actives);
