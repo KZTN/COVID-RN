@@ -207,6 +207,13 @@ export default function Dashboard() {
                     100
                 ).toFixed(2)}% `
             );
+            setRefusestitle(
+                `Total: ${response.data.refuses[0]} variação: ${(
+                    ((response.data.refuses[0] * 100) /
+                        response.data.refuses[1]) %
+                    100
+                ).toFixed(2)}% `
+            );
             setCasestitle(
                 `Total: ${response.data.cases[0]} variação: ${(
                     ((response.data.cases[0] * 100) / response.data.cases[1]) %
