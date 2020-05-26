@@ -81,6 +81,9 @@ export default function Dashboard() {
             } else {
                 setBoxrefuses(response.data.refuses[0]);
             }
+            const suspects = response.data.suspects[0];
+            const suspectsbefore = response.data.suspects[1];
+
             const actives =
                 response.data.cases[0] -
                 (response.data.recovered[0] + response.data.deaths[0]);
@@ -100,19 +103,27 @@ export default function Dashboard() {
                 ).toFixed(2)}% `
             );
 
-            setSuspectstitle(
-                `Total: ${response.data.suspects[0]} variação: ${(
-                    ((response.data.suspects[0] * 100) /
-                        response.data.suspects[1]) %
-                    100
-                ).toFixed(2)}% `
-            );
             setCasestitle(
                 `Total: ${response.data.cases[0]} variação: ${(
                     ((response.data.cases[0] * 100) / response.data.cases[1]) %
                     100
                 ).toFixed(2)}% `
             );
+            if (suspects > suspectsbefore) {
+                setSuspectstitle(
+                    `Total: ${suspects} variação: ${(
+                        ((suspects * 100) / suspectsbefore) %
+                        100
+                    ).toFixed(2)}% `
+                );
+            } else {
+                setSuspectstitle(
+                    `Total: ${suspects} variação: -${(
+                        ((suspectsbefore * 100) / suspects) %
+                        100
+                    ).toFixed(2)}% `
+                );
+            }
             if (actives > activesbefore) {
                 setActivestitle(
                     `Total: ${actives} variação: ${(
@@ -177,6 +188,8 @@ export default function Dashboard() {
             const response = await mongodb.post('/RN/cidade', {
                 name: capitalize(name),
             });
+            const suspects = response.data.suspects[0];
+            const suspectsbefore = response.data.suspects[1];
             const actives =
                 response.data.cases[0] -
                 (response.data.recovered[0] + response.data.deaths[0]);
@@ -200,13 +213,21 @@ export default function Dashboard() {
             }
             setBoxdeaths(response.data.deaths[0]);
             setBoxactives(actives);
-            setSuspectstitle(
-                `Total: ${response.data.suspects[0]} variação: ${(
-                    ((response.data.suspects[0] * 100) /
-                        response.data.suspects[1]) %
-                    100
-                ).toFixed(2)}% `
-            );
+            if (suspects > suspectsbefore) {
+                setSuspectstitle(
+                    `Total: ${suspects} variação: ${(
+                        ((suspects * 100) / suspectsbefore) %
+                        100
+                    ).toFixed(2)}% `
+                );
+            } else {
+                setSuspectstitle(
+                    `Total: ${suspects} variação: -${(
+                        ((suspectsbefore * 100) / suspects) %
+                        100
+                    ).toFixed(2)}% `
+                );
+            }
             setRefusestitle(
                 `Total: ${response.data.refuses[0]} variação: ${(
                     ((response.data.refuses[0] * 100) /
