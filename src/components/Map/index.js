@@ -152,10 +152,10 @@ export default function Map() {
                                 scaledSize: new window.google.maps.Size(
                                     (isMobile ? 9.99 : 13.33) +
                                         city.cases[selectedsample] /
-                                            (isMobile ? 29.99 : 26.66),
+                                            (isMobile ? 36.66 : 29.99),
                                     (isMobile ? 9.99 : 13.33) +
                                         city.cases[selectedsample] /
-                                            (isMobile ? 29.99 : 26.66)
+                                            (isMobile ? 36.66 : 29.99)
                                 ),
                             }}
                             key={city._id}
