@@ -185,6 +185,9 @@ a {
 }
 
 @media (max-width: 650px) {
+    body {
+        overflow-x: hidden;
+    }
     .container footer {
         flex-direction: column;
         align-items: center;
