@@ -6,6 +6,7 @@ import DateTime from '../../utils/datetime';
 import SpinnerPage from '../../utils/SpinnerPage';
 import { capitalize } from '../../utils/capitalize';
 import Graph from '../../components/Graph';
+import ChartIsolation from '../../components/ChartIsolation';
 import { createMuiTheme, MuiThemeProvider, Tooltip } from '@material-ui/core';
 //import Calendar from '../../components/Calendar';
 import { isMobile } from 'react-device-detect';
@@ -22,6 +23,7 @@ const theme = createMuiTheme({
     },
 });
 export default function Dashboard() {
+    const [selectedchart, setSelectedchart] = useState('epidemiologic');
     const [loading, setLoading] = useState(true);
     const [datedata, setDatedata] = useState();
     const [boxname, setBoxname] = useState('Rio Grande do Norte');
@@ -286,6 +288,7 @@ export default function Dashboard() {
         document.getElementById('input').blur();
         window.blur();
         setName('');
+        setSelectedchart('epidemiologic');
     }
     function has_any_spaces(str) {
         const expression = /^\S+$/g;
@@ -568,20 +571,37 @@ export default function Dashboard() {
                     este dado
                 </p>
             </div>
-
-            <div className="box-chart">
-                <div className="box-header-boxchart">
-                    <p>
-                        Gráfico d{surname} {boxname}
-                    </p>
+            <section id="chart">
+                <div className="box-chart">
+                    <div className="box-header-boxchart">
+                        <p>
+                        {selectedchart === 'epidemiologic' ? `Gráfico d${surname} ${boxname}`: 'Gráfico do Rio Grande do Norte'}
+                        </p>
+                    </div>
+                    {selectedchart === 'epidemiologic' ? (
+                        <Graph
+                            cases={chartcases}
+                            deaths={chartdeaths}
+                            dates={chartdates}
+                            recovered={chartrecovered}
+                        />
+                    ) : <ChartIsolation/>}
                 </div>
-                <Graph
-                    cases={chartcases}
-                    deaths={chartdeaths}
-                    dates={chartdates}
-                    recovered={chartrecovered}
-                />
-            </div>
+                <div className="chart-actions">
+                    <button
+                        value="epidemiologic"
+                        onClick={(e) => setSelectedchart(e.target.value)}
+                    >
+                        Gráfico epidemiológico
+                    </button>
+                    <button
+                        value="isolation"
+                        onClick={(e) => setSelectedchart(e.target.value)}
+                    >
+                        Gráfico isolamento
+                    </button>
+                </div>
+            </section>
         </>
     );
 }
