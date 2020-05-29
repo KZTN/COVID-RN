@@ -67,31 +67,18 @@ export default function Dashboard() {
     useEffect(() => {
         async function handleAPI() {
             const response = await mongodb.get('/uf/RN');
-            setBoxname(response.data.name);
-            setBoxname(response.data.name);
-            if (response.data.suspects[0] >= 10000) {
-                setBoxsuspects(
-                    `${parseInt(response.data.suspects[0] / 1000)}mil`
-                );
-            } else {
-                setBoxsuspects(response.data.suspects[0]);
-            }
-            if (response.data.refuses[0] >= 10000) {
-                setBoxrefuses(
-                    `${parseInt(response.data.refuses[0] / 1000)}mil`
-                );
-            } else {
-                setBoxrefuses(response.data.refuses[0]);
-            }
+
             const suspects = response.data.suspects[0];
             const suspectsbefore = response.data.suspects[1];
-
             const actives =
                 response.data.cases[0] -
                 (response.data.recovered[0] + response.data.deaths[0]);
             const activesbefore =
                 response.data.cases[1] -
                 (response.data.recovered[1] + response.data.deaths[1]);
+            setBoxname(response.data.name);
+            setBoxsuspects(response.data.suspects[0]);
+            setBoxrefuses(response.data.refuses[0]);
             setBoxcases(response.data.cases[0]);
             setBoxactives(actives);
             setBoxdeaths(response.data.deaths[0]);
@@ -199,20 +186,8 @@ export default function Dashboard() {
                 response.data.cases[1] -
                 (response.data.recovered[1] + response.data.deaths[1]);
             setBoxname(response.data.name);
-            if (response.data.suspects[0] >= 10000) {
-                setBoxsuspects(
-                    `${parseInt(response.data.suspects[0] / 1000)}mil`
-                );
-            } else {
-                setBoxsuspects(response.data.suspects[0]);
-            }
-            if (response.data.refuses[0] >= 10000) {
-                setBoxrefuses(
-                    `${parseInt(response.data.refuses[0] / 1000)}mil`
-                );
-            } else {
-                setBoxrefuses(response.data.refuses[0]);
-            }
+            setBoxsuspects(response.data.suspects[0]);
+            setBoxrefuses(response.data.refuses[0]);
             setBoxdeaths(response.data.deaths[0]);
             setBoxactives(actives);
             if (suspects > suspectsbefore) {
@@ -575,7 +550,9 @@ export default function Dashboard() {
                 <div className="box-chart">
                     <div className="box-header-boxchart">
                         <p>
-                        {selectedchart === 'epidemiologic' ? `Gráfico d${surname} ${boxname}`: 'Gráfico do Rio Grande do Norte'}
+                            {selectedchart === 'epidemiologic'
+                                ? `Gráfico d${surname} ${boxname}`
+                                : 'Gráfico do Rio Grande do Norte'}
                         </p>
                     </div>
                     {selectedchart === 'epidemiologic' ? (
@@ -585,7 +562,9 @@ export default function Dashboard() {
                             dates={chartdates}
                             recovered={chartrecovered}
                         />
-                    ) : <ChartIsolation/>}
+                    ) : (
+                        <ChartIsolation />
+                    )}
                 </div>
                 <div className="chart-actions">
                     <button
