@@ -61,7 +61,7 @@ export default function ChartIsolation() {
                 tickAmount: 'dataPoints',
                 labels: {
                     hideOverlappingLabels: true,
-                    format: 'dddd/MM',
+                    format: 'dd/MM',
                     rotate: -45,
                     rotateAlways: false,
                     showDuplicates: false,
@@ -87,6 +87,7 @@ export default function ChartIsolation() {
                 },
             },
             yaxis: {
+                forceNiceScale: false,
                 floating: true,
                 axisTicks: {
                     show: false,
@@ -96,6 +97,7 @@ export default function ChartIsolation() {
                 },
                 labels: {
                     show: false,
+                    formatter: (value) => value.toFixed(2) +'%',
                 },
             },
         },
