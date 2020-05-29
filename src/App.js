@@ -14,23 +14,35 @@ import './App.css';
 import 'dotenv';
 
 function App() {
-    const [ready, setReady] = useState(false);
+    const [readyuf, setReadyuf] = useState(false);
+    const [readycity, setReadycity] = useState(false);
     const [UF, setUF] = useState();
     const [cities, setCities] = useState([]);
     useEffect(() => {
         async function getUFData() {
-            const response = await mongodb.get('/uf/RN');
-            if (response) {
-                setUF(response.data);
-            }
+            await mongodb
+                .get('/uf/RN')
+                .then((response) => {
+                    setUF(response.data);
+                    setReadyuf(true);
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
         }
         getUFData();
     }, []);
     useEffect(() => {
         async function getData() {
-            const response = await mongodb.get('/RN/cidades');
-            setCities(response.data);
-            setReady(true);
+            await mongodb
+                .get('/RN/cidades')
+                .then((response) => {
+                    setCities(response.data);
+                    setReadycity(true);
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
         }
         getData();
     }, []);
@@ -41,7 +53,8 @@ function App() {
             )
         ) {
             window.open(
-                'https://www.facebook.com/sharer/sharer.php?u=covid-rn.herokuapp.com', '_blank'
+                'https://www.facebook.com/sharer/sharer.php?u=covid-rn.herokuapp.com',
+                '_blank'
             );
             return false;
         }
@@ -101,7 +114,9 @@ function App() {
     return (
         <>
             <div className="container">
-                <div className="msg">{ready ? <ModalAlert /> : null}</div>
+                <div className="msg">
+                    {readycity && readyuf ? <ModalAlert /> : null}
+                </div>
                 <header>
                     <div className="title-box">
                         <h1>
@@ -117,10 +132,12 @@ function App() {
                     </main>
                 </div>
                 <div className="box-scrollboxes">
-                    {ready ? <News cities={cities} /> : null}
-                    {ready ? <StateGrow uf={UF} /> : null}
+                    {readycity ? <News cities={cities} /> : null}
+                    {readyuf ? <StateGrow uf={UF} /> : null}
                 </div>
-                {ready ? <Top10 uf={UF} cities={cities}/>  : null}
+                {readycity && readyuf ? (
+                    <Top10 uf={UF} cities={cities} />
+                ) : null}
                 <div className="box-map"></div>
                 <div className="map" style={{ width: '100%', height: '450px' }}>
                     <MapWrapped
