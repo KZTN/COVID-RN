@@ -59,7 +59,9 @@ a {
     border-radius: 0 0 12px 12px;
     font-size: 44px;
 }
-
+.container .content {
+    max-width: 100%;
+}
 .container h1 {
     font-family: 'Open Sans';
     text-transform: uppercase;
