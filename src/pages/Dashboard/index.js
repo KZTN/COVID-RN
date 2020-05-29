@@ -85,7 +85,7 @@ export default function Dashboard() {
             setDatedata(response.data.date[0]);
 
             setRefusestitle(
-                `Total: ${response.data.refuses[0]} variação: ${(
+                `Aumento: ${response.data.refuses[0] - response.data.refuses[1]} variação: ${(
                     ((response.data.refuses[0] * 100) /
                         response.data.refuses[1]) %
                     100
@@ -93,21 +93,21 @@ export default function Dashboard() {
             );
 
             setCasestitle(
-                `Total: ${response.data.cases[0]} variação: ${(
+                `Aumento: ${response.data.cases[0] - response.data.cases[1]} variação: ${(
                     ((response.data.cases[0] * 100) / response.data.cases[1]) %
                     100
                 ).toFixed(2)}% `
             );
             if (suspects > suspectsbefore) {
                 setSuspectstitle(
-                    `Total: ${suspects} variação: ${(
+                    `Aumento: ${suspects - suspectsbefore} variação: ${(
                         ((suspects * 100) / suspectsbefore) %
                         100
                     ).toFixed(2)}% `
                 );
             } else {
                 setSuspectstitle(
-                    `Total: ${suspects} variação: -${(
+                    `Diminuição: ${suspectsbefore - suspects} variação: -${(
                         ((suspectsbefore * 100) / suspects) %
                         100
                     ).toFixed(2)}% `
@@ -115,28 +115,28 @@ export default function Dashboard() {
             }
             if (actives > activesbefore) {
                 setActivestitle(
-                    `Total: ${actives} variação: ${(
+                    `Aumento: ${actives - activesbefore} variação: ${(
                         ((actives * 100) / activesbefore) %
                         100
                     ).toFixed(2)}% `
                 );
             } else {
                 setActivestitle(
-                    `Total: ${actives} variação: -${(
+                    `Diminuição: ${activesbefore - actives} variação: -${(
                         ((activesbefore * 100) / actives) %
                         100
                     ).toFixed(2)}% `
                 );
             }
             setDeathstitle(
-                `Total: ${response.data.deaths[0]} variação: ${(
+                `Aumento: ${response.data.deaths[0] - response.data.deaths[1]} variação: ${(
                     ((response.data.deaths[0] * 100) /
                         response.data.deaths[1]) %
                     100
                 ).toFixed(2)}% `
             );
             setRecoveredtitle(
-                `Total: ${response.data.recovered[0]} variação: ${(
+                `Aumento: ${response.data.recovered[0] - response.data.recovered[1]} variação: ${(
                     ((response.data.recovered[0] * 100) /
                         response.data.recovered[1]) %
                     100
@@ -192,56 +192,56 @@ export default function Dashboard() {
             setBoxactives(actives);
             if (suspects > suspectsbefore) {
                 setSuspectstitle(
-                    `Total: ${suspects} variação: ${(
+                    `Aumento: ${suspects - suspectsbefore} variação: ${(
                         ((suspects * 100) / suspectsbefore) %
                         100
                     ).toFixed(2)}% `
                 );
             } else {
                 setSuspectstitle(
-                    `Total: ${suspects} variação: -${(
+                    `Diminuição: ${suspectsbefore - suspects} variação: -${(
                         ((suspectsbefore * 100) / suspects) %
                         100
                     ).toFixed(2)}% `
                 );
             }
             setRefusestitle(
-                `Total: ${response.data.refuses[0]} variação: ${(
+                `Aumento: ${response.data.refuses[0] - response.data.refuses[1]} variação: ${(
                     ((response.data.refuses[0] * 100) /
                         response.data.refuses[1]) %
                     100
                 ).toFixed(2)}% `
             );
             setCasestitle(
-                `Total: ${response.data.cases[0]} variação: ${(
+                `Aumento: ${response.data.cases[0] - response.data.cases[1]} variação: ${(
                     ((response.data.cases[0] * 100) / response.data.cases[1]) %
                     100
                 ).toFixed(2)}% `
             );
             if (actives > activesbefore) {
                 setActivestitle(
-                    `Total: ${actives} variação: ${(
+                    `Aumento: ${actives - activesbefore} variação: ${(
                         ((actives * 100) / activesbefore) %
                         100
                     ).toFixed(2)}% `
                 );
             } else {
                 setActivestitle(
-                    `Total: ${actives} variação: -${(
+                    `Diminuição: ${activesbefore - actives} variação: -${(
                         ((activesbefore * 100) / actives) %
                         100
                     ).toFixed(2)}% `
                 );
             }
             setDeathstitle(
-                `Total: ${response.data.deaths[0]} variação: ${(
+                `Aumento: ${response.data.deaths[0] - response.data.deaths[1]} variação: ${(
                     ((response.data.deaths[0] * 100) /
                         response.data.deaths[1]) %
                     100
                 ).toFixed(2)}% `
             );
             setRecoveredtitle(
-                `Total: ${response.data.recovered[0]} variação: ${(
+                `Aumento: ${response.data.recovered[0] - response.data.recovered[1]} variação: ${(
                     ((response.data.recovered[0] * 100) /
                         response.data.recovered[1]) %
                     100
