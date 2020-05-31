@@ -81,13 +81,13 @@ export default function StateGrow({ uf }) {
                             <div
                                 className="list-progress-bar-deaths"
                                 style={{
-                                    width: `${arrDeaths[index] / 8.5}%`,
-                                    right: `${cases / 8.5}%`,
+                                    width: `${arrDeaths[index] / 10}%`,
+                                    right: `${cases / 10}%`,
                                 }}
                             ></div>
                             <div
                                 className="list-progress-bar-cases"
-                                style={{ width: `${cases / 8.5}%` }}
+                                style={{ width: `${cases / 10}%` }}
                             ></div>
                         </div>
                         <div className="list-box">
