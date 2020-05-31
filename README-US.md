@@ -152,6 +152,7 @@ After the merge of your pull request is done, you can delete your branch.
 - [ ] Create a PDF extractor
 - [ ] Create a PDF to csv / json converter
 - [x] Create graphs with isolation rates
+- [ ] Dictionary of cities, usability improvements, map navigation improvements
 - [ ] and more...
 
 ## :memo: License
