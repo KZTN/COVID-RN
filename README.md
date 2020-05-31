@@ -158,6 +158,8 @@ Depois que o merge da sua pull request for feito, você pode deletar a sua branc
 - [ ] Criar um extrator de PDFs
 - [ ] Criar um conversor de PDFs para csv/json
 - [x] Elaborar gráficos com base no índice de isolamento social
+- [ ] Dicionário de buscas de cidades, melhorias de usabilidade, melhorias de navegação de mapa
+
 - [ ] and more...
 
 ## :memo: Licença
