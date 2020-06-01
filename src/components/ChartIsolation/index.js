@@ -24,7 +24,39 @@ export default function ChartIsolation() {
                     opacity: 0.3,
                 },
             },
-            colors: ['#f40d30'],
+            tooltip: {
+                x: {
+                    format: 'dd MMMM',
+                },
+            },
+            fill: {
+                type: 'gradient',
+                gradient: {
+                    shade: 'light',
+                    type: 'vertical',
+                    shadeIntensity: 0.5,
+                    gradientToColors: undefined, // optional, if not defined - uses the shades of same color in series
+                    inverseColors: true,
+                    opacityFrom: 1,
+                    opacityTo: 1,
+                    stops: [0, 100],
+                    colorStops: [
+                        [
+                            {
+                                offset: 0,
+                                color: '#E70023',
+                                opacity: 1,
+                            },
+                            {
+                                offset: 100,
+                                color: '#810000',
+                                opacity: 1,
+                            },
+                        ],
+                    ],
+                },
+            },
+            colors: ['#C60002'],
             chart: {
                 locales: [ptbr],
                 defaultLocale: 'pt-br',
@@ -35,6 +67,7 @@ export default function ChartIsolation() {
                     show: false,
                 },
             },
+
             annotations: {
                 yaxis: [
                     {
@@ -42,11 +75,11 @@ export default function ChartIsolation() {
                         borderColor: '#999',
                         label: {
                             show: true,
-                            text: '0',
+                            text: '',
                             style: {
-                                color: '#fff',
-                                background: '#00E396',
-                            },
+                                color: "#fff",
+                                background: '#00E396'
+                              }
                         },
                     },
                 ],
@@ -93,7 +126,7 @@ export default function ChartIsolation() {
                 },
                 labels: {
                     show: false,
-                    formatter: (value) => value.toFixed(2) +'%',
+                    formatter: (value) => value.toFixed(2) + '%',
                 },
             },
         },

@@ -16,6 +16,11 @@ export default function Graph({ cases, deaths, dates, recovered }) {
                     opacity: 0.3,
                 },
             },
+            tooltip: {
+                x: {
+                  format: 'dd MMMM'
+                }
+              },
             colors: ['#4bc0c0', '#e26a6a', '#1db954', '#52d'],
             chart: {
                 locales: [ptbr],
