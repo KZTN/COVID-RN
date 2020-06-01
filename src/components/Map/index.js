@@ -150,12 +150,12 @@ export default function Map() {
                             icon={{
                                 url: require('./circle.png'),
                                 scaledSize: new window.google.maps.Size(
-                                    (isMobile ? 9.99 : 13.33) +
+                                    (isMobile ? 8 : 11) +
                                         city.cases[selectedsample] /
-                                            (isMobile ? 36.66 : 29.99),
-                                    (isMobile ? 9.99 : 13.33) +
+                                            (isMobile ? 60 : 46.66),
+                                    (isMobile ? 8 : 11) +
                                         city.cases[selectedsample] /
-                                            (isMobile ? 36.66 : 29.99)
+                                            (isMobile ? 60 : 46.66)
                                 ),
                             }}
                             key={city._id}

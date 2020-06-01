@@ -8,11 +8,7 @@ export default function ChartIsolation() {
     async function getData() {
         await mongodb.get('/uf/RN').then((response) => {
             setDate(response.data.date.reverse());
-            var arr = [];
-            response.data.isolation.reverse().map((value) => {
-                arr.push(Math.abs((value - 100).toFixed(2)));
-            });
-            setIsolation(arr);
+            setIsolation(response.data.isolation.reverse());
         });
     }
 
