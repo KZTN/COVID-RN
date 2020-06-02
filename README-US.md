@@ -45,11 +45,6 @@
 COVID-RN is a project that aims to track coronavirus cases across the territory of Rio Grande do Norte, reporting unique data for both the state and each city.
 
 ## 🤔 Reason / features
-By the country not offer a complete coverage of where is focused the main place of contamination. The project aims to:
--  Make a full coverage of all Brazil territory covid focus 
-- Alert users to avoid dangerous places
-
-
 Due to the lack of the state does not have an API on the incidence of coronavirus cases and little dynamics in the publication of newsletters. The project has the scope to offer:
 <ul>
    <li>A free access API REST   database for research and consultation</li>
