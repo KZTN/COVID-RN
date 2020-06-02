@@ -1,9 +1,20 @@
-.box-slider {
-    width: 90%;
-    margin: 0 auto;
+section#map {
+    position: absolute;
+}
+section#map .box-slider {
+    position: relative;
+    width: 1100px;
+    margin: 420px auto 0 50px;
 }
 
-.box-info {
+section#map .box-info {
     display: flex;
     flex-direction: column;
+}
+
+@media (max-width: 650px) {
+    section#map .box-slider {
+        width: 320px;
+        margin: 435px auto 0 20px;
+    }
 }

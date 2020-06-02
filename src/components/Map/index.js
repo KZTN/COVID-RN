@@ -1,22 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { GoogleMap, Marker, InfoWindow, Polygon } from 'react-google-maps';
 import mongodb from '../../services/mongodb';
 import styles from './GoogleMapStyles.json';
 import coordinates from './polygons.json';
 import { isMobile } from 'react-device-detect';
-import { withStyles } from '@material-ui/core/styles';
+import Form from '../Form';
 import { ThemeProvider } from '@material-ui/styles';
 import Slider from '@material-ui/core/Slider';
 import { createMuiTheme } from '@material-ui/core';
-
-import './styles.css';
 import * as moment from 'moment';
+import './styles.css';
+
 let Arrcoordinates = coordinates[0].geojson.coordinates[0][0];
 let cordArr = [];
-
 Arrcoordinates.map((coordinate) =>
     cordArr.push({ lat: coordinate[1], lng: coordinate[0] })
 );
+
 export default function Map() {
     const AmountSlider = createMuiTheme({
         overrides: {
@@ -51,19 +51,22 @@ export default function Map() {
                 track: {
                     height: 12,
                     borderRadius: 6,
-                    width: "102%",
-                    marginLeft: -11
-
-
+                    width: '102%',
+                    marginLeft: -11,
                 },
                 rail: {
                     height: 12,
                     borderRadius: 6,
-                    width: "102%",
-                    marginLeft: -11
+                    width: '102%',
+                    marginLeft: -11,
                 },
             },
         },
+    });
+
+    const [coords, setCoords] = useState({
+        lat: -5.65,
+        lng: -36.6444833,
     });
     const [selectedsample, setSelectedsample] = useState(0);
     const [isready, setIsready] = useState(false);
@@ -71,13 +74,15 @@ export default function Map() {
     const [samples, setSamples] = useState(0);
     const [dates, setDates] = useState([]);
     const [selectedcity, setSelectedcity] = useState();
+    const [fieldpressed, setFieldpressed] = useState(false);
+    const [zoomChanged, setzoomChanged] = useState(5);
+    const mapRef = useRef(null);
     function valuetext(value) {
         return moment(dates[value - 1])
             .utc()
             .format('DD-MM');
     }
     function handleChangeSlider(number) {
-        console.log('vrum vrum' + number);
         var result = number - samples;
         if (result < 0) {
             result = Math.abs(result);
@@ -85,7 +90,6 @@ export default function Map() {
         setSelectedsample(result);
         return true;
     }
-
     useEffect(() => {
         async function getData() {
             await mongodb.get('/uf/RN').then((response) => {
@@ -97,7 +101,6 @@ export default function Map() {
         }
         getData();
     }, []);
-
     useEffect(() => {
         async function getData() {
             const response = await mongodb.get('/RN/cidades');
@@ -117,18 +120,52 @@ export default function Map() {
             window.removeEventListener('keydown', listener);
         };
     }, []);
-
+    function handleLoad(map) {
+        mapRef.current = map;
+    }
+    function handleCenterChanged() {
+        if (!mapRef.current) return;
+        const newPos = mapRef.current.getCenter().toJSON();
+        setCoords(newPos);
+    }
+    function handleInputField(data) {
+        try {
+            const result = cities.filter(
+                (e) => e.name.toLowerCase() === data.inputfield.toLowerCase()
+            );
+            if (result) {
+                setFieldpressed(true);
+                setzoomChanged(8);
+                setTimeout(() => {
+                    setzoomChanged(10);
+                }, 500);
+                setCoords({
+                    lat: result[0].location.coordinates[0],
+                    lng: result[0].location.coordinates[1],
+                });
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    }
     return (
-        <>
+        <section id="map">
+            <Form onSubmit={handleInputField} />
             <GoogleMap
+                id="map"
+                ref={(e) => {handleLoad(e)}}
                 streetViewControl={false}
                 defaultZoom={isMobile ? 7 : 8}
-                defaultCenter={{ lat: -5.799659599999999, lng: -36.6444833 }}
+                defaultCenter={{ lat: -5.65, lng: -36.6444833 }}
+                center={{ lat: coords.lat, lng: coords.lng }}
+                zoom={fieldpressed ? zoomChanged : isMobile ? 7 : 8}
+                onZoomChanged={() => setFieldpressed(false)}
                 defaultOptions={{
                     styles: styles,
                     mapTypeControl: false,
                     streetViewControl: false,
                 }}
+                onCenterChanged={handleCenterChanged}
             >
                 <Polygon
                     onMouseOut={() => {
@@ -180,7 +217,7 @@ export default function Map() {
                             setSelectedcity(null);
                         }}
                         position={{
-                            lat: selectedcity.location.coordinates[0],
+                            lat: (selectedcity.location.coordinates[0] - 0.01),
                             lng: selectedcity.location.coordinates[1],
                         }}
                     >
@@ -193,21 +230,24 @@ export default function Map() {
                             <h3>{selectedcity.name}</h3>
                             <span>
                                 Casos: {selectedcity.cases[selectedsample]}
+                                <br />
                             </span>
                             <span>
-                                Ativos:{' '}
+                                Ativos:
                                 {selectedcity.cases[selectedsample] -
                                     (selectedcity.recovered[selectedsample] +
                                         selectedcity.deaths[selectedsample])}
+                                <br />
                             </span>
                             <span>
                                 Mortes: {selectedcity.deaths[selectedsample]}
+                                <br />
                             </span>
                             <span>
-                                Recuperados:{' '}
+                                Recuperados:
                                 {selectedcity.recovered[selectedsample]
                                     ? selectedcity.recovered[selectedsample]
-                                    : '-'}{' '}
+                                    : '-'}
                             </span>
                             <div className="box-content"></div>
                         </div>
@@ -233,6 +273,6 @@ export default function Map() {
                     </ThemeProvider>
                 ) : null}
             </div>
-        </>
+        </section>
     );
 }

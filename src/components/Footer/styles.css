@@ -56,7 +56,10 @@ footer .item .box-column img {
     margin-right: 20px;
 }
 footer .item .box-column .box-info {
+    display: flex;
+    flex-direction: column;
     margin-left: auto;
+    text-align: right;
 }
 @media (max-width: 650px) {
     footer {
@@ -100,6 +103,7 @@ footer .item .box-column .box-info {
     }
     footer .item .box-column .box-info {
         margin: 0;
+        text-align: center;
     }
     footer .item .box-column img {
         margin: 0 auto;
