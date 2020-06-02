@@ -36,6 +36,7 @@
 <b>🔥 Para o mês de Junho, será desenvolvido o modelo SIR do projeto. Para mais informações, Confira o <a href="#Workflow">Workflow</a> e a <a href="https://github.com/KZTN/COVID-RN/issues/5">Issue</a> desta milestone para saber o andamento do projeto.</b>
 
 > Requisições por datas específicas foram implementadas e estão liberadas para uso e consulta, a documentação referente também foi atualizada.
+
 > As documentações foram unificadas, veja a <a href="#-Documentação">Documentação</a>
 
 
