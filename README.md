@@ -156,7 +156,7 @@ Depois que o merge da sua pull request for feito, você pode deletar a sua branc
 - [x] Gerar mapas de contaminação por data
 - [ ] Revisão, refatoração e optimização de todo o projeto (em desenvolvimento...)
 - [x] Elaborar gráficos com base no índice de isolamento social
-- [ ] Dicionário de buscas de cidades, melhorias de usabilidade, melhorias de navegação de mapa
+- [x] Dicionário de buscas de cidades, melhorias de usabilidade, melhorias de navegação de mapa
 
 - [ ] and more...
 
