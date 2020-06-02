@@ -135,6 +135,7 @@ export default function Map() {
                 (e) => e.name.toLowerCase() === data.inputfield.toLowerCase()
             );
             if (result) {
+                setSelectedcity(result[0]);
                 setFieldpressed(true);
                 setzoomChanged(8);
                 setTimeout(() => {
@@ -223,7 +224,7 @@ export default function Map() {
 
                         }}
                         position={{
-                            lat: (selectedcity.location.coordinates[0] - 0.01),
+                            lat: (selectedcity.location.coordinates[0]),
                             lng: selectedcity.location.coordinates[1],
                         }}
                     >
