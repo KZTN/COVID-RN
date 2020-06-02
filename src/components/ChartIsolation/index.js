@@ -26,7 +26,7 @@ export default function ChartIsolation() {
             },
             tooltip: {
                 x: {
-                    format: 'dd MMMM',
+                    format: 'dddd (dd MMMM)',
                 },
             },
             fill: {
