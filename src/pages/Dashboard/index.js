@@ -85,7 +85,9 @@ export default function Dashboard() {
             setDatedata(response.data.date[0]);
 
             setRefusestitle(
-                `Aumento: ${response.data.refuses[0] - response.data.refuses[1]} variação: ${(
+                `Aumento: ${
+                    response.data.refuses[0] - response.data.refuses[1]
+                } variação: ${(
                     ((response.data.refuses[0] * 100) /
                         response.data.refuses[1]) %
                     100
@@ -93,7 +95,9 @@ export default function Dashboard() {
             );
 
             setCasestitle(
-                `Aumento: ${response.data.cases[0] - response.data.cases[1]} variação: ${(
+                `Aumento: ${
+                    response.data.cases[0] - response.data.cases[1]
+                } variação: ${(
                     ((response.data.cases[0] * 100) / response.data.cases[1]) %
                     100
                 ).toFixed(2)}% `
@@ -129,14 +133,18 @@ export default function Dashboard() {
                 );
             }
             setDeathstitle(
-                `Aumento: ${response.data.deaths[0] - response.data.deaths[1]} variação: ${(
+                `Aumento: ${
+                    response.data.deaths[0] - response.data.deaths[1]
+                } variação: ${(
                     ((response.data.deaths[0] * 100) /
                         response.data.deaths[1]) %
                     100
                 ).toFixed(2)}% `
             );
             setRecoveredtitle(
-                `Aumento: ${response.data.recovered[0] - response.data.recovered[1]} variação: ${(
+                `Aumento: ${
+                    response.data.recovered[0] - response.data.recovered[1]
+                } variação: ${(
                     ((response.data.recovered[0] * 100) /
                         response.data.recovered[1]) %
                     100
@@ -206,14 +214,18 @@ export default function Dashboard() {
                 );
             }
             setRefusestitle(
-                `Aumento: ${response.data.refuses[0] - response.data.refuses[1]} variação: ${(
+                `Aumento: ${
+                    response.data.refuses[0] - response.data.refuses[1]
+                } variação: ${(
                     ((response.data.refuses[0] * 100) /
                         response.data.refuses[1]) %
                     100
                 ).toFixed(2)}% `
             );
             setCasestitle(
-                `Aumento: ${response.data.cases[0] - response.data.cases[1]} variação: ${(
+                `Aumento: ${
+                    response.data.cases[0] - response.data.cases[1]
+                } variação: ${(
                     ((response.data.cases[0] * 100) / response.data.cases[1]) %
                     100
                 ).toFixed(2)}% `
@@ -234,14 +246,18 @@ export default function Dashboard() {
                 );
             }
             setDeathstitle(
-                `Aumento: ${response.data.deaths[0] - response.data.deaths[1]} variação: ${(
+                `Aumento: ${
+                    response.data.deaths[0] - response.data.deaths[1]
+                } variação: ${(
                     ((response.data.deaths[0] * 100) /
                         response.data.deaths[1]) %
                     100
                 ).toFixed(2)}% `
             );
             setRecoveredtitle(
-                `Aumento: ${response.data.recovered[0] - response.data.recovered[1]} variação: ${(
+                `Aumento: ${
+                    response.data.recovered[0] - response.data.recovered[1]
+                } variação: ${(
                     ((response.data.recovered[0] * 100) /
                         response.data.recovered[1]) %
                     100
@@ -277,7 +293,7 @@ export default function Dashboard() {
         return output;
     }
     return (
-        <>
+        <section id="dashboard">
             <div className="box-situation">
                 <p>Situação d{surname}</p>
                 <div className="box-rn">
@@ -302,12 +318,15 @@ export default function Dashboard() {
                 </span>
             </div>
             <form className="box-form" onSubmit={handleSubmit}>
-                <FaSearch
-                    className="icon-search"
-                    size={30}
-                    color="#6a6a6a"
-                    style={{ margin: 'auto 10px auto 20px' }}
-                />
+                <div className="icon">
+                    {isMobile ? null : (
+                        <FaSearch
+                            className="icon-search"
+                            size={30}
+                            color="#6a6a6a"
+                        />
+                    )}
+                </div>
                 <input
                     id="input"
                     type="text"
@@ -581,6 +600,6 @@ export default function Dashboard() {
                     </button>
                 </div>
             </section>
-        </>
+        </section>
     );
 }

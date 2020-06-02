@@ -1,7 +1,7 @@
 section#form form.box-form {
     height: 62px;
     width: 50%;
-    margin: -490px auto 0 312px;
+    margin: -540px auto 0 312px;
     display: flex;
     flex-direction: row;
     background: rgba(255, 255, 255, 0.8);

@@ -8,8 +8,8 @@ export default function Form({ onSubmit }) {
 
     async function handleSubmit(e) {
         e.preventDefault();
-        console.log('estou enviando: ' + inputfield);
         setInputfield('');
+        document.getElementById('map').blur();
         window.blur();
         await onSubmit({
             inputfield,

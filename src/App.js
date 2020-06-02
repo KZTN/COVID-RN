@@ -139,7 +139,7 @@ function App() {
                     <Top10 uf={UF} cities={cities} />
                 ) : null}
                 <div className="box-map"></div>
-                <div className="map" style={{ width: '100%', height: '500px' }}>
+                <div className="map">
                     <MapWrapped
                         googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${process.env.REACT_APP_GOOGLE_KEY}`}
                         loadingElement={<div style={{ height: `100%` }} />}

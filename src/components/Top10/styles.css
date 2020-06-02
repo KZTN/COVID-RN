@@ -1,9 +1,9 @@
 .slick-prev:before {
     color: #444;
-  }
-  .slick-next:before {
+}
+.slick-next:before {
     color: #444;
-  }
+}
 .featured {
     width: 100%;
 }
@@ -14,16 +14,17 @@
 .top-content-mobile {
     width: 80%;
     margin: 0 auto;
-
 }
 
 .top-content strong {
-    color: #666;
+    color: #777;
     font-size: 78px;
     padding-top: 30px;
 }
 .top-content span {
-    color: #444;
+    color: #777;
+    font-size: 18px;
+    font-weight: 100;
 }
 
 .top-content-mobile strong {

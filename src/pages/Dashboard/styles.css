@@ -7,10 +7,11 @@ ul {
 }
 
 li.box-item {
+    width: 183px;
     background: #f5f5f2;
     box-shadow: 0 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.15);
     border-radius: 8px;
-    padding: 20px;
+    padding: 20px 0;
     text-align: center;
     cursor: default;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -35,7 +36,9 @@ li.box-item strong {
 }
 
 li.box-item span {
-    color: #444;
+    color: #777;
+    font-size: 18px;
+    font-weight: 100;
 }
 
 .box-loading {
@@ -73,7 +76,10 @@ li.box-item span {
     border: 0;
     border-radius: 40px;
 }
-
+.container form.box-form .icon {
+    margin: auto 0;
+    padding: 0 0.5rem 0 1rem;
+}
 .container form.box-form button[type='submit'] {
     margin: auto 5px auto auto;
     padding: 0 16px;
@@ -155,6 +161,9 @@ section#chart .chart-actions button {
     }
     .content {
         width: 90%;
+    }
+    li.box-item {
+        width: 100%;
     }
     section#chart .box-chart {
         height: 350px;
