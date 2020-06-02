@@ -76,6 +76,7 @@ export default function Map() {
     const [selectedcity, setSelectedcity] = useState();
     const [fieldpressed, setFieldpressed] = useState(false);
     const [zoomChanged, setzoomChanged] = useState(5);
+    const [mouseover, setMouseover] = useState(false);
     const mapRef = useRef(null);
     function valuetext(value) {
         return moment(dates[value - 1])
@@ -165,7 +166,7 @@ export default function Map() {
                     mapTypeControl: false,
                     streetViewControl: false,
                 }}
-                onCenterChanged={handleCenterChanged}
+                onCenterChanged={mouseover? handleCenterChanged : null}
             >
                 <Polygon
                     onMouseOut={() => {
@@ -202,9 +203,11 @@ export default function Map() {
                             }}
                             onMouseOver={() => {
                                 setSelectedcity(city);
+                                setMouseover(true);
                             }}
                             onClick={() => {
                                 setSelectedcity(city);
+                                setMouseover(true);
                             }}
                         />
                     ))}
@@ -212,9 +215,12 @@ export default function Map() {
                     <InfoWindow
                         onMouseOut={() => {
                             setSelectedcity(null);
+                            setMouseover(false);
                         }}
                         onCloseClick={() => {
                             setSelectedcity(null);
+                            setMouseover(false);
+
                         }}
                         position={{
                             lat: (selectedcity.location.coordinates[0] - 0.01),
