@@ -304,9 +304,9 @@ export default function Dashboard() {
             <form className="box-form" onSubmit={handleSubmit}>
                 <FaSearch
                     className="icon-search"
-                    size={28}
+                    size={30}
                     color="#6a6a6a"
-                    style={{ margin: 'auto 0 auto 10px' }}
+                    style={{ margin: 'auto 10px auto 20px' }}
                 />
                 <input
                     id="input"
