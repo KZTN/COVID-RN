@@ -1,0 +1,3 @@
+# https://www.covid19rn.com.br/robotstxt.html
+User-agent: *
+Allow: /
