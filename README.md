@@ -2,7 +2,7 @@
 
 
 <p align="center">
-    <img alt="COVID-RN" title="#app" src=".github/COVID-RN_icon.png" width="250px" />
+    <a href="https://covid19rn.com.br/"><img alt="COVID-RN" title="#app" src=".github/COVID-RN_icon.png" width="250px" /><a/>
 </p>
     <h1 align="center">COVID-RN</h1>
 
