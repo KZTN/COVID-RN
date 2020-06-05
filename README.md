@@ -60,6 +60,7 @@ Com base no design dos boletins epidemiológicos lançados pela SESAP-RN, o proj
 ## 💽 Fonte de dados 
 
 - [Secretaria de Saúde Pública do Rio Grande do Norte](http://www.saude.rn.gov.br/)
+- [Inloco](https://www.inloco.com.br)
 
 ## 🔌 Base url 
 
