@@ -181,6 +181,9 @@ export default function Dashboard() {
     async function handleSubmit(e) {
         e.preventDefault();
         setLoading(true);
+        if (name === "") {
+            window.location.reload();
+        }
         try {
             const response = await mongodb.post('/RN/cidade', {
                 name: capitalize(name),
