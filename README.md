@@ -2,7 +2,7 @@
 
 
 <p align="center">
-    <img alt="COVID-RN" title="#app" src=".github/COVID-RN_icon.png" width="250px" />
+    <a href="https://covid19rn.com.br/"><img alt="COVID-RN" title="#app" src=".github/COVID-RN_icon.png" width="250px" /><a/>
 </p>
     <h1 align="center">COVID-RN</h1>
 
@@ -60,6 +60,7 @@ Com base no design dos boletins epidemiológicos lançados pela SESAP-RN, o proj
 ## 💽 Fonte de dados 
 
 - [Secretaria de Saúde Pública do Rio Grande do Norte](http://www.saude.rn.gov.br/)
+- [Inloco](https://www.inloco.com.br)
 
 ## 🔌 Base url 
 
