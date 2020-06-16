@@ -191,15 +191,16 @@ export default function Map() {
                                 scaledSize: new window.google.maps.Size(
                                     (isMobile ? 8 : 11) +
                                         city.cases[selectedsample] /
-                                            (isMobile ? 80 : 60),
+                                            (isMobile ? 100 : 80),
                                     (isMobile ? 8 : 11) +
                                         city.cases[selectedsample] /
-                                            (isMobile ? 80 : 60)
+                                            (isMobile ? 100 : 80)
                                 ),
                             }}
                             key={city._id}
                             position={{
-                                lat: city.location.coordinates[0],
+                                lat: city.location.coordinates[0] - (city.cases[selectedsample] /
+                                    (isMobile ? 100 : 80) / 1000),
                                 lng: city.location.coordinates[1],
                             }}
                             onMouseOver={() => {
