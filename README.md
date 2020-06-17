@@ -82,7 +82,6 @@ O que você precisa para instalar o software:
 ```
 node v12.x
 yarn 1.22.4
-npm 6.14.4
 git
 ```
 > Para uma melhor experiência no ambiente de testes com o servidor API REST, recomenda-se o uso do [insomnia](https://insomnia.rest/)
