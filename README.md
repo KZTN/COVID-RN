@@ -123,8 +123,9 @@ yarn start
 Visite http://localhost:3000 com o seu navegador para ver o resultado. 🎉
 
 ## 📄 Documentação 
-
-<a href="https://covid-rn-documentation.now.sh/" target="_blank">Versão unificada</a>
+<ul>
+   <li><a href="https://covid-rn-documentation.now.sh/" target="_blank">Versão unificada</a></li>
+</ul>
 
 
 ## Como contribuir
