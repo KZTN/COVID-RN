@@ -68,8 +68,10 @@ Todas chamadas devem usar a url base:
 ```
 https://covid-rn-server.herokuapp.com/api/v2
 ```
-> utilize a [documentação](https://insomnia-documenter-covidrn-6fgddqztj.now.sh/) para mais informações de como utilizar a API corretamente
+A API está usando o pacote Cors, isso permite o acesso de qualquer Interface (frontend), desde que a mesma seja direcionada para a porta adequada.
 
+> utilize a [documentação](https://covid-rn-documentation.now.sh/) para mais informações de como utilizar a
+API corretamente
 
 ## Começando...
 Essas instruções fornecerão uma cópia do projeto em execução na sua máquina local para fins de desenvolvimento e teste.
@@ -80,7 +82,6 @@ O que você precisa para instalar o software:
 ```
 node v12.x
 yarn 1.22.4
-npm 6.14.4
 git
 ```
 > Para uma melhor experiência no ambiente de testes com o servidor API REST, recomenda-se o uso do [insomnia](https://insomnia.rest/)
@@ -122,8 +123,9 @@ yarn start
 Visite http://localhost:3000 com o seu navegador para ver o resultado. 🎉
 
 ## 📄 Documentação 
-
-<a href="https://covid-rn-documentation.now.sh/" target="_blank">Versão unificada</a>
+<ul>
+   <li><a href="https://covid-rn-documentation.now.sh/" target="_blank">Versão unificada</a></li>
+</ul>
 
 
 ## Como contribuir
