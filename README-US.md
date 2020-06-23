@@ -30,7 +30,7 @@
 
 
 ## ⚠️ Warning
-
+<b> 🔥 the project's SIR model is intended to be developed until 1th July. For more information, check out the <a href="#Workflow"> Workflow </a> and <a href="https://github.com/KZTN/COVID-RN/issues/5"> Issue </ a > this milestone to know the progress of the project. </b>
 > Requests for specific dates have been implemented and are released for use and consultation, the related documentation has also been updated.
 
 > Documentations have been unified, see <a href="#-Documentation">Documentation</a>
