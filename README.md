@@ -149,13 +149,14 @@ Depois que o merge da sua pull request for feito, você pode deletar a sua branc
 - [x] Desenvolver a versão 2.0 da API
 - [x] Consultas a API por data específica
 - [ ] Elaborar um modelo epidemiológico SIR no projeto (em desenvolvimento...)
-- [ ] Gerar estatísticas de acesso, consultas, erros e depuração (em desenvolvimento...)
+- [ ] Gerar estatísticas de acesso, consultas, erros e depuração
 - [ ] Criar um console de consultas à API e estátisticas de acesso
 - [x] Gerar relatórios automáticos de status do serviço
 - [x] Gerar mapas de contaminação por data
 - [ ] Revisão, refatoração e optimização de todo o projeto (em desenvolvimento...)
 - [x] Elaborar gráficos com base no índice de isolamento social
 - [x] Dicionário de buscas de cidades, melhorias de usabilidade, melhorias de navegação de mapa
+- [ ] Utilização da API PLACES do google no formulários de requisições (em desenvolvimento...)
 
 - [ ] and more...
 

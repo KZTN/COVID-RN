@@ -30,12 +30,7 @@
 
 
 ## ⚠️ Warning
-<b>🔥 A new API server status console and call request count is being designed, the planned development and implementation period is until the end of the month. See the <a href="#Workflow">Workflow</a>.</b>
-
-<b>🔥 A new API has been developed and is ready to use, check the <a href="#-Documentation">Documentation</a>.</b>
-
-> It's highly recommended for new users use V2. Because V1, while continuing to receive daily data, will no longer support new updates.
-
+<b> 🔥 the project's SIR model is intended to be developed until 1th July. For more information, check out the <a href="#Workflow"> Workflow </a> and <a href="https://github.com/KZTN/COVID-RN/issues/5"> Issue </ a > this milestone to know the progress of the project. </b>
 > Requests for specific dates have been implemented and are released for use and consultation, the related documentation has also been updated.
 
 > Documentations have been unified, see <a href="#-Documentation">Documentation</a>
@@ -66,6 +61,7 @@ All calls must use the base url:
 ```
 https://covid-rn-server.herokuapp.com
 ```
+The API is using the Cors package, this allows access from any Interface (frontend), as long as it is directed to the appropriate port.
 > Use [documentation](https://insomnia-documenter-covidrn-6fgddqztj.now.sh/) for more information on how to use the API correctly
 
 ## Starting...
