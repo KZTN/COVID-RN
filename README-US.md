@@ -147,6 +147,7 @@ After the merge of your pull request is done, you can delete your branch.
 - [ ] Revision, refactoring and optimization of the entire project (on going...)
 - [x] Create graphs with isolation rates
 - [ ] Dictionary of cities, usability improvements, map navigation improvements
+- [ ] Generate automatic backups on database
 - [ ] and more...
 
 ## :memo: License
