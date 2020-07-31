@@ -149,7 +149,7 @@ Depois que o merge da sua pull request for feito, você pode deletar a sua branc
 - [x] Elaborar gráficos com base no índice de isolamento social
 - [x] Dicionário de buscas de cidades, melhorias de usabilidade, melhorias de navegação de mapa
 - [ ] Utilização da API PLACES do google no formulários de requisições (em desenvolvimento...)
-- [ ] Gerar backups automáticos do banco de dados
+- [X] Gerar backups automáticos do banco de dados
 
 - [ ] and more...
 
