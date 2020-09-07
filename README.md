@@ -31,6 +31,8 @@
 ## 👋 Hello world 
 [English README version](README-US.md)🇺🇸
 
+## Atenção
+O projeto está sem receber novas atualizações desde 01/08/2020. Não sei se irei ter tempo de voltar a manter o projeto. Muitos boletins foram disponibilizados e a demanda aumenta a cada dia. Estou procurando disponibilidade para realização de uma manutenção geral e manter os dados novamente atualizados.
 
 ## 💻 Projeto
 
